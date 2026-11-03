@@ -20,9 +20,9 @@
       "pro": "novator_access_pro",
       "price": "$299",
       "versions": "17.0 - 20.0",
-      "guide": false,
+      "guide": true,
       "store": "https://apps.odoo.com/apps/modules/20.0/novator_access_pro",
-      "icon": null
+      "icon": "img/access-manager/icon.png"
     },
     {
       "slug": "ai-connector",
@@ -32,9 +32,9 @@
       "pro": "novator_mcp_pro",
       "price": "$149",
       "versions": "17.0 - 20.0",
-      "guide": false,
+      "guide": true,
       "store": "https://apps.odoo.com/apps/modules/20.0/novator_mcp_pro",
-      "icon": null
+      "icon": "img/ai-connector/icon.png"
     },
     {
       "slug": "direct-print",
@@ -44,9 +44,9 @@
       "pro": "novator_direct_print",
       "price": "$99",
       "versions": "13.0 - 20.0",
-      "guide": false,
+      "guide": true,
       "store": "https://apps.odoo.com/apps/modules/20.0/novator_direct_print",
-      "icon": null
+      "icon": "img/direct-print/icon.png"
     },
     {
       "slug": "storage-manager",
@@ -56,9 +56,9 @@
       "pro": "novator_storage_manager",
       "price": "$299",
       "versions": "17.0 - 20.0",
-      "guide": false,
+      "guide": true,
       "store": "https://apps.odoo.com/apps/modules/20.0/novator_storage_manager",
-      "icon": null
+      "icon": "img/storage-manager/icon.png"
     },
     {
       "slug": "device-access-control",
@@ -68,9 +68,9 @@
       "pro": "device_access_control",
       "price": "$299",
       "versions": "17.0 - 20.0",
-      "guide": false,
+      "guide": true,
       "store": "https://apps.odoo.com/apps/modules/20.0/device_access_control",
-      "icon": null
+      "icon": "img/device-access-control/icon.png"
     },
     {
       "slug": "pos-counter-ticket",
@@ -80,9 +80,9 @@
       "pro": "pos_bakery_ticket",
       "price": "$299",
       "versions": "17.0 - 20.0",
-      "guide": false,
+      "guide": true,
       "store": "https://apps.odoo.com/apps/modules/20.0/pos_bakery_ticket",
-      "icon": null
+      "icon": "img/pos-counter-ticket/icon.png"
     },
     {
       "slug": "price-checker-kiosk",
@@ -92,9 +92,9 @@
       "pro": "retail_price_checker_kiosk",
       "price": "$249",
       "versions": "16.0 - 20.0",
-      "guide": false,
+      "guide": true,
       "store": "https://apps.odoo.com/apps/modules/20.0/retail_price_checker_kiosk",
-      "icon": null
+      "icon": "img/price-checker-kiosk/icon.png"
     },
     {
       "slug": "daily-stock-ledger",
@@ -104,9 +104,9 @@
       "pro": "daily_stock_ledger",
       "price": "$149",
       "versions": "17.0 - 20.0",
-      "guide": false,
+      "guide": true,
       "store": "https://apps.odoo.com/apps/modules/20.0/daily_stock_ledger",
-      "icon": null
+      "icon": "img/daily-stock-ledger/icon.png"
     },
     {
       "slug": "pos-scale",
@@ -116,9 +116,9 @@
       "pro": null,
       "price": null,
       "versions": "13.0 - 20.0",
-      "guide": false,
+      "guide": true,
       "store": "https://apps.odoo.com/apps/modules/20.0/pos_scale_webserial",
-      "icon": null
+      "icon": "img/pos-scale/icon.png"
     },
     {
       "slug": "bank-alfalah",
@@ -128,9 +128,9 @@
       "pro": "payment_bank_alfalah",
       "price": "$99",
       "versions": "17.0 - 20.0",
-      "guide": false,
+      "guide": true,
       "store": "https://apps.odoo.com/apps/modules/20.0/payment_bank_alfalah",
-      "icon": null
+      "icon": "img/bank-alfalah/icon.png"
     },
     {
       "slug": "fatora",
@@ -140,9 +140,9 @@
       "pro": null,
       "price": null,
       "versions": "18.0",
-      "guide": false,
+      "guide": true,
       "store": "https://apps.odoo.com/apps/modules/18.0/payment_fatora",
-      "icon": null
+      "icon": "img/fatora/icon.png"
     }
   ]
 }
