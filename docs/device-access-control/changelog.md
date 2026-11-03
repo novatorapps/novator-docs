@@ -9,6 +9,12 @@ description: "Version history of Device Access Control for Odoo."
 
 The newest release is first. In Odoo the version number starts with the Odoo version, so release 1.1.0 for Odoo 20.0 shows as `20.0.1.1.0`.
 
+## Device Access Control 1.2.2, Login Audit 1.0.2
+
+*2026-11-03, Odoo 17.0 - 20.0*
+
+- Store page and app links now point to this user guide. No change to how the app works.
+
 ## Device Access Control 1.2.1, Login Audit 1.0.1
 
 *2026-10-22, Odoo 17.0 - 20.0*

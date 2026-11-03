@@ -9,6 +9,12 @@ description: "Version history of POS Scale Integration for Odoo."
 
 The newest release is first. In Odoo the version number starts with the Odoo version, so release 1.1.0 for Odoo 20.0 shows as `20.0.1.1.0`.
 
+## 3.0.2
+
+*2026-11-03, Odoo 13.0 - 20.0*
+
+- Store page and app links now point to this user guide. No change to how the app works.
+
 ## 3.0.1
 
 *2026-10-26, Odoo 13.0 - 20.0*
