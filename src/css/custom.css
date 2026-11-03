@@ -1,0 +1,47 @@
+:root {
+  --ifm-color-primary: #1f56b3;
+  --ifm-color-primary-dark: #1c4da1;
+  --ifm-color-primary-darker: #1a4998;
+  --ifm-color-primary-darkest: #153c7d;
+  --ifm-color-primary-light: #225fc5;
+  --ifm-color-primary-lighter: #2463ce;
+  --ifm-color-primary-lightest: #3b75d8;
+  --ifm-font-family-base: Inter, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --ifm-code-font-size: 92%;
+}
+[data-theme='dark'] {
+  --ifm-color-primary: #6f9be6;
+  --ifm-color-primary-dark: #5689e2;
+  --ifm-color-primary-darker: #4a80e0;
+  --ifm-color-primary-darkest: #2766d4;
+  --ifm-color-primary-light: #88ade9;
+  --ifm-color-primary-lighter: #94b6eb;
+  --ifm-color-primary-lightest: #bad0f2;
+}
+/* screenshots */
+.markdown img {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  box-shadow: 0 4px 18px rgba(16, 24, 40, 0.08);
+  margin: 0.5rem 0 1.2rem;
+}
+.markdown img.app-icon { border: 0; box-shadow: none; width: 72px; float: right; margin: 0 0 1rem 1rem; }
+/* home */
+.home-hero { padding: 3.5rem 1rem 2rem; text-align: center; }
+.home-hero h1 { font-size: 2.6rem; margin-bottom: .6rem; }
+.home-hero p { font-size: 1.15rem; color: var(--ifm-color-emphasis-700); max-width: 720px; margin: 0 auto; }
+.app-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.2rem; padding: 1rem 0 4rem; }
+.app-card { display: flex; gap: 1rem; padding: 1.2rem; border: 1px solid var(--ifm-color-emphasis-200); border-radius: 12px;
+  background: var(--ifm-background-surface-color); color: inherit; transition: box-shadow .15s, transform .15s; }
+.app-card:hover { box-shadow: 0 8px 24px rgba(16, 24, 40, .1); transform: translateY(-2px); text-decoration: none; color: inherit; }
+.app-card img { width: 56px; height: 56px; border-radius: 12px; flex: 0 0 auto; }
+.app-card h3 { margin: 0 0 .25rem; font-size: 1.1rem; }
+.app-card p { margin: 0 0 .5rem; font-size: .92rem; color: var(--ifm-color-emphasis-700); }
+.app-tags { display: flex; gap: .4rem; flex-wrap: wrap; }
+.app-tag { font-size: .75rem; font-weight: 600; padding: .1rem .55rem; border-radius: 10px; background: var(--ifm-color-emphasis-100); }
+.app-tag.free { background: #e6f6ec; color: #1d7a43; }
+.app-tag.pro { background: #fff3dc; color: #8a5a00; }
+[data-theme='dark'] .app-tag.free { background: #173a26; color: #8fe0ad; }
+[data-theme='dark'] .app-tag.pro { background: #3d2c09; color: #ffcf73; }
+.version-pill { display: inline-block; font-size: .8rem; font-weight: 600; padding: .1rem .6rem; border-radius: 10px;
+  border: 1px solid var(--ifm-color-emphasis-300); margin-right: .3rem; }

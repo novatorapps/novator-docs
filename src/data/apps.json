@@ -1,0 +1,39 @@
+[
+  {
+    "slug": "dashboard-builder",
+    "title": "Dashboard Builder",
+    "summary": "KPI tiles, 13 chart types and lists from any Odoo data. Pro adds AI, drill-down, TV mode, SQL and email digests.",
+    "versions": [
+      "17.0",
+      "18.0",
+      "19.0",
+      "20.0"
+    ],
+    "free": {
+      "technical": "novator_dashboard",
+      "name": "Dashboard Builder: KPI Tiles, Charts & Lists",
+      "version": "20.0.1.0.0",
+      "license": "LGPL-3",
+      "price": "Free",
+      "store": {
+        "17.0": "https://apps.odoo.com/apps/modules/17.0/novator_dashboard",
+        "18.0": "https://apps.odoo.com/apps/modules/18.0/novator_dashboard",
+        "19.0": "https://apps.odoo.com/apps/modules/19.0/novator_dashboard",
+        "20.0": "https://apps.odoo.com/apps/modules/20.0/novator_dashboard"
+      }
+    },
+    "pro": {
+      "technical": "novator_dashboard_pro",
+      "name": "Dashboard Builder Pro: AI, Drill-down, TV Mode, SQL & Email",
+      "version": "20.0.1.0.0",
+      "license": "OPL-1",
+      "price": "$299",
+      "store": {
+        "17.0": "https://apps.odoo.com/apps/modules/17.0/novator_dashboard_pro",
+        "18.0": "https://apps.odoo.com/apps/modules/18.0/novator_dashboard_pro",
+        "19.0": "https://apps.odoo.com/apps/modules/19.0/novator_dashboard_pro",
+        "20.0": "https://apps.odoo.com/apps/modules/20.0/novator_dashboard_pro"
+      }
+    }
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "_comment": "Registry of guides. tools/sync.py reads this, copies screenshots and icons from the modules and writes src/data/apps.json for the home page.",
+  "apps": [
+    {
+      "slug": "dashboard-builder",
+      "title": "Dashboard Builder",
+      "summary": "KPI tiles, 13 chart types and lists from any Odoo data. Pro adds AI, drill-down, TV mode, SQL and email digests.",
+      "free": "novator_dashboard",
+      "pro": "novator_dashboard_pro",
+      "versions": ["17.0", "18.0", "19.0", "20.0"]
+    }
+  ]
+}
