@@ -35,7 +35,7 @@ const config = {
     colorMode: {respectPrefersColorScheme: true},
     navbar: {
       title: 'Apps & Guides',
-      logo: {alt: 'Novator', src: 'img/novator-logo.png', srcDark: 'img/novator-logo-dark.png', height: 30},
+      logo: {alt: 'Novator', src: 'img/novator-logo.png', height: 30},
       items: [
         {type: 'docSidebar', sidebarId: 'guides', position: 'left', label: 'All apps'},
         {href: 'https://apps.odoo.com/apps/browse?repo_maintainer_id=271577', label: 'Odoo Apps Store', position: 'right'},

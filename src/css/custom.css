@@ -50,3 +50,5 @@
 [data-theme='dark'] .app-tag.pro { background: #3d2c09; color: #ffcf73; }
 .version-pill { display: inline-block; font-size: .8rem; font-weight: 600; padding: .1rem .6rem; border-radius: 10px;
   border: 1px solid var(--ifm-color-emphasis-300); margin-right: .3rem; }
+/* the original logo, unchanged; on a white plate in dark mode so the navy stays readable */
+[data-theme='dark'] .navbar__logo img { background: #fff; border-radius: 6px; padding: 3px 6px; box-sizing: content-box; }
