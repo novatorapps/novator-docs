@@ -5,6 +5,10 @@ sidebar_position: 1
 description: Control what each user sees in Odoo without code. Pro adds fields, buttons, records, chatter and filter rules.
 ---
 
+import AppSchema from '@site/src/components/AppSchema';
+
+<AppSchema slug="access-manager" />
+
 <img className="app-icon" src="/img/access-manager/icon.png" alt="" />
 
 # Access Manager

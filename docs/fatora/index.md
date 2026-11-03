@@ -5,6 +5,10 @@ sidebar_position: 1
 description: Card payments in Qatar, Saudi Arabia and the GCC through the Fatora hosted checkout, with verification and refunds.
 ---
 
+import AppSchema from '@site/src/components/AppSchema';
+
+<AppSchema slug="fatora" />
+
 <img className="app-icon" src="/img/fatora/icon.png" alt="" />
 
 # Fatora Payments

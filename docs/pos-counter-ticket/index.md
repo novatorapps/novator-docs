@@ -5,6 +5,10 @@ sidebar_position: 1
 description: Print an order slip at any counter, scan it and pay at the checkout.
 ---
 
+import AppSchema from '@site/src/components/AppSchema';
+
+<AppSchema slug="pos-counter-ticket" />
+
 <img className="app-icon" src="/img/pos-counter-ticket/icon.png" alt="" />
 
 # POS Counter Ticket

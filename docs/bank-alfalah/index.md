@@ -5,6 +5,10 @@ sidebar_position: 1
 description: Card payments for Odoo eCommerce, invoices and payment links through the Bank Alfalah Mastercard Payment Gateway, with verification and refunds.
 ---
 
+import AppSchema from '@site/src/components/AppSchema';
+
+<AppSchema slug="bank-alfalah" />
+
 <img className="app-icon" src="/img/bank-alfalah/icon.png" alt="" />
 
 # Bank Alfalah Payments

@@ -8,15 +8,15 @@ description: Common questions about Bank Alfalah Payments.
 
 ### Bank Alfalah does not appear at checkout
 
-Check that the provider is **Published**, set to **Enabled** (or Test), and allowed for the currency of the order (PKR or USD) and the company.
+Check that the provider is **Published**, not archived, and allowed for the currency of the order (PKR or USD) and the company. On Odoo 17 to 19 its state must be **Enabled** or **Test**; on Odoo 20 switch on **Live** for real payments.
 
 ### The customer paid but the order is still pending
 
 The gateway may still be authenticating the card. The webhook confirms it as soon as the bank does; check that the webhook URL is set in the merchant portal.
 
-### "Webhook refused"
+### Payments are not confirmed by the webhook
 
-The notification secret in Odoo does not match the one in the merchant portal.
+The server log shows the webhook was refused because of a wrong notification secret. The **Webhook Notification Secret** in Odoo must match the one in the merchant portal.
 
 ### Can I take payments in other currencies?
 

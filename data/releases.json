@@ -1,0 +1,364 @@
+{
+  "dashboard-builder": [
+    {
+      "version": "1.0.0",
+      "date": "2026-11-03",
+      "modules": [
+        "novator_dashboard",
+        "novator_dashboard_pro"
+      ],
+      "series": "17.0 - 20.0",
+      "notes": [
+        "First release.",
+        "Free: KPI tiles, 13 chart types and lists.",
+        "Pro: AI, drill-down, TV mode, SQL, email digests and templates."
+      ]
+    }
+  ],
+  "access-manager": [
+    {
+      "version": "Pro 1.1.0, free 1.0.1",
+      "date": "2026-11-03",
+      "modules": [
+        "novator_access_pro",
+        "novator_access"
+      ],
+      "series": "17.0 - 20.0",
+      "notes": [
+        "Pro: chatter rules and filter rules.",
+        "Pro: hidden buttons are also refused by the server."
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "date": "2026-11-03",
+      "modules": [
+        "novator_access",
+        "novator_access_pro"
+      ],
+      "series": "17.0 - 20.0",
+      "notes": [
+        "First release."
+      ]
+    }
+  ],
+  "ai-connector": [
+    {
+      "version": "Free 1.0.1",
+      "date": "2026-11-03",
+      "modules": [
+        "novator_mcp"
+      ],
+      "series": "17.0 - 20.0",
+      "notes": [
+        "The free app is now licensed under LGPL-3."
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "date": "2026-11-03",
+      "modules": [
+        "novator_mcp",
+        "novator_mcp_pro"
+      ],
+      "series": "17.0 - 20.0",
+      "notes": [
+        "First release."
+      ]
+    }
+  ],
+  "direct-print": [
+    {
+      "version": "1.1.0",
+      "date": "2026-11-02",
+      "modules": [
+        "novator_direct_print"
+      ],
+      "series": "13.0 - 20.0",
+      "notes": [
+        "New Print To window.",
+        "Workstations.",
+        "Shipping labels.",
+        "More examples."
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "date": "2026-11-01",
+      "modules": [
+        "novator_direct_print"
+      ],
+      "series": "13.0 - 20.0",
+      "notes": [
+        "First release: print agents, printers, print rules, automatic printing, print jobs, the printer menu in the top bar and the Novator Print Agent."
+      ]
+    }
+  ],
+  "storage-manager": [
+    {
+      "version": "Storage Manager 1.6.2 (Odoo 17.0)",
+      "date": "2026-10-23",
+      "modules": [
+        "novator_storage_manager"
+      ],
+      "series": "17.0",
+      "notes": [
+        "App description update only. No change to how the app works."
+      ]
+    },
+    {
+      "version": "Storage Manager 1.6.1, Storage Analyzer 1.0.2",
+      "date": "2026-10-22",
+      "modules": [
+        "novator_storage_manager",
+        "novator_storage_analyzer"
+      ],
+      "series": "17.0 - 20.0",
+      "notes": [
+        "Storage Manager: fixed a crash when moving files between connections.",
+        "Storage Analyzer: app description update only."
+      ]
+    },
+    {
+      "version": "Storage Manager 1.6.0, Storage Analyzer 1.0.0",
+      "date": "2026-10-22",
+      "modules": [
+        "novator_storage_manager",
+        "novator_storage_analyzer"
+      ],
+      "series": "17.0 - 20.0",
+      "notes": [
+        "First release on the Odoo Apps Store."
+      ]
+    }
+  ],
+  "device-access-control": [
+    {
+      "version": "Device Access Control 1.2.1, Login Audit 1.0.1",
+      "date": "2026-10-22",
+      "modules": [
+        "device_access_control",
+        "novator_login_audit"
+      ],
+      "series": "17.0 - 20.0",
+      "notes": [
+        "App description update only. No change to how the apps work."
+      ]
+    },
+    {
+      "version": "Device Access Control 1.2.0, Login Audit 1.0.0",
+      "date": "2026-10-22",
+      "modules": [
+        "device_access_control",
+        "novator_login_audit"
+      ],
+      "series": "17.0 - 20.0",
+      "notes": [
+        "First release on the Odoo Apps Store."
+      ]
+    }
+  ],
+  "pos-counter-ticket": [
+    {
+      "version": "3.5.0",
+      "date": "2026-10-23",
+      "modules": [
+        "pos_bakery_ticket"
+      ],
+      "series": "17.0 - 20.0",
+      "notes": [
+        "The app is now called POS Counter Ticket.",
+        "Odoo 20.0 version."
+      ]
+    },
+    {
+      "version": "Earlier releases",
+      "date": "2026-01-18",
+      "modules": [
+        "pos_bakery_ticket"
+      ],
+      "series": "17.0 - 19.0",
+      "notes": [
+        "Published in January 2026 as POS Bakery Counter Ticket for Odoo 17.0, 18.0 and 19.0."
+      ]
+    }
+  ],
+  "price-checker-kiosk": [
+    {
+      "version": "1.1.0",
+      "date": "2026-10-23",
+      "modules": [
+        "retail_price_checker_kiosk"
+      ],
+      "series": "16.0 - 20.0",
+      "notes": [
+        "Odoo 20.0 version.",
+        "Installation and security improvements."
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "date": "2026-01-22",
+      "modules": [
+        "retail_price_checker_kiosk"
+      ],
+      "series": "16.0 - 19.0",
+      "notes": [
+        "First release."
+      ]
+    }
+  ],
+  "daily-stock-ledger": [
+    {
+      "version": "1.1.0",
+      "date": "2026-10-23",
+      "modules": [
+        "daily_stock_ledger"
+      ],
+      "series": "17.0 - 20.0",
+      "notes": [
+        "Rewritten calculation engine with a day by day view.",
+        "Several warehouses at once.",
+        "Click through from the ledger to the document.",
+        "Lots.",
+        "Odoo 19.0 and 20.0 versions."
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "date": "2026-01-20",
+      "modules": [
+        "daily_stock_ledger"
+      ],
+      "series": "17.0 - 18.0",
+      "notes": [
+        "The technical name changed to daily_stock_ledger."
+      ]
+    }
+  ],
+  "pos-scale": [
+    {
+      "version": "3.0.1",
+      "date": "2026-10-26",
+      "modules": [
+        "pos_scale_webserial"
+      ],
+      "series": "13.0 - 20.0",
+      "notes": [
+        "Odoo 13.0, 14.0 and 15.0 versions.",
+        "The scale stays on when IoT Box settings are saved."
+      ]
+    },
+    {
+      "version": "3.0.0",
+      "date": "2026-10-24",
+      "modules": [
+        "pos_scale_webserial"
+      ],
+      "series": "16.0 - 20.0",
+      "notes": [
+        "Installs on Odoo Community without an IoT Box.",
+        "Scale profiles.",
+        "Licensed under AGPL-3.",
+        "Odoo 16.0, 17.0, 18.0 and 20.0 versions."
+      ]
+    },
+    {
+      "version": "2.1.0",
+      "date": "2026-08-11",
+      "modules": [
+        "pos_scale_webserial"
+      ],
+      "series": "19.0",
+      "notes": [
+        "Free release.",
+        "Fixed automatic reconnection to the scale."
+      ]
+    },
+    {
+      "version": "1.10.0",
+      "date": "2026-08-07",
+      "modules": [
+        "pos_scale_webserial"
+      ],
+      "series": "19.0",
+      "notes": [
+        "Fixed compatibility with Odoo Community."
+      ]
+    }
+  ],
+  "bank-alfalah": [
+    {
+      "version": "1.3.1",
+      "date": "2026-10-24",
+      "modules": [
+        "payment_bank_alfalah"
+      ],
+      "series": "17.0 - 20.0",
+      "notes": [
+        "Odoo 20.0 version.",
+        "Fixed return links when the website address ends with a slash."
+      ]
+    },
+    {
+      "version": "1.3.0",
+      "date": "2026-10-23",
+      "modules": [
+        "payment_bank_alfalah"
+      ],
+      "series": "17.0 - 19.0",
+      "notes": [
+        "Payments are verified with Bank Alfalah before they are posted.",
+        "Refunds from Odoo."
+      ]
+    },
+    {
+      "version": "Earlier releases",
+      "date": "2026-08-07",
+      "modules": [
+        "payment_bank_alfalah"
+      ],
+      "series": "17.0 - 19.0",
+      "notes": [
+        "Published for Odoo 17.0, 18.0 and 19.0."
+      ]
+    }
+  ],
+  "fatora": [
+    {
+      "version": "1.2.0",
+      "date": "2026-10-23",
+      "modules": [
+        "payment_fatora"
+      ],
+      "series": "18.0",
+      "notes": [
+        "Now free and open source under AGPL-3."
+      ]
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-10-23",
+      "modules": [
+        "payment_fatora"
+      ],
+      "series": "18.0",
+      "notes": [
+        "Payments are verified with Fatora before they are posted.",
+        "Customers return to Odoo correctly after paying.",
+        "Refunds from Odoo."
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "date": "2026-01-08",
+      "modules": [
+        "payment_fatora"
+      ],
+      "series": "18.0",
+      "notes": [
+        "First release."
+      ]
+    }
+  ]
+}

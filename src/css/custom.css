@@ -35,20 +35,59 @@
 .home-hero { padding: 3.5rem 1rem 2rem; text-align: center; }
 .home-hero h1 { font-size: 2.6rem; margin-bottom: .6rem; }
 .home-hero p { font-size: 1.15rem; color: var(--ifm-color-emphasis-700); max-width: 720px; margin: 0 auto; }
-.app-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.2rem; padding: 1rem 0 4rem; }
+.app-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.2rem; padding: .5rem 0 4rem; }
 .app-card { display: flex; gap: 1rem; padding: 1.2rem; border: 1px solid var(--ifm-color-emphasis-200); border-radius: 12px;
-  background: var(--ifm-background-surface-color); color: inherit; transition: box-shadow .15s, transform .15s; }
-.app-card:hover { box-shadow: 0 8px 24px rgba(16, 24, 40, .1); transform: translateY(-2px); text-decoration: none; color: inherit; }
+  background: var(--ifm-background-surface-color); }
+.app-card:hover { box-shadow: 0 6px 18px rgba(16, 24, 40, .08); }
 .app-card img { width: 56px; height: 56px; border-radius: 12px; flex: 0 0 auto; }
-.app-card h3 { margin: 0 0 .25rem; font-size: 1.1rem; }
-.app-card p { margin: 0 0 .5rem; font-size: .92rem; color: var(--ifm-color-emphasis-700); }
-.app-tags { display: flex; gap: .4rem; flex-wrap: wrap; }
+.app-card-body { min-width: 0; display: flex; flex-direction: column; }
+.app-card-category { font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--novator-green); }
+.app-card h3 { margin: .1rem 0 .3rem; font-size: 1.1rem; }
+.app-card h3 a { color: inherit; }
+.app-card p { margin: 0 0 .6rem; font-size: .92rem; color: var(--ifm-color-emphasis-700); }
+.app-tags { display: flex; gap: .4rem; flex-wrap: wrap; margin-bottom: .7rem; }
 .app-tag { font-size: .75rem; font-weight: 600; padding: .1rem .55rem; border-radius: 10px; background: var(--ifm-color-emphasis-100); }
 .app-tag.free { background: #e6f6ec; color: #1d7a43; }
 .app-tag.pro { background: #fff3dc; color: #8a5a00; }
 [data-theme='dark'] .app-tag.free { background: #173a26; color: #8fe0ad; }
 [data-theme='dark'] .app-tag.pro { background: #3d2c09; color: #ffcf73; }
+.app-links { margin-top: auto; display: flex; gap: .9rem; flex-wrap: wrap; font-size: .88rem; font-weight: 600; }
+.catalog-filters { display: flex; gap: .6rem; flex-wrap: wrap; margin-top: .5rem; }
+.catalog-filters input, .catalog-filters select { font: inherit; font-size: .95rem; padding: .45rem .7rem; border-radius: 8px;
+  border: 1px solid var(--ifm-color-emphasis-300); background: var(--ifm-background-surface-color); color: var(--ifm-font-color-base); }
+.catalog-search { flex: 1 1 240px; }
+.catalog-count { margin: .8rem 0 .2rem; font-size: .85rem; color: var(--ifm-color-emphasis-600); }
+.catalog-empty { padding: 2rem 0 4rem; }
+@media (max-width: 600px) { .catalog-filters select { flex: 1 1 45%; } }
 .version-pill { display: inline-block; font-size: .8rem; font-weight: 600; padding: .1rem .6rem; border-radius: 10px;
   border: 1px solid var(--ifm-color-emphasis-300); margin-right: .3rem; }
 /* the original logo, unchanged; on a white plate in dark mode so the navy stays readable */
 [data-theme='dark'] .navbar__logo img { background: #fff; border-radius: 6px; padding: 3px 6px; box-sizing: content-box; }
+
+/* "Was this page helpful?" */
+.helpful {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem;
+  margin-top: 2.5rem; padding: 0.9rem 1rem;
+  border: 1px solid var(--ifm-color-emphasis-200); border-radius: 8px;
+  font-size: 0.95rem;
+}
+.helpful > span:first-child { margin-right: 0.4rem; }
+
+/* keep navbar labels on one line */
+.navbar__item, .navbar__title { white-space: nowrap; }
+@media (max-width: 1200px) { .navbar__item { padding-left: 0.55rem; padding-right: 0.55rem; } }
+.navbar__brand { flex-shrink: 0; }
+@media (max-width: 1200px) { .navbar__title { display: none; } }
+@media (min-width: 997px) and (max-width: 1150px) { .navbar__item.nav-store { display: none; } }
+
+/* version request on installation pages */
+.request-box {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem;
+  margin: 1rem 0 1.5rem; padding: 0.8rem 1rem;
+  border: 1px solid var(--ifm-color-emphasis-200); border-radius: 8px; font-size: 0.95rem;
+}
+.request-box select {
+  padding: 0.3rem 0.5rem; border-radius: 6px; border: 1px solid var(--ifm-color-emphasis-300);
+  background: var(--ifm-background-color); color: var(--ifm-font-color-base);
+}
+.catalog-custom { margin-top: 2rem; text-align: center; color: var(--ifm-color-emphasis-700); }

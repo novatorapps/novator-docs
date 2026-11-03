@@ -1,0 +1,15 @@
+# Indexed hosts: novatorapps.com (company site) and docs.novatorapps.com (guides).
+# Pages addresses and preview deploys are kept out of search results.
+https://novator-docs.pages.dev/*
+  X-Robots-Tag: noindex
+https://:version.novator-docs.pages.dev/*
+  X-Robots-Tag: noindex
+https://novatorapps-site.pages.dev/*
+  X-Robots-Tag: noindex
+https://:version.novatorapps-site.pages.dev/*
+  X-Robots-Tag: noindex
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+/img/*
+  Cache-Control: public, max-age=86400

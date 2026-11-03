@@ -44,7 +44,7 @@ The cashier scans the ticket barcode. Odoo shows what is on the ticket and asks 
 
 ## Track tickets
 
-**Point of Sale > Counter Tickets** lists every ticket with its counter, total and status: *Printed*, *Scanned, Not Paid*, *Paid* or *Cancelled*. Paid tickets link to the order that paid them. Use **Today's Tickets**, the unpaid and paid filters, and group by counter, session or cashier.
+**Point of Sale > Counter Tickets > All Tickets** lists every ticket with its counter, total and status: *Printed*, *Scanned, Not Paid*, *Paid* or *Cancelled*. Paid tickets link to the order that paid them. Use **Today's Tickets** (or the **Today** filter), the **Not Paid** and **Paid** filters, and group by status, session, user, checkout (**Scanned at POS**) or date.
 
 ![Counter tickets](/img/pos-counter-ticket/backend_tickets.png)
 
@@ -56,4 +56,4 @@ A ticket scanned but never paid stays **Scanned, Not Paid**. A manager can click
 
 ![A paid ticket linked to its order](/img/pos-counter-ticket/backend_ticket_paid.png)
 
-Any ticket can be reprinted from the back office.
+Any ticket that is not cancelled can be reprinted from the back office.

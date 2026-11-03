@@ -10,7 +10,7 @@ Storage Manager moves old attachments to cloud storage you already pay for. User
 
 ## Who can do what
 
-Storage Manager has three levels, enforced on the server: **User** (opens offloaded files, sees the analysis), **Manager** (rules, runs, offloaded files, logs) and Settings administrators (connections and credentials, deleting remote copies).
+Storage Manager has three levels, enforced on the server: **User** (opens offloaded files, views the analysis), **Manager** (rules, runs, analyses, offloaded files, logs) and Settings administrators (connections and credentials, deleting remote copies).
 
 ## 1. Connect your storage
 
@@ -42,7 +42,7 @@ Open **Storage > Offload > Offload Rules** and create a rule, for example *PDFs 
 
 - Filter by company, document types (include or exclude), file types, minimum size and age (by creation or last change date).
 - Optional: files in binary fields (product images, signed documents) and public files.
-- **Backup mode** copies files to the remote storage and keeps the local file.
+- **Backup mode**: switch off **Remove Local Copy** on a rule to copy files to the remote storage and keep the local file.
 - **Preview** shows how many files and how many GB match before anything moves.
 
 Rules run in the background every hour in small batches with a 10 minute budget and continue where they stopped, so they never hit request timeouts (also on Odoo.sh). To move specific files now, select attachments and use **Action > Offload to Remote Storage**.
@@ -56,7 +56,7 @@ Offloaded files stay attached to their invoices, bills, contacts and payments. E
 ![Chatter attachments with their storage](/img/storage-manager/chatter_source_labels.png)
 
 - **Keep in Odoo** brings a file back permanently.
-- **Remove from Odoo** frees local space again for files that already have a remote copy.
+- **Remove from Odoo (keep remote copy)** frees local space again for files that already have a remote copy.
 - Cached copies that nobody opened for a set number of days are removed every night.
 
 ## Offloaded files and fetch tracking

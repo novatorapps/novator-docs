@@ -1,0 +1,9 @@
+# Cloudflare Pages settings used by `wrangler pages deploy` (tools/publish.sh, tools/preview.sh).
+# EVENTS stores anonymous counters for "Was this helpful?" votes and Odoo Apps Store link clicks (functions/api/event.js).
+name = "novator-docs"
+pages_build_output_dir = "build"
+compatibility_date = "2026-10-01"
+
+[[kv_namespaces]]
+binding = "EVENTS"
+id = "3fb735f1d2424ce688ffe9519c031638"

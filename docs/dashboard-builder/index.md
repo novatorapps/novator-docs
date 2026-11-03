@@ -5,6 +5,10 @@ sidebar_position: 1
 description: KPI tiles, 13 chart types and lists from any Odoo data. Pro adds AI, drill-down, TV mode, SQL and email digests.
 ---
 
+import AppSchema from '@site/src/components/AppSchema';
+
+<AppSchema slug="dashboard-builder" />
+
 <img className="app-icon" src="/img/dashboard-builder/icon.png" alt="" />
 
 # Dashboard Builder

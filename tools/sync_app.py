@@ -91,14 +91,20 @@ def cmd_images(slug, addons):
     print('%d screenshots in static/img/%s' % (len(seen), slug))
 
 
+REQUIRED = ('index.md', 'install.md', 'faq.md', 'changelog.md')
+
+
 def cmd_check():
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import gen_pages
     data = load()
-    problems = []
+    problems = gen_pages.main()
     out = []
     for app in data['apps']:
         slug = app['slug']
         icon = os.path.join(ROOT, 'static', 'img', slug, 'icon.png')
         entry = dict(app, store=store_url(app, app.get('pro') or app.get('free')),
+                     store_free=store_url(app, app.get('free')), store_pro=store_url(app, app.get('pro')),
                      icon='img/%s/icon.png' % slug if os.path.exists(icon) else None)
         out.append(entry)
         folder = os.path.join(ROOT, 'docs', slug)
@@ -107,6 +113,11 @@ def cmd_check():
                 problems.append('%s: guide is true but docs/%s is missing' % (slug, slug))
             if not entry['icon']:
                 problems.append('%s: no icon (run images)' % slug)
+            if not app.get('category'):
+                problems.append('%s: no category in apps.json' % slug)
+            for name in REQUIRED:
+                if os.path.isdir(folder) and not os.path.exists(os.path.join(folder, name)):
+                    problems.append('docs/%s/%s is missing' % (slug, name))
         if os.path.isdir(folder):
             for name in os.listdir(folder):
                 if not name.endswith(('.md', '.mdx')):

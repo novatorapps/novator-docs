@@ -6,6 +6,8 @@
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
     "build": "docusaurus build",
+    "build:site": "docusaurus build --config site.config.js --out-dir build-site",
+    "serve:site": "docusaurus serve --config site.config.js --dir build-site",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",

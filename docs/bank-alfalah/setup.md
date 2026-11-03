@@ -10,14 +10,18 @@ description: Merchant portal values, provider configuration, taking payments, ve
 
 1. Get your sandbox (and later production) merchant account.
 2. In the merchant portal, note the **Merchant ID** and create an **API password**.
-3. Under **Webhook Notifications**, generate the **notification secret**.
+3. Under **Webhook Notifications**, generate the notification secret.
 
 ## In Odoo
 
-1. Go to **Invoicing (or Website) > Configuration > Payment Providers > Bank Alfalah**.
-2. Enter the **Merchant ID**, **API password** and **notification secret**.
+1. Open the payment providers and click **Bank Alfalah**:
+   - Odoo 20: **Invoicing > Configuration > Online Payments**, or **Website > Configuration > Payments**.
+   - Odoo 17 to 19: **Invoicing (or Website) > Configuration > Payment Providers**.
+2. Enter the **Merchant ID**, the **API password** and, in **Webhook Notification Secret**, the notification secret.
 3. Copy the **Webhook URL** shown on the form into the merchant portal (Webhook Notifications).
-4. Test with sandbox credentials (**Live** switched off uses the sandbox gateway), then switch on **Live** with your production credentials and publish the provider.
+4. Test with sandbox credentials first, then switch to your production credentials and publish the provider:
+   - Odoo 20: with **Live** switched off the sandbox gateway is used; switch on **Live** for real payments.
+   - Odoo 17 to 19: set the state to **Test** for the sandbox and **Enabled** for real payments.
 
 ![Provider configuration](/img/bank-alfalah/provider_configuration.png)
 

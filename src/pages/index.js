@@ -1,43 +1,20 @@
 import Layout from '@theme/Layout';
-import Link from '@docusaurus/Link';
-import useBaseUrl from '@docusaurus/useBaseUrl';
-import apps from '@site/src/data/apps.json';
-
-function AppCard({app}) {
-  const icon = useBaseUrl(app.icon || 'img/app-default.png');
-  const href = app.guide ? `/${app.slug}` : app.store;
-  const inner = (
-    <>
-      <img src={icon} alt="" />
-      <div>
-        <h3>{app.title}</h3>
-        <p>{app.summary}</p>
-        <div className="app-tags">
-          {app.free && <span className="app-tag free">Free</span>}
-          {app.pro && <span className="app-tag pro">{app.free ? `Pro ${app.price}` : app.price}</span>}
-          <span className="app-tag">Odoo {app.versions}</span>
-          {!app.guide && <span className="app-tag">Guide coming soon</span>}
-        </div>
-      </div>
-    </>
-  );
-  return app.guide
-    ? <Link className="app-card" to={href}>{inner}</Link>
-    : <a className="app-card" href={href} target="_blank" rel="noopener noreferrer">{inner}</a>;
-}
+import Catalog from '@site/src/components/Catalog';
 
 export default function Home() {
-  const list = [...apps.apps].sort((a, b) => Number(b.guide) - Number(a.guide));
   return (
-    <Layout title="User guides" description="Step-by-step guides for every Novator app for Odoo">
+    <Layout title="User guides for Novator apps for Odoo"
+            description="User guides for every Novator Technologies app for Odoo: installation, setup, everyday use, troubleshooting and release notes.">
       <header className="home-hero">
-        <h1>Novator user guides</h1>
-        <p>Install, set up and get the most out of every Novator app for Odoo. Pick an app, or search with the box at the top.</p>
+        <h1>Novator app guides</h1>
+        <p>Install, set up and get the most out of every Novator app for Odoo. Each guide follows the same steps:
+          overview, installation, setup, everyday use, troubleshooting and release notes.</p>
       </header>
       <main className="container">
-        <div className="app-grid">
-          {list.map((app) => <AppCard key={app.slug} app={app} />)}
-        </div>
+        <Catalog />
+        <p className="catalog-custom">
+          Need an app we do not have? <a href="https://novatorapps.com/services#request">Tell us what you need</a>.
+        </p>
       </main>
     </Layout>
   );

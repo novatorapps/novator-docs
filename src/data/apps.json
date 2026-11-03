@@ -9,7 +9,10 @@
       "price": "$299",
       "versions": "17.0 - 20.0",
       "guide": true,
+      "category": "Reporting",
       "store": "https://apps.odoo.com/apps/modules/20.0/novator_dashboard_pro",
+      "store_free": "https://apps.odoo.com/apps/modules/20.0/novator_dashboard",
+      "store_pro": "https://apps.odoo.com/apps/modules/20.0/novator_dashboard_pro",
       "icon": "img/dashboard-builder/icon.png"
     },
     {
@@ -21,7 +24,10 @@
       "price": "$299",
       "versions": "17.0 - 20.0",
       "guide": true,
+      "category": "Security",
       "store": "https://apps.odoo.com/apps/modules/20.0/novator_access_pro",
+      "store_free": "https://apps.odoo.com/apps/modules/20.0/novator_access",
+      "store_pro": "https://apps.odoo.com/apps/modules/20.0/novator_access_pro",
       "icon": "img/access-manager/icon.png"
     },
     {
@@ -33,7 +39,10 @@
       "price": "$149",
       "versions": "17.0 - 20.0",
       "guide": true,
+      "category": "AI & Integrations",
       "store": "https://apps.odoo.com/apps/modules/20.0/novator_mcp_pro",
+      "store_free": "https://apps.odoo.com/apps/modules/20.0/novator_mcp",
+      "store_pro": "https://apps.odoo.com/apps/modules/20.0/novator_mcp_pro",
       "icon": "img/ai-connector/icon.png"
     },
     {
@@ -45,7 +54,10 @@
       "price": "$99",
       "versions": "13.0 - 20.0",
       "guide": true,
+      "category": "Printing",
       "store": "https://apps.odoo.com/apps/modules/20.0/novator_direct_print",
+      "store_free": "",
+      "store_pro": "https://apps.odoo.com/apps/modules/20.0/novator_direct_print",
       "icon": "img/direct-print/icon.png"
     },
     {
@@ -57,7 +69,10 @@
       "price": "$299",
       "versions": "17.0 - 20.0",
       "guide": true,
+      "category": "Storage",
       "store": "https://apps.odoo.com/apps/modules/20.0/novator_storage_manager",
+      "store_free": "https://apps.odoo.com/apps/modules/20.0/novator_storage_analyzer",
+      "store_pro": "https://apps.odoo.com/apps/modules/20.0/novator_storage_manager",
       "icon": "img/storage-manager/icon.png"
     },
     {
@@ -69,7 +84,10 @@
       "price": "$299",
       "versions": "17.0 - 20.0",
       "guide": true,
+      "category": "Security",
       "store": "https://apps.odoo.com/apps/modules/20.0/device_access_control",
+      "store_free": "https://apps.odoo.com/apps/modules/20.0/novator_login_audit",
+      "store_pro": "https://apps.odoo.com/apps/modules/20.0/device_access_control",
       "icon": "img/device-access-control/icon.png"
     },
     {
@@ -81,7 +99,10 @@
       "price": "$299",
       "versions": "17.0 - 20.0",
       "guide": true,
+      "category": "Point of Sale",
       "store": "https://apps.odoo.com/apps/modules/20.0/pos_bakery_ticket",
+      "store_free": "",
+      "store_pro": "https://apps.odoo.com/apps/modules/20.0/pos_bakery_ticket",
       "icon": "img/pos-counter-ticket/icon.png"
     },
     {
@@ -93,7 +114,10 @@
       "price": "$249",
       "versions": "16.0 - 20.0",
       "guide": true,
+      "category": "Retail",
       "store": "https://apps.odoo.com/apps/modules/20.0/retail_price_checker_kiosk",
+      "store_free": "",
+      "store_pro": "https://apps.odoo.com/apps/modules/20.0/retail_price_checker_kiosk",
       "icon": "img/price-checker-kiosk/icon.png"
     },
     {
@@ -105,7 +129,10 @@
       "price": "$149",
       "versions": "17.0 - 20.0",
       "guide": true,
+      "category": "Inventory",
       "store": "https://apps.odoo.com/apps/modules/20.0/daily_stock_ledger",
+      "store_free": "",
+      "store_pro": "https://apps.odoo.com/apps/modules/20.0/daily_stock_ledger",
       "icon": "img/daily-stock-ledger/icon.png"
     },
     {
@@ -117,7 +144,10 @@
       "price": null,
       "versions": "13.0 - 20.0",
       "guide": true,
+      "category": "Point of Sale",
       "store": "https://apps.odoo.com/apps/modules/20.0/pos_scale_webserial",
+      "store_free": "https://apps.odoo.com/apps/modules/20.0/pos_scale_webserial",
+      "store_pro": "",
       "icon": "img/pos-scale/icon.png"
     },
     {
@@ -129,7 +159,10 @@
       "price": "$99",
       "versions": "17.0 - 20.0",
       "guide": true,
+      "category": "Payments",
       "store": "https://apps.odoo.com/apps/modules/20.0/payment_bank_alfalah",
+      "store_free": "",
+      "store_pro": "https://apps.odoo.com/apps/modules/20.0/payment_bank_alfalah",
       "icon": "img/bank-alfalah/icon.png"
     },
     {
@@ -141,7 +174,10 @@
       "price": null,
       "versions": "18.0",
       "guide": true,
+      "category": "Payments",
       "store": "https://apps.odoo.com/apps/modules/18.0/payment_fatora",
+      "store_free": "https://apps.odoo.com/apps/modules/18.0/payment_fatora",
+      "store_pro": "",
       "icon": "img/fatora/icon.png"
     }
   ]

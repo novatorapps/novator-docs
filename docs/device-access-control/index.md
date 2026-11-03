@@ -5,6 +5,10 @@ sidebar_position: 1
 description: Record every Odoo sign-in attempt, then lock chosen users to registered computers and browsers.
 ---
 
+import AppSchema from '@site/src/components/AppSchema';
+
+<AppSchema slug="device-access-control" />
+
 <img className="app-icon" src="/img/device-access-control/icon_pro.png" alt="" />
 
 # Login Audit and Device Access Control

@@ -5,6 +5,10 @@ sidebar_position: 1
 description: "Turn any tablet into a price checker: customers scan, see the price, photo and stock, live from Odoo."
 ---
 
+import AppSchema from '@site/src/components/AppSchema';
+
+<AppSchema slug="price-checker-kiosk" />
+
 <img className="app-icon" src="/img/price-checker-kiosk/icon.png" alt="" />
 
 # Price Checker Kiosk

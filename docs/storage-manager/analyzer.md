@@ -6,7 +6,7 @@ description: Database size, largest tables, attachments by company, type and age
 
 # Analyze your storage
 
-Open **Storage Analyzer > Storage Analysis** (in Storage Manager: **Storage > Analysis > Storage Analysis**) and click **Analyze Now**. On very large filestores the analysis runs in the background; the page shows when it is done.
+Open **Storage Analyzer > Storage Analysis** (in Storage Manager: **Storage > Analysis > Storage Analysis**) and click **Analyze Now**. On very large filestores click **Analyze in Background** instead, then refresh the list after a few minutes.
 
 ![Storage analysis](/img/storage-manager/storage_analysis.png)
 
@@ -44,5 +44,5 @@ A scheduled analysis runs every week, so the trend builds by itself.
 ![Weekly storage growth](/img/storage-manager/storage_trend.png)
 
 :::tip
-Ready to free the space? **Offload Old Files** in the Analyzer opens Storage Manager on the Apps Store. See [Move old files to the cloud](./offload.md).
+Ready to free the space? **Offload Old Files** in the Analyzer opens the Offload Rules of Storage Manager, or its Apps Store page when Storage Manager is not installed. See [Move old files to the cloud](./offload.md).
 :::

@@ -29,10 +29,12 @@ Odoo Online only runs apps that Odoo hosts itself, so third-party apps cannot be
 
 Many Novator apps come as a free app and a **Pro** add-on. Pro installs on top of the free app and Odoo adds the free app automatically. Everything you set up with the free app stays when you add Pro.
 
+Two pairs work differently: Storage Manager and Device Access Control are complete apps of their own, and Storage Analyzer and Login Audit are free companions you can add or leave out. The **Installation** page of each guide lists exactly what an app needs.
+
 ## Updating
 
 Download the new version, replace the app folder, restart Odoo (Odoo.sh: push), then open **Apps**, find the app and click **Upgrade**.
 
 ## Need help?
 
-Write to **support@novator.co** with your Odoo version and a screenshot of what you see.
+See [Support](../support.md) for what to include so we can help quickly.

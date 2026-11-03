@@ -5,6 +5,10 @@ sidebar_position: 1
 description: Print Odoo reports and ZPL labels straight to office and label printers, with no monthly fee.
 ---
 
+import AppSchema from '@site/src/components/AppSchema';
+
+<AppSchema slug="direct-print" />
+
 <img className="app-icon" src="/img/direct-print/icon.png" alt="" />
 
 # Direct Print

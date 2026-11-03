@@ -5,6 +5,10 @@ sidebar_position: 1
 description: Opening and closing stock for any period, every movement by type, and a ledger with a running balance.
 ---
 
+import AppSchema from '@site/src/components/AppSchema';
+
+<AppSchema slug="daily-stock-ledger" />
+
 <img className="app-icon" src="/img/daily-stock-ledger/icon.png" alt="" />
 
 # Daily Stock Report and Stock Ledger

@@ -5,6 +5,10 @@ sidebar_position: 1
 description: Connect Claude, ChatGPT and other AI apps to Odoo. Each user signs in with Odoo and keeps their own access rights.
 ---
 
+import AppSchema from '@site/src/components/AppSchema';
+
+<AppSchema slug="ai-connector" />
+
 <img className="app-icon" src="/img/ai-connector/icon.png" alt="" />
 
 # AI Connector for Claude and MCP

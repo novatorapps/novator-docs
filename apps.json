@@ -1,5 +1,5 @@
 {
-  "_comment": "Catalog of Novator apps. One entry per app or freemium pair. 'guide' is true once docs/<slug>/ is written. tools/sync_app.py fills icons, screenshots and versions from the modules.",
+  "_comment": "Catalog of Novator apps. One entry per app or freemium pair. 'guide' is true once docs/<slug>/ is written. tools/sync_app.py fills icons, screenshots, versions and changelogs from the modules.",
   "apps": [
     {
       "slug": "dashboard-builder",
@@ -9,7 +9,8 @@
       "pro": "novator_dashboard_pro",
       "price": "$299",
       "versions": "17.0 - 20.0",
-      "guide": true
+      "guide": true,
+      "category": "Reporting"
     },
     {
       "slug": "access-manager",
@@ -19,7 +20,8 @@
       "pro": "novator_access_pro",
       "price": "$299",
       "versions": "17.0 - 20.0",
-      "guide": true
+      "guide": true,
+      "category": "Security"
     },
     {
       "slug": "ai-connector",
@@ -29,7 +31,8 @@
       "pro": "novator_mcp_pro",
       "price": "$149",
       "versions": "17.0 - 20.0",
-      "guide": true
+      "guide": true,
+      "category": "AI & Integrations"
     },
     {
       "slug": "direct-print",
@@ -39,7 +42,8 @@
       "pro": "novator_direct_print",
       "price": "$99",
       "versions": "13.0 - 20.0",
-      "guide": true
+      "guide": true,
+      "category": "Printing"
     },
     {
       "slug": "storage-manager",
@@ -49,7 +53,8 @@
       "pro": "novator_storage_manager",
       "price": "$299",
       "versions": "17.0 - 20.0",
-      "guide": true
+      "guide": true,
+      "category": "Storage"
     },
     {
       "slug": "device-access-control",
@@ -59,7 +64,8 @@
       "pro": "device_access_control",
       "price": "$299",
       "versions": "17.0 - 20.0",
-      "guide": true
+      "guide": true,
+      "category": "Security"
     },
     {
       "slug": "pos-counter-ticket",
@@ -69,7 +75,8 @@
       "pro": "pos_bakery_ticket",
       "price": "$299",
       "versions": "17.0 - 20.0",
-      "guide": true
+      "guide": true,
+      "category": "Point of Sale"
     },
     {
       "slug": "price-checker-kiosk",
@@ -79,7 +86,8 @@
       "pro": "retail_price_checker_kiosk",
       "price": "$249",
       "versions": "16.0 - 20.0",
-      "guide": true
+      "guide": true,
+      "category": "Retail"
     },
     {
       "slug": "daily-stock-ledger",
@@ -89,7 +97,8 @@
       "pro": "daily_stock_ledger",
       "price": "$149",
       "versions": "17.0 - 20.0",
-      "guide": true
+      "guide": true,
+      "category": "Inventory"
     },
     {
       "slug": "pos-scale",
@@ -99,7 +108,8 @@
       "pro": null,
       "price": null,
       "versions": "13.0 - 20.0",
-      "guide": true
+      "guide": true,
+      "category": "Point of Sale"
     },
     {
       "slug": "bank-alfalah",
@@ -109,7 +119,8 @@
       "pro": "payment_bank_alfalah",
       "price": "$99",
       "versions": "17.0 - 20.0",
-      "guide": true
+      "guide": true,
+      "category": "Payments"
     },
     {
       "slug": "fatora",
@@ -119,7 +130,8 @@
       "pro": null,
       "price": null,
       "versions": "18.0",
-      "guide": true
+      "guide": true,
+      "category": "Payments"
     }
   ]
 }

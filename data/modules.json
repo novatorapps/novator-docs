@@ -1,0 +1,19 @@
+{
+  "novator_dashboard": {"name": "Dashboard Builder", "license": "LGPL-3", "depends": ["base_setup", "web"]},
+  "novator_dashboard_pro": {"name": "Dashboard Builder Pro", "license": "OPL-1", "depends": ["novator_dashboard", "mail"]},
+  "novator_access": {"name": "Access Manager", "license": "LGPL-3", "depends": ["base_setup", "web"]},
+  "novator_access_pro": {"name": "Access Manager Pro", "license": "OPL-1", "depends": ["novator_access", "mail"]},
+  "novator_mcp": {"name": "AI Connector", "license": "LGPL-3", "depends": ["base_setup", "web"], "python": ["requests"]},
+  "novator_mcp_pro": {"name": "AI Connector Pro", "license": "OPL-1", "depends": ["novator_mcp", "mail"]},
+  "novator_direct_print": {"name": "Direct Print", "license": "OPL-1", "depends": ["web", "bus", "base_automation"]},
+  "novator_storage_analyzer": {"name": "Storage Analyzer", "license": "LGPL-3", "depends": ["base", "web"]},
+  "novator_storage_manager": {"name": "Storage Manager", "license": "OPL-1", "depends": ["base", "web", "mail"]},
+  "novator_login_audit": {"name": "Login Audit", "license": "LGPL-3", "depends": ["base", "web"]},
+  "device_access_control": {"name": "Device Access Control", "license": "OPL-1", "depends": ["base", "web"]},
+  "pos_bakery_ticket": {"name": "POS Counter Ticket", "license": "OPL-1", "depends": ["point_of_sale"]},
+  "retail_price_checker_kiosk": {"name": "Price Checker Kiosk", "license": "OPL-1", "depends": ["product", "stock", "sale"]},
+  "daily_stock_ledger": {"name": "Daily Stock Ledger", "license": "OPL-1", "depends": ["stock"]},
+  "pos_scale_webserial": {"name": "POS Scale Integration", "license": "AGPL-3", "depends": ["point_of_sale"]},
+  "payment_bank_alfalah": {"name": "Bank Alfalah Payments", "license": "OPL-1", "depends": ["payment"]},
+  "payment_fatora": {"name": "Fatora Payments", "license": "AGPL-3", "depends": ["payment"]}
+}

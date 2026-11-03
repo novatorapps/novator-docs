@@ -5,6 +5,10 @@ sidebar_position: 1
 description: Weigh products in Point of Sale with your own USB or serial scale, read by the browser. No IoT Box.
 ---
 
+import AppSchema from '@site/src/components/AppSchema';
+
+<AppSchema slug="pos-scale" />
+
 <img className="app-icon" src="/img/pos-scale/icon.png" alt="" />
 
 # POS Scale Integration

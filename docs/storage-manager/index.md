@@ -5,6 +5,10 @@ sidebar_position: 1
 description: See what fills your Odoo database and filestore, then move old attachments to Google Drive, Cloudflare R2 or any S3 storage.
 ---
 
+import AppSchema from '@site/src/components/AppSchema';
+
+<AppSchema slug="storage-manager" />
+
 <img className="app-icon" src="/img/storage-manager/icon_pro.png" alt="" />
 
 # Storage Analyzer and Storage Manager
