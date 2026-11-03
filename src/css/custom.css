@@ -1,23 +1,28 @@
 :root {
-  --ifm-color-primary: #1f56b3;
-  --ifm-color-primary-dark: #1c4da1;
-  --ifm-color-primary-darker: #1a4998;
-  --ifm-color-primary-darkest: #153c7d;
-  --ifm-color-primary-light: #225fc5;
-  --ifm-color-primary-lighter: #2463ce;
-  --ifm-color-primary-lightest: #3b75d8;
+  /* Novator brand: navy #1b237e, green #2e7d32 (from novator.co) */
+  --ifm-color-primary: #1b237e;
+  --ifm-color-primary-dark: #182071;
+  --ifm-color-primary-darker: #171e6b;
+  --ifm-color-primary-darkest: #131858;
+  --ifm-color-primary-light: #1e268b;
+  --ifm-color-primary-lighter: #1f2891;
+  --ifm-color-primary-lightest: #232ea4;
+  --novator-green: #2e7d32;
   --ifm-font-family-base: Inter, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --ifm-code-font-size: 92%;
 }
 [data-theme='dark'] {
-  --ifm-color-primary: #6f9be6;
-  --ifm-color-primary-dark: #5689e2;
-  --ifm-color-primary-darker: #4a80e0;
-  --ifm-color-primary-darkest: #2766d4;
-  --ifm-color-primary-light: #88ade9;
-  --ifm-color-primary-lighter: #94b6eb;
-  --ifm-color-primary-lightest: #bad0f2;
+  --ifm-color-primary: #8f97e8;
+  --ifm-color-primary-dark: #7680e3;
+  --ifm-color-primary-darker: #6a74e1;
+  --ifm-color-primary-darkest: #4551d8;
+  --ifm-color-primary-light: #a8aeed;
+  --ifm-color-primary-lighter: #b4baef;
+  --ifm-color-primary-lightest: #d9dcf7;
+  --novator-green: #66bb6a;
 }
+.navbar__title { font-weight: 600; color: var(--novator-green); }
+.navbar__logo { margin-right: .6rem; }
 /* screenshots */
 .markdown img {
   border: 1px solid var(--ifm-color-emphasis-300);

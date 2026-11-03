@@ -3,7 +3,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Novator User Guides',
+  title: 'Novator Apps & Guides',
   tagline: 'Step-by-step guides for every Novator app for Odoo',
   favicon: 'img/favicon.png',
   url: 'https://novatorapps.com',
@@ -34,8 +34,8 @@ const config = {
     image: 'img/social-card.png',
     colorMode: {respectPrefersColorScheme: true},
     navbar: {
-      title: 'User Guides',
-      logo: {alt: 'Novator', src: 'img/logo.svg'},
+      title: 'Apps & Guides',
+      logo: {alt: 'Novator', src: 'img/novator-logo.png', srcDark: 'img/novator-logo-dark.png', height: 30},
       items: [
         {type: 'docSidebar', sidebarId: 'guides', position: 'left', label: 'All apps'},
         {href: 'https://apps.odoo.com/apps/browse?repo_maintainer_id=271577', label: 'Odoo Apps Store', position: 'right'},
