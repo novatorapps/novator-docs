@@ -1,27 +1,34 @@
 ---
-title: {{TITLE}}
+title: {{title}}
 sidebar_label: Overview
 sidebar_position: 1
-description: {{SUMMARY}}
+description: {{summary}}
 ---
 
-<img src="/img/{{SLUG}}/icon-free.png" alt="" class="app-icon" />
+<img className="app-icon" src="/img/{{slug}}/icon.png" alt="" />
 
-{{SUMMARY}}
+# {{title}}
 
-<span class="version-pill">{{VERSIONS}}</span> <span class="version-pill">Community &amp; Enterprise</span>
+{{summary}}
 
-## What you can do
+<span className="version-pill">Odoo {{versions}}</span> <span className="version-pill">Community &amp; Enterprise</span>
 
-TODO: three to six bullets, one per main feature, in the user's words.
+TODO: two or three sentences on the problem it solves and who it is for.
 
-![TODO alt text](/img/{{SLUG}}/TODO.png)
+![TODO main screen](/img/{{slug}}/TODO.png)
 
 ## Free and Pro
 
-TODO: table of what the free app and Pro do. Remove this section when there is no Pro app.
+| | Free | Pro |
+|---|:---:|:---:|
+| TODO feature | ✓ | ✓ |
+| TODO Pro feature | | ✓ |
 
-## Get the app
+- Free app: [{{free}} on the Apps Store]({{store_free}})
+- Pro: [{{pro}} on the Apps Store]({{store_pro}}) ({{price}}, one-time)
 
-- Free: [{{TITLE}} on the Odoo Apps Store](https://apps.odoo.com/apps/modules/20.0/{{FREE}})
-- Pro: [{{TITLE}} Pro on the Odoo Apps Store](https://apps.odoo.com/apps/modules/20.0/{{PRO}})
+## Next steps
+
+1. [Install the app](/getting-started/install).
+2. [Set it up](./setup.md).
+3. Read the feature pages in the menu on the left.

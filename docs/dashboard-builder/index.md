@@ -5,42 +5,41 @@ sidebar_position: 1
 description: KPI tiles, 13 chart types and lists from any Odoo data. Pro adds AI, drill-down, TV mode, SQL and email digests.
 ---
 
-<img src="/img/dashboard-builder/icon-free.png" alt="" class="app-icon" />
+<img className="app-icon" src="/img/dashboard-builder/icon.png" alt="" />
 
-Build dashboards from any Odoo data without writing code: KPI tiles that compare with the previous period, 13 chart types and lists, a period filter and drag and drop. Share each dashboard with the right people; everyone sees only the figures they are allowed to see.
+# Dashboard Builder
 
-<span class="version-pill">Odoo 17.0, 18.0, 19.0, 20.0</span> <span class="version-pill">Community &amp; Enterprise</span> <span class="version-pill">Odoo.sh &amp; On-Premise</span>
+Build dashboards from any Odoo data: KPI tiles, 13 chart types and lists, with a period filter and drag and drop. No code, no SQL.
 
-![A dashboard with KPI tiles, a bar chart, a funnel and a list](/img/dashboard-builder/dashboard.png)
+<span className="version-pill">Odoo 17.0 - 20.0</span> <span className="version-pill">Community &amp; Enterprise</span>
 
-## What you can do
+Dashboards are for everyone who asks "how are we doing?": managers checking sales and cash, team leads watching their pipeline, a warehouse screen on the wall. Every figure is read with the user's own access rights, so people only see totals of records they are allowed to see.
 
-- **KPI tiles** with the change against the previous period and progress towards a goal.
-- **13 chart types and lists**: bar, horizontal bar, stacked bar, line, area, pie, doughnut, polar area, radar, scatter, funnel, gauge and lists. Switch the type of an item in one click.
-- **Any data**: pick a model, filter it, choose what to measure and how to group it.
-- **One period for the whole dashboard**: today, this month, last quarter, year to date and 18 more, or your own dates.
-- **Drag and resize** items, copy or move them to another dashboard.
-- **Click a chart** to open the records behind it.
-- **Share** with groups or users, add the dashboard to any menu, or make it your home page.
+![A sales, pipeline and cash dashboard](/img/dashboard-builder/dashboard.png)
 
 ## Free and Pro
 
-| | Dashboard Builder | Dashboard Builder Pro |
+| | Free | Pro |
 |---|:---:|:---:|
-| Dashboards, tiles, 13 chart types, lists | Yes | Yes |
-| Period filter, drag and drop, click to open records | Yes | Yes |
-| Sharing, menus, home page, CSV and image export | Yes | Yes |
-| [AI: create a dashboard from a sentence, explain a chart](pro.md#ai) | | Yes |
-| [Drill-down](pro.md#drill-down) | | Yes |
-| [TV mode](pro.md#tv-mode) | | Yes |
-| [SQL and spreadsheet items](pro.md#sql-items) | | Yes |
-| [Email digests](pro.md#email-digests) | | Yes |
-| [Ready-made dashboards, export and import](pro.md#ready-made-dashboards) | | Yes |
-| Price | Free | $299 once |
+| Unlimited dashboards, own menu, sharing by group or user | ✓ | ✓ |
+| KPI tiles with the change against the previous period and a goal | ✓ | ✓ |
+| 13 chart types and lists, switch type in one click | ✓ | ✓ |
+| Period filter (22 presets and custom dates) | ✓ | ✓ |
+| Drag and resize layout, copy and move items | ✓ | ✓ |
+| Click a chart to open its records, CSV and image export | ✓ | ✓ |
+| AI: build a dashboard from a sentence, explain a chart (your own key) | | ✓ |
+| Drill-down from the month to the salesperson to the customer | | ✓ |
+| TV mode | | ✓ |
+| SQL and spreadsheet (CSV, Excel) items | | ✓ |
+| Scheduled email digests | | ✓ |
+| Ready-made dashboards for 7 apps, export and import | | ✓ |
 
-## Get the app
+- Free app: [Dashboard Builder on the Apps Store](https://apps.odoo.com/apps/modules/20.0/novator_dashboard)
+- Pro: [Dashboard Builder Pro on the Apps Store](https://apps.odoo.com/apps/modules/20.0/novator_dashboard_pro) ($299, one-time)
 
-- [Dashboard Builder (free) on the Odoo Apps Store](https://apps.odoo.com/apps/modules/20.0/novator_dashboard)
-- [Dashboard Builder Pro on the Odoo Apps Store](https://apps.odoo.com/apps/modules/20.0/novator_dashboard_pro)
+## Next steps
 
-Then follow [Install and set up](install.md).
+1. [Install the app](/getting-started/install). Pro brings the free app with it.
+2. [Set it up](./setup.md): who can see and edit dashboards, and your first dashboard.
+3. [Use it](./features.md): tiles, charts, lists, the period filter and the layout.
+4. [Pro features](./pro.md): AI, drill-down, TV mode, SQL, files, email digests and templates.

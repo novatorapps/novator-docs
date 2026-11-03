@@ -1,37 +1,42 @@
+import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import Layout from '@theme/Layout';
 import apps from '@site/src/data/apps.json';
 
 function AppCard({app}) {
-  const icon = useBaseUrl(`/img/${app.slug}/icon-free.png`);
-  return (
-    <Link className="app-card" to={`/${app.slug}`}>
+  const icon = useBaseUrl(app.icon || 'img/app-default.png');
+  const href = app.guide ? `/${app.slug}` : app.store;
+  const inner = (
+    <>
       <img src={icon} alt="" />
       <div>
         <h3>{app.title}</h3>
         <p>{app.summary}</p>
         <div className="app-tags">
           {app.free && <span className="app-tag free">Free</span>}
-          {app.pro && <span className="app-tag pro">Pro {app.pro.price}</span>}
-          <span className="app-tag">Odoo {app.versions[0]} - {app.versions[app.versions.length - 1]}</span>
+          {app.pro && <span className="app-tag pro">{app.free ? `Pro ${app.price}` : app.price}</span>}
+          <span className="app-tag">Odoo {app.versions}</span>
+          {!app.guide && <span className="app-tag">Guide coming soon</span>}
         </div>
       </div>
-    </Link>
+    </>
   );
+  return app.guide
+    ? <Link className="app-card" to={href}>{inner}</Link>
+    : <a className="app-card" href={href} target="_blank" rel="noopener noreferrer">{inner}</a>;
 }
 
 export default function Home() {
-  const sorted = [...apps].sort((a, b) => a.title.localeCompare(b.title));
+  const list = [...apps.apps].sort((a, b) => Number(b.guide) - Number(a.guide));
   return (
-    <Layout title="User guides" description="Step-by-step guides for every Novator app for Odoo.">
+    <Layout title="User guides" description="Step-by-step guides for every Novator app for Odoo">
+      <header className="home-hero">
+        <h1>Novator user guides</h1>
+        <p>Install, set up and get the most out of every Novator app for Odoo. Pick an app, or search with the box at the top.</p>
+      </header>
       <main className="container">
-        <div className="home-hero">
-          <h1>Novator User Guides</h1>
-          <p>Step-by-step guides for every Novator app for Odoo, with screenshots. Search above, or pick an app.</p>
-        </div>
         <div className="app-grid">
-          {sorted.map((app) => <AppCard key={app.slug} app={app} />)}
+          {list.map((app) => <AppCard key={app.slug} app={app} />)}
         </div>
       </main>
     </Layout>

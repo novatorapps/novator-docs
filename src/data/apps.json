@@ -1,39 +1,148 @@
-[
-  {
-    "slug": "dashboard-builder",
-    "title": "Dashboard Builder",
-    "summary": "KPI tiles, 13 chart types and lists from any Odoo data. Pro adds AI, drill-down, TV mode, SQL and email digests.",
-    "versions": [
-      "17.0",
-      "18.0",
-      "19.0",
-      "20.0"
-    ],
-    "free": {
-      "technical": "novator_dashboard",
-      "name": "Dashboard Builder: KPI Tiles, Charts & Lists",
-      "version": "20.0.1.0.0",
-      "license": "LGPL-3",
-      "price": "Free",
-      "store": {
-        "17.0": "https://apps.odoo.com/apps/modules/17.0/novator_dashboard",
-        "18.0": "https://apps.odoo.com/apps/modules/18.0/novator_dashboard",
-        "19.0": "https://apps.odoo.com/apps/modules/19.0/novator_dashboard",
-        "20.0": "https://apps.odoo.com/apps/modules/20.0/novator_dashboard"
-      }
-    },
-    "pro": {
-      "technical": "novator_dashboard_pro",
-      "name": "Dashboard Builder Pro: AI, Drill-down, TV Mode, SQL & Email",
-      "version": "20.0.1.0.0",
-      "license": "OPL-1",
+{
+  "apps": [
+    {
+      "slug": "dashboard-builder",
+      "title": "Dashboard Builder",
+      "summary": "KPI tiles, 13 chart types and lists from any Odoo data. Pro: AI, drill-down, TV mode, SQL, email digests.",
+      "free": "novator_dashboard",
+      "pro": "novator_dashboard_pro",
       "price": "$299",
-      "store": {
-        "17.0": "https://apps.odoo.com/apps/modules/17.0/novator_dashboard_pro",
-        "18.0": "https://apps.odoo.com/apps/modules/18.0/novator_dashboard_pro",
-        "19.0": "https://apps.odoo.com/apps/modules/19.0/novator_dashboard_pro",
-        "20.0": "https://apps.odoo.com/apps/modules/20.0/novator_dashboard_pro"
-      }
+      "versions": "17.0 - 20.0",
+      "guide": true,
+      "store": "https://apps.odoo.com/apps/modules/20.0/novator_dashboard_pro",
+      "icon": "img/dashboard-builder/icon.png"
+    },
+    {
+      "slug": "access-manager",
+      "title": "Access Manager",
+      "summary": "Hide menus, read-only users, no developer mode. Pro: fields, buttons, records, chatter and filter rules.",
+      "free": "novator_access",
+      "pro": "novator_access_pro",
+      "price": "$299",
+      "versions": "17.0 - 20.0",
+      "guide": false,
+      "store": "https://apps.odoo.com/apps/modules/20.0/novator_access_pro",
+      "icon": null
+    },
+    {
+      "slug": "ai-connector",
+      "title": "AI Connector for Claude & MCP",
+      "summary": "Connect Claude and other AI apps to Odoo with each user's own access rights. Pro: approvals, undo, limits.",
+      "free": "novator_mcp",
+      "pro": "novator_mcp_pro",
+      "price": "$149",
+      "versions": "17.0 - 20.0",
+      "guide": false,
+      "store": "https://apps.odoo.com/apps/modules/20.0/novator_mcp_pro",
+      "icon": null
+    },
+    {
+      "slug": "direct-print",
+      "title": "Direct Print",
+      "summary": "Print reports, labels and receipts straight to local and network printers, no dialogs.",
+      "free": null,
+      "pro": "novator_direct_print",
+      "price": "$99",
+      "versions": "13.0 - 20.0",
+      "guide": false,
+      "store": "https://apps.odoo.com/apps/modules/20.0/novator_direct_print",
+      "icon": null
+    },
+    {
+      "slug": "storage-manager",
+      "title": "Storage Manager",
+      "summary": "Analyse database storage and move old attachments to Google Drive, S3 or Cloudflare R2.",
+      "free": "novator_storage_analyzer",
+      "pro": "novator_storage_manager",
+      "price": "$299",
+      "versions": "17.0 - 20.0",
+      "guide": false,
+      "store": "https://apps.odoo.com/apps/modules/20.0/novator_storage_manager",
+      "icon": null
+    },
+    {
+      "slug": "device-access-control",
+      "title": "Device Access Control",
+      "summary": "Allow sign-in only from approved devices, with Login Audit as the free companion.",
+      "free": "novator_login_audit",
+      "pro": "device_access_control",
+      "price": "$299",
+      "versions": "17.0 - 20.0",
+      "guide": false,
+      "store": "https://apps.odoo.com/apps/modules/20.0/device_access_control",
+      "icon": null
+    },
+    {
+      "slug": "pos-counter-ticket",
+      "title": "POS Counter Ticket",
+      "summary": "Counter tickets and pickup numbers for bakeries and food counters in Point of Sale.",
+      "free": null,
+      "pro": "pos_bakery_ticket",
+      "price": "$299",
+      "versions": "17.0 - 20.0",
+      "guide": false,
+      "store": "https://apps.odoo.com/apps/modules/20.0/pos_bakery_ticket",
+      "icon": null
+    },
+    {
+      "slug": "price-checker-kiosk",
+      "title": "Price Checker Kiosk",
+      "summary": "A self-service price checker for shop customers: scan a barcode, see price and stock.",
+      "free": null,
+      "pro": "retail_price_checker_kiosk",
+      "price": "$249",
+      "versions": "16.0 - 20.0",
+      "guide": false,
+      "store": "https://apps.odoo.com/apps/modules/20.0/retail_price_checker_kiosk",
+      "icon": null
+    },
+    {
+      "slug": "daily-stock-ledger",
+      "title": "Daily Stock Ledger",
+      "summary": "Opening, in, out and closing stock per product per day.",
+      "free": null,
+      "pro": "daily_stock_ledger",
+      "price": "$149",
+      "versions": "17.0 - 20.0",
+      "guide": false,
+      "store": "https://apps.odoo.com/apps/modules/20.0/daily_stock_ledger",
+      "icon": null
+    },
+    {
+      "slug": "pos-scale",
+      "title": "POS Scale Integration",
+      "summary": "Connect a weighing scale to Odoo Point of Sale through the browser, no IoT box.",
+      "free": "pos_scale_webserial",
+      "pro": null,
+      "price": null,
+      "versions": "13.0 - 20.0",
+      "guide": false,
+      "store": "https://apps.odoo.com/apps/modules/20.0/pos_scale_webserial",
+      "icon": null
+    },
+    {
+      "slug": "bank-alfalah",
+      "title": "Bank Alfalah Payments",
+      "summary": "Accept card payments in Odoo through Bank Alfalah.",
+      "free": null,
+      "pro": "payment_bank_alfalah",
+      "price": "$99",
+      "versions": "17.0 - 20.0",
+      "guide": false,
+      "store": "https://apps.odoo.com/apps/modules/20.0/payment_bank_alfalah",
+      "icon": null
+    },
+    {
+      "slug": "fatora",
+      "title": "Fatora Payments",
+      "summary": "Accept payments in Odoo through Fatora.",
+      "free": "payment_fatora",
+      "pro": null,
+      "price": null,
+      "versions": "18.0",
+      "guide": false,
+      "store": "https://apps.odoo.com/apps/modules/18.0/payment_fatora",
+      "icon": null
     }
-  }
-]
+  ]
+}

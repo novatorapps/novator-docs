@@ -1,10 +1,13 @@
 ---
-title: Using {{TITLE}}
+title: Using {{title}}
 sidebar_position: 3
+description: Everyday use of {{title}}.
 ---
 
-TODO: one section per feature. For each: what it is for, the steps, one screenshot, tips.
+# Using {{title}}
+
+TODO: one section per feature. For each: what it is for, the steps, one screenshot, a tip.
 
 ## TODO feature
 
-![TODO alt text](/img/{{SLUG}}/TODO.png)
+![TODO](/img/{{slug}}/TODO.png)

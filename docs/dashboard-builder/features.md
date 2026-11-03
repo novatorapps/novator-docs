@@ -1,96 +1,85 @@
 ---
-title: Building dashboards
+title: Using Dashboard Builder
 sidebar_position: 3
+description: Tiles, charts, lists, the period filter and the layout.
 ---
 
-## The dashboard screen
+# Using Dashboard Builder
 
-- **Dashboard name** (top left): click it to switch to another dashboard or create one.
-- **Period**: the dates every item follows, unless an item has its own period.
-- **Refresh**: reload the figures. A dashboard can also refresh on its own (see [Dashboard settings](#dashboard-settings)).
-- **Edit layout**, **Add** and the **&#8942;** menu: for dashboard administrators.
+## Tiles
 
-![A dashboard with KPI tiles, charts and a list](/img/dashboard-builder/dashboard.png)
+A tile shows one number: a count, sum, average, minimum or maximum.
 
-## Item types
+- **Compare with previous period**: when the dashboard has a period (for example *This month*), the tile shows the change against the period before, in green or red.
+- **Target**: shows a progress bar towards a goal, for example a revenue target.
+- **Icon** and **Color**: pick a Font Awesome icon such as `fa-money` and a colour. On Odoo 20.0 you can also type a Material Symbols name such as `payments`.
 
-| Type | Use it for |
-|---|---|
-| Tile | One number: revenue, open tickets, stock value. Shows the change against the previous period and progress towards a goal. |
-| Bar, Horizontal bar | Comparing groups: revenue by month, top customers. |
-| Stacked bar | Groups split by a second field: opportunities by salesperson and stage. |
-| Line, Area | Trends over time. |
-| Pie, Doughnut, Polar area | Shares of a whole. |
-| Radar | Comparing a few groups on one value. |
-| Scatter | Two measures per group: revenue against number of orders per customer. |
-| Funnel | Stages in order: pipeline by stage. |
-| Gauge | One number against a goal. |
-| List | Records (latest orders) or totals per group. |
+Click a tile to open the records behind it.
+
+## Charts
 
 ![Thirteen chart types on one dashboard](/img/dashboard-builder/chart_types.png)
 
-## Setting up an item
+| Type | Good for |
+|---|---|
+| Bar, horizontal bar | Comparing values: revenue by salesperson, top customers |
+| Stacked bar | Totals split by a second field: opportunities by salesperson and stage |
+| Line, area | Trends over time; tick **Cumulative** for a running total |
+| Pie, doughnut, polar area | Shares of a whole |
+| Radar | Comparing a few categories at once |
+| Scatter | Two measures against each other, for example revenue against number of orders per customer |
+| Funnel | Stages in order, such as the CRM pipeline |
+| Gauge | One value against a target |
 
-Click **Add** and choose a type, or open an item's **&#8942;** menu and click **Edit**.
+### Setting up a chart
 
-![The item form](/img/dashboard-builder/item_form.png)
+![Setting up a chart](/img/dashboard-builder/item_form.png)
 
-**Data tab**
+On the **Data** tab:
 
-- **Model**: where the data comes from, for example *Sales Order* or *Invoice*.
-- **Domain**: which records count, for example *Status is Sales Order*. In the code editor (developer mode) you can write `%UID` for the current user and `%MYCOMPANY` for the current company.
-- **Date field** and **Period**: the date the period filter applies to. *Follow the dashboard period*, an *Own period* (for example always *This year*), or *All time*.
-- **Aggregate** and **Measure**: *Count* the records, or *Sum*, *Average*, *Minimum* or *Maximum* of a number.
-- **Second measure**: a second value drawn as a line on bar charts, with its own axis (for example revenue as bars, number of orders as a line). On a scatter chart it is the vertical axis.
-- **Group by**: one bar or slice per value. Dates group by day, week, month, quarter or year.
-- **Then by (series)**: a second grouping, for stacked bars and multi-line charts.
-- **Sort** and **Limit**: for example *Largest first* and *8*, with **Group the rest as Others**.
-- **Cumulative**: a running total, each point adds the previous ones.
+1. **Model**: where the data comes from, for example *Sales Order* or *Invoice*. Any model works, including your own.
+2. **Filter**: which records count, with Odoo's usual filter editor. Two shortcuts work in filters: `%UID` for the current user and `%MYCOMPANY` for the current company. Example: `[('user_id', '=', %UID)]` shows each person their own figures.
+3. **Date field** and **Period**: which date the dashboard period applies to. Choose *Own period* to fix an item to, say, *This year* whatever the dashboard shows, or *All time* to ignore dates.
+4. **Measure**: count, or sum, average, minimum or maximum of a number field.
+5. **Second measure**: shown as a line with its own axis on bar charts, for example revenue as bars and number of orders as a line.
+6. **Group by**: the field along the axis. Dates group by day, week, month, quarter or year.
+7. **Then by (series)**: splits each bar by a second field.
+8. **Sort and limit**: largest first, top 10, and **Group the rest as Others**.
 
-**Look tab**: prefix and suffix, currency symbol, short numbers (1.2K, 3.4M), decimals, icon and color for tiles, palette, values on the chart, legend, and whether a click opens the records.
+On the **Look** tab: prefix and suffix, the currency symbol, short numbers (1.2K, 3.4M), decimals, values on the chart, legend, colours and what a click does.
 
-**Position tab**: column, row, width and height. Dragging in edit mode is easier.
+## Lists
 
-### Lists
+A list shows either **Records** (for example the latest 10 orders, with the columns you choose and their order) or **Grouped totals** (a table version of a chart). Click a row to open it.
 
-A **List** shows either **Records** (choose the columns in order, the sort order and how many rows) or **Grouped totals** (one row per group, like a bar chart in table form). Click a row to open the record or the records of the group.
+## The period filter
+
+The calendar box at the top changes the period of every item that follows the dashboard: today, this week, this month, this quarter, this year, the same for last and next, month to date, quarter to date, year to date, the last 7, 30, 90 or 365 days, the next 7 or 30 days, or a **Custom range**. The choice is remembered while your browser tab is open.
 
 ## The item menu
 
-Every item has a **&#8942;** menu.
+Every item has a **⋮** menu:
 
 ![The menu of a chart](/img/dashboard-builder/item_menu.png)
 
-- **Edit**, **Duplicate**, **Delete**.
-- **Switch the type** with the small chart buttons. The data stays the same.
-- **Open records**: the list of records behind the item.
-- **Export CSV**, **Export image** (PNG).
-- **Copy to** or **Move to** another dashboard.
+- **Edit** and **Duplicate**.
+- The row of icons switches the chart type in one click, keeping the data.
+- **Open records** opens the list behind the item.
+- **Export CSV** and **Export image** (PNG).
+- **Copy to** and **Move to** another dashboard.
+- **Delete**.
 
-Clicking a bar, slice, point, funnel step or tile also opens the records behind it.
+Clicking a bar, slice or point opens exactly the records behind it.
 
-## Edit layout
+## Layout
 
-Click **Edit layout**. Drag an item by its title, and resize it from the bottom right corner. Other items make room, and the layout is saved as soon as you let go. Click **Done** when finished.
+Click **Edit layout**. Drag items by their title and resize them from the bottom right corner. Other items move out of the way and the layout is saved as soon as you let go. Click **Done** when finished.
 
 ![Editing the layout](/img/dashboard-builder/edit_layout.png)
 
-The dashboard uses 12 columns. On a phone, items are shown one under the other.
+The grid has 12 columns. On a phone, items are shown one under the other.
 
-## Dashboard settings
+## Refresh, print and export
 
-Open **&#8942;**, then **Dashboard settings** (or Dashboards, Configuration, Dashboards).
-
-![Dashboard access settings](/img/dashboard-builder/dashboard_settings.png)
-
-- **Default period**, **Auto refresh** (every 30 seconds to every hour) and **Palette**.
-- **Show in menu** and **Under menu**: add a menu entry for this dashboard anywhere in Odoo, for example under Sales.
-- **Access**: groups and users who can open it. Leave both empty to share it with everyone.
-
-**Set as my home page** (in the **&#8942;** menu) opens this dashboard when you sign in.
-
-## Periods
-
-All time, today, yesterday, tomorrow, this, last and next week, month and quarter, this and last year, month, quarter and year to date, the last 7, 30, 90 and 365 days, the next 7 and 30 days, and custom dates.
-
-When the period is a month, quarter or year, tiles compare with the same length of time just before (this month against last month). Other periods compare with the same number of days before.
+- The refresh button reloads every item. **Auto refresh** in the dashboard settings does it on a timer.
+- **⋮ > Print** prints the dashboard, or saves it as a PDF from the print window.

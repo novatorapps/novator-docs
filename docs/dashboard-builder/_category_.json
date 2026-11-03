@@ -1,5 +1,1 @@
-{
-  "label": "Dashboard Builder",
-  "position": 10,
-  "link": {"type": "doc", "id": "dashboard-builder/index"}
-}
+{"label": "Dashboard Builder", "position": 2, "link": {"type": "doc", "id": "dashboard-builder/index"}}

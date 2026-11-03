@@ -1,5 +1,1 @@
-{
-  "label": "{{TITLE}}",
-  "position": 10,
-  "link": {"type": "doc", "id": "{{SLUG}}/index"}
-}
+{"label": "{{title}}", "position": {{position}}, "link": {"type": "doc", "id": "{{slug}}/index"}}
