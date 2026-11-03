@@ -7,7 +7,7 @@ MSG=${1:-"Update guides"}
 ZIP=$2
 REPO=~/Code/novator-docs
 PROJECT=novator-docs
-DOMAIN=docs.novator.co
+DOMAIN=novatorapps.com
 if [ ! -d $REPO/.git ]; then git clone -q https://github.com/novatorapps/novator-docs.git $REPO; fi
 cd $REPO
 git fetch -q origin && git checkout -q -B main origin/main 2>/dev/null || git checkout -q -B main

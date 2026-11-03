@@ -1,4 +1,4 @@
-// Novator user guides: https://docs.novator.co
+// Novator apps and user guides: https://novatorapps.com (also served at docs.novator.co)
 import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
@@ -6,7 +6,7 @@ const config = {
   title: 'Novator User Guides',
   tagline: 'Step-by-step guides for every Novator app for Odoo',
   favicon: 'img/favicon.png',
-  url: 'https://docs.novator.co',
+  url: 'https://novatorapps.com',
   baseUrl: '/',
   organizationName: 'novatorapps',
   projectName: 'novator-docs',

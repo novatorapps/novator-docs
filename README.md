@@ -1,6 +1,6 @@
 # Novator user guides
 
-Source of https://docs.novator.co: one guide per Novator app for Odoo, built with Docusaurus and hosted on Cloudflare Pages.
+Source of https://novatorapps.com (also https://docs.novator.co): one guide per Novator app for Odoo, built with Docusaurus and hosted on Cloudflare Pages.
 
 ## Every release
 
