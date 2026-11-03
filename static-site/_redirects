@@ -1,4 +1,6 @@
 # Guides moved to docs.novatorapps.com (November 2026). Old novatorapps.com URLs keep working.
+/woocommerce-connector https://docs.novatorapps.com/woocommerce-connector 301
+/woocommerce-connector/* https://docs.novatorapps.com/woocommerce-connector/:splat 301
 /dashboard-builder https://docs.novatorapps.com/dashboard-builder 301
 /dashboard-builder/* https://docs.novatorapps.com/dashboard-builder/:splat 301
 /access-manager https://docs.novatorapps.com/access-manager 301

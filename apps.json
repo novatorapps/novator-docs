@@ -2,6 +2,17 @@
   "_comment": "Catalog of Novator apps. One entry per app or freemium pair. 'guide' is true once docs/<slug>/ is written. tools/sync_app.py fills icons, screenshots, versions and changelogs from the modules.",
   "apps": [
     {
+      "slug": "woocommerce-connector",
+      "title": "WooCommerce Connector",
+      "summary": "Orders, customers, products, stock, prices, refunds and tracking in sync between WooCommerce and Odoo.",
+      "free": null,
+      "pro": "novator_woocommerce_connector",
+      "price": "$399",
+      "versions": "17.0 - 20.0",
+      "guide": true,
+      "category": "eCommerce"
+    },
+    {
       "slug": "dashboard-builder",
       "title": "Dashboard Builder",
       "summary": "KPI tiles, 13 chart types and lists from any Odoo data. Pro: AI, drill-down, TV mode, SQL, email digests.",

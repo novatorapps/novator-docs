@@ -1,4 +1,6 @@
 {
+  "novator_woocommerce_connector": {"name": "WooCommerce Connector", "license": "OPL-1", "depends": ["commerce_bridge"], "python": ["requests"]},
+  "commerce_bridge": {"name": "Commerce Bridge (engine, $49, added to the cart with the connector)", "license": "OPL-1", "depends": ["sale_management", "sale_stock", "account", "mail"]},
   "novator_dashboard": {"name": "Dashboard Builder", "license": "LGPL-3", "depends": ["base_setup", "web"]},
   "novator_dashboard_pro": {"name": "Dashboard Builder Pro", "license": "OPL-1", "depends": ["novator_dashboard", "mail"]},
   "novator_access": {"name": "Access Manager", "license": "LGPL-3", "depends": ["base_setup", "web"]},

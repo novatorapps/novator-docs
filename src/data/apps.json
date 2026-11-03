@@ -1,6 +1,21 @@
 {
   "apps": [
     {
+      "slug": "woocommerce-connector",
+      "title": "WooCommerce Connector",
+      "summary": "Orders, customers, products, stock, prices, refunds and tracking in sync between WooCommerce and Odoo.",
+      "free": null,
+      "pro": "novator_woocommerce_connector",
+      "price": "$399",
+      "versions": "17.0 - 20.0",
+      "guide": true,
+      "category": "eCommerce",
+      "store": "https://apps.odoo.com/apps/modules/20.0/novator_woocommerce_connector",
+      "store_free": "",
+      "store_pro": "https://apps.odoo.com/apps/modules/20.0/novator_woocommerce_connector",
+      "icon": "img/woocommerce-connector/icon.png"
+    },
+    {
       "slug": "dashboard-builder",
       "title": "Dashboard Builder",
       "summary": "KPI tiles, 13 chart types and lists from any Odoo data. Pro: AI, drill-down, TV mode, SQL, email digests.",

@@ -1,4 +1,21 @@
 {
+  "woocommerce-connector": [
+    {
+      "version": "1.0.0",
+      "date": "2026-11-03",
+      "modules": [
+        "novator_woocommerce_connector",
+        "commerce_bridge"
+      ],
+      "series": "17.0 - 20.0",
+      "notes": [
+        "First release.",
+        "Orders, customers and refunds from WooCommerce, with webhooks and a 15-minute check.",
+        "Stock, prices, deliveries with tracking, cancellations and credit notes from Odoo to the store.",
+        "Products and variants in both directions, job queue with retry, protection of test databases."
+      ]
+    }
+  ],
   "dashboard-builder": [
     {
       "version": "1.0.1",
