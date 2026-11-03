@@ -1,6 +1,19 @@
 {
   "woocommerce-connector": [
     {
+      "version": "1.0.1",
+      "date": "2026-11-03",
+      "modules": [
+        "novator_woocommerce_connector",
+        "commerce_bridge"
+      ],
+      "series": "17.0 - 20.0",
+      "notes": [
+        "New menu Online Stores > WooCommerce Guide opens this user guide.",
+        "The Connection tab of a store links to the setup guide."
+      ]
+    },
+    {
       "version": "1.0.0",
       "date": "2026-11-03",
       "modules": [

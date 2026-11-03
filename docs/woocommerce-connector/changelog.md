@@ -9,6 +9,13 @@ description: "Version history of WooCommerce Connector for Odoo."
 
 The newest release is first. In Odoo the version number starts with the Odoo version, so release 1.1.0 for Odoo 20.0 shows as `20.0.1.1.0`.
 
+## 1.0.1
+
+*2026-11-03, Odoo 17.0 - 20.0*
+
+- New menu Online Stores > WooCommerce Guide opens this user guide.
+- The Connection tab of a store links to the setup guide.
+
 ## 1.0.0
 
 *2026-11-03, Odoo 17.0 - 20.0*
