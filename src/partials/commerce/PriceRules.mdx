@@ -1,0 +1,21 @@
+Odoo can send prices to {props.platform} for every linked product with **Send Price** on (in **Product Links**).
+
+### The price sent
+
+- **Regular price**: the store **Pricelist** price for one unit, or the product's **Sales Price** when the store has no pricelist.
+- **Sale price**: when the **Sale Price Pricelist** gives a lower price for one unit, that price is sent as the sale (reduced) price. Otherwise the sale price is cleared.
+- Prices are rounded to two decimals, in the currency of the pricelist.
+
+### When prices are sent
+
+| When | What is sent |
+|---|---|
+| Every hour, with **Send Prices Automatically** on | Products whose regular or sale price changed since they were last sent |
+| **Sync... > Send prices to the store** | Every linked product |
+| **Product Links**, select lines, **Action > Send Price to Store** | The selected products |
+
+**Price Sent** and **Sale Price Sent** in **Product Links** show what {props.platform} accepted last time. A test copy of the database never sends prices.
+
+:::tip
+To run a sale, put the reduced prices in the **Sale Price Pricelist** (for example with a date range on the rules). The hourly check sends them when they start and clears them when they end.
+:::

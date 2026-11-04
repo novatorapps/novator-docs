@@ -1,0 +1,16 @@
+**Online Stores > Stores** shows one card per store.
+
+<img src={props.img + '/stores_dashboard.png'} alt="Store cards" />
+
+| On the card | Meaning |
+|---|---|
+| Status badge | *Connected*, *Connection error* or *Not connected*. *Read only copy* when the store was connected from another database. |
+| **Orders, 30 days** | Orders with an order date in the last 30 days, cancelled ones excluded |
+| **Sales, 30 days** | Their total without tax, in the company currency |
+| **Linked variants** | Products and variants linked to the store |
+| **pending jobs** | Jobs waiting or running |
+| **failed jobs** | Jobs that gave up (shown only when there are some) |
+| **total differences** | Orders whose Odoo total differs from the store total (shown only when there are some) |
+| **Sync...**, **Check Orders**, **Send Stock** | Bulk operations, an order check right now, and all stock |
+
+The store form has the same counters as buttons at the top: **Orders**, **Products**, **Customers**, **Pending Jobs**, **Failed Jobs** and **Log**. **Online Stores > Sales > Sales Analysis** shows sales per store and month.

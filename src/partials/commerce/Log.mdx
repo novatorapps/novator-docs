@@ -1,0 +1,15 @@
+**Online Stores > Queue > Log** has one line per operation: orders imported, updated or cancelled, products created or linked, stock and prices sent, refunds, deliveries, new payment methods and taxes, and every warning and error. Warnings are yellow and errors red.
+
+<img src={props.img + '/log.png'} alt="The log" />
+
+| Column | Meaning |
+|---|---|
+| **Date** | When |
+| **Store** | Which store |
+| **Level** | *Info*, *Warning* or *Error* |
+| **Operation** | For example *import_order*, *export_stock*, *workflow* |
+| **Message** | What happened, in plain words |
+| **Store Reference** | The {props.platform} ID concerned |
+| Record | The Odoo document; the arrow opens it |
+
+Warnings are worth a look: totals that differ from the store, workflow steps that failed (an invoice that could not be posted), store variants without an Odoo variant, cancelled orders that were already delivered. Log lines are kept for 30 days.

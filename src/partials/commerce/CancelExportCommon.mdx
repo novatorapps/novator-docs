@@ -1,0 +1,7 @@
+With **Cancel in the Store When Cancelled in Odoo** on, cancelling an imported order in Odoo cancels it in {props.platform}.
+
+1. Cancel the order in Odoo (**Cancel** on the sales order).
+2. Odoo queues a job *Cancel ... in the store*. Orders already cancelled or refunded in {props.platform} are skipped.
+3. The job checks that the order is still cancelled in Odoo before it sends anything. If you set it back to quotation in the meantime, nothing is sent.
+
+Orders cancelled because {props.platform} cancelled them are never sent back. In a test copy of the database, nothing is sent.

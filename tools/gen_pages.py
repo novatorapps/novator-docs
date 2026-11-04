@@ -31,7 +31,8 @@ def needs(mod, mods):
     odoo = [ODOO_APPS[d] for d in mod['depends'] if d in ODOO_APPS]
     out = []
     if other:
-        out.append('the free ' + ', '.join(mods[d]['name'] for d in other))
+        names = [mods[d]['name'] for d in other]
+        out.append(('the ' if any('$' in n for n in names) else 'the free ') + ', '.join(names))
     out += odoo
     return ', '.join(out) if out else 'nothing beyond standard Odoo'
 

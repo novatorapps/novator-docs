@@ -1,0 +1,18 @@
+Copies of your database (an Odoo.sh staging or development build, a duplicate made for testing) must never change your live {props.platform} store. Commerce Bridge takes care of it.
+
+### How it works
+
+- Each store remembers the database that connected it (its database UUID).
+- A copy of a database normally gets a new database UUID. Then the store shows a warning *This store was connected from another database...* and the badge *Read only copy*.
+- A read-only copy can still **read** from {props.platform} (test connection, import products and orders) but never **sends** anything: no stock, prices, products, deliveries, cancellations or refunds. Buttons that would send refuse with *Store "X" was connected from another database. This copy can read from the store but does not send anything to it.*
+- A **neutralized** copy (Odoo.sh staging, or a database neutralized with `odoo-bin neutralize`) also turns off automatic order import, stock and prices on every store, and cancels pending jobs.
+
+### Moving the live database
+
+After you move the live database to a new server, Odoo may see it as a copy. Open each store and click **Use in This Database** (Odoo administrators only). From then on, this database sends again.
+
+:::warning
+Click **Use in This Database** only in the live database. In a test copy it would start sending test data to your real store.
+:::
+
+Webhooks of {props.platform} keep going to the address they were created for (normally the live Odoo). After moving to a new address, set them up again on the store.

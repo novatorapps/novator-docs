@@ -1,0 +1,62 @@
+Every imported order needs three contacts: the **customer**, the **invoice address** and the **delivery address**. Odoo finds existing contacts first and creates only what is missing, so the same buyer does not end up as ten contacts.
+
+### How Odoo finds the customer
+
+Odoo tries these steps in order and stops at the first one that finds a contact.
+
+1. **Customer link.** If the order has a {props.platform} customer (not a guest order) and that customer is already linked to an Odoo contact (**Online Stores > Catalog > Customer Links**), Odoo uses the linked contact.
+2. **Email.** Odoo looks for a contact with the same email address (upper and lower case do not matter). It only looks at main contacts (not addresses or people inside a company), of type *Contact*, that belong to the store's company or to no company. The email of the {props.platform} customer is used, or the billing email when the customer has none.
+3. **New contact.** When nothing is found, Odoo creates a contact from the billing address: name (first and last name), street, city, zip, country, state, email and phone. The contact is not tied to a company, so it is visible in every company. If there is no name, Odoo uses the company name, then the email, then *Store customer*.
+
+When the order has a {props.platform} customer, Odoo then records the customer link, so the next order of that customer is found at step 1 even if the email changed.
+
+### Companies
+
+When Odoo creates a new contact and the billing address has a company name, the contact is created as a person inside that company:
+
+- Odoo looks for a main contact with the same company name (case does not matter) that is a company. From Odoo 20, where *Is a Company* follows the tax ID, it looks for a main contact with that name and no email.
+- If there is none, Odoo creates the company with the billing street, city, zip, country, state and phone.
+
+A company name only matters when the person is created. An existing contact found by link or email is not moved into a company.
+
+### Invoice and delivery addresses
+
+1. Odoo compares the billing address with the customer: name, street, street 2, city and zip (case and extra spaces do not matter) and the country.
+2. Same address: the customer itself is the invoice address.
+3. Different address: Odoo uses an existing **Invoice Address** of that customer with the same address, or creates one.
+4. The delivery address works the same way with the shipping address and **Delivery Address** contacts. When the order has no shipping address (no street, city or last name), the billing address is used.
+
+Countries are found by their two-letter code. States are found by code or name within that country. When nothing matches, the field stays empty and the import continues.
+
+### Examples
+
+| In {props.platform} | Result in Odoo |
+|---|---|
+| A new customer places a first order | New contact, linked to the {props.platform} customer. Invoice and delivery address are the contact itself, or child addresses when they differ. |
+| The same customer orders again | Found by the customer link. No new contact. |
+| The customer orders again with a new delivery address | Same customer, new **Delivery Address** under it. The next order to that address reuses it. |
+| A guest checks out with an email that exists in Odoo | The existing contact is used. Guest orders have no customer link, so every guest order is matched by email. |
+| A guest checks out without email (for example a phone order) | A new contact for every such order. |
+| The billing address has a company, the email is new | New person inside the company. The company is found by name or created. |
+| An existing contact orders with a company name | The contact is used as it is. It is not moved into the company. |
+| The customer changes the email in {props.platform} | Still found by the customer link. The Odoo email is not changed. |
+
+### Good to know
+
+:::note
+- Contacts that Odoo finds are never overwritten. A changed name, phone or address in {props.platform} becomes a new address under the customer, never an edit of the existing contact.
+- The email search also finds **archived** contacts. If an archived contact has the email, the order is placed on it. Unarchive it, or change its email, if that is not what you want.
+- When several contacts have the same email, Odoo takes the first one in alphabetical order. Merge duplicates (**Contacts**, select them, **Action > Merge**) to keep it predictable.
+- Persons inside a company (with a **Company** set on the contact) are not found by email. Their orders create a new contact.
+:::
+
+### FAQ
+
+**Can I import all customers before the first order?**
+Yes: **Sync... > Import customers from the store**. Customers that are already linked are skipped; the others go through the same steps as above.
+
+**I merged two contacts. Do the links follow?**
+Yes. Links point to a contact; Odoo's merge moves them to the remaining contact.
+
+**Can the same buyer be one contact for two stores?**
+Yes. Each store keeps its own customer links, and the email step finds the same contact for both.

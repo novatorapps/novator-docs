@@ -1,0 +1,47 @@
+An order is not only imported once. Every time it changes in {props.platform} (through a webhook, the 15-minute check or **Update From Store**), Odoo compares it with what it imported last and applies the changes that are still safe to apply.
+
+### How Odoo decides what to do
+
+1. Odoo builds a fingerprint of the store order (lines, amounts, addresses, status, payment, refunds). When it is the same as at the last import, nothing happens, so repeated webhooks cost nothing.
+2. Odoo saves the new **Store Status**. **Paid in the Store** only ever goes from off to on.
+3. **Cancelled in the store**: see the cancellation rules below. Nothing else is updated.
+4. **Order cancelled in Odoo**: nothing else is updated.
+5. **Not delivered and not invoiced yet**: lines and the delivery address are updated (see the table).
+6. A status change is written in the log.
+7. A quotation whose new status is not one Odoo imports stays as it is.
+8. The payment method workflow runs again (confirm, delivery, invoice, payment), so an order paid later is now invoiced and its payment registered.
+9. New refunds are imported.
+
+### Change in the store, effect in Odoo
+
+| Change in {props.platform} | Effect in Odoo |
+|---|---|
+| Quantity or price of a line changed | Line updated, while the order is neither delivered nor invoiced |
+| Line added | Line added, same condition |
+| Line removed | Removed from a quotation; quantity set to 0 on a confirmed order (the delivery is updated by Odoo), same condition |
+| Other product on a line | Product changed on a quotation only |
+| Shipping address changed | New delivery address; open deliveries are moved to it, same condition |
+| Billing address changed | Not updated (the invoice address of the order stays) |
+| Order paid | **Paid in the Store** on; invoice and payment per payment method |
+| Order completed or fulfilled | Invoice per payment method (when not invoiced yet) |
+| Order cancelled | Order cancelled, or a to-do when it is already delivered or invoiced |
+| Refund | Credit note (see refunds) |
+| Anything, after delivery or invoicing | Status, payment and refunds only. Lines and addresses stay as invoiced. |
+
+When lines change, Odoo also compares the new totals and flags the order if they differ.
+
+### Cancellations from the store
+
+With **Cancel Orders Cancelled in the Store** on:
+
+- **Not delivered and no posted invoice**: draft invoices are cancelled, then the order is cancelled. Nothing is sent back to {props.platform}.
+- **Already delivered or invoiced**: the order is not cancelled. The log gets a warning and the salesperson (or you) gets a to-do *Cancelled in the store* on the order: handle the return and the credit note by hand.
+
+With the setting off, only the **Store Status** changes.
+
+### Good to know
+
+:::note
+- **Update From Store** on an order reads it again from {props.platform} and applies it even when the fingerprint did not change. Use it after you fixed a mapping or a product.
+- Changes made in Odoo to an imported order (an extra line, another price) can be overwritten by the next store change while the order is not delivered or invoiced. Change the order in {props.platform} instead, or deliver or invoice it first.
+:::

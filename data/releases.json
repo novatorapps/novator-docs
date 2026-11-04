@@ -1,6 +1,20 @@
 {
   "woocommerce-connector": [
     {
+      "version": "1.0.2",
+      "date": "2026-11-04",
+      "modules": [
+        "novator_woocommerce_connector",
+        "commerce_bridge"
+      ],
+      "series": "17.0 - 20.0",
+      "notes": [
+        "The app is now listed as Odoo WooCommerce Connector.",
+        "Commerce Bridge 1.0.2: Stock From Warehouses is respected on Odoo 18.0 - 20.0; a store refund no longer leads to a second invoice when the order is updated later.",
+        "Commerce Bridge 1.0.3: clearer notes in the Sync wizard; the delivery setting is now called Send Deliveries to the Store."
+      ]
+    },
+    {
       "version": "1.0.1",
       "date": "2026-11-03",
       "modules": [
@@ -525,6 +539,38 @@
       "series": "18.0",
       "notes": [
         "First release."
+      ]
+    }
+  ],
+  "shopify-connector": [
+    {
+      "version": "1.0.1",
+      "date": "2026-11-04",
+      "modules": [
+        "novator_shopify_connector",
+        "commerce_bridge"
+      ],
+      "series": "17.0 - 20.0",
+      "notes": [
+        "The app is now listed as Odoo Shopify Connector.",
+        "Commerce Bridge 1.0.3: clearer notes in the Sync wizard; the delivery setting is now called Send Deliveries to the Store."
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "date": "2026-11-04",
+      "modules": [
+        "novator_shopify_connector",
+        "commerce_bridge"
+      ],
+      "series": "17.0 - 20.0",
+      "notes": [
+        "First release, on the Shopify GraphQL Admin API (2026-10).",
+        "Orders with taxes, discounts and shipping, cash on delivery and other pending payments, refunds and cancellations from Shopify, with webhooks and a 15-minute check.",
+        "Stock per Shopify location, prices with compare-at prices, fixed prices for Shopify Markets, fulfillments with tracking, cancellations and credit notes from Odoo.",
+        "Products and variants in both directions, with images.",
+        "Shopify Payments payouts as journal entries matched with the order payments.",
+        "Needs Commerce Bridge 1.0.2."
       ]
     }
   ]

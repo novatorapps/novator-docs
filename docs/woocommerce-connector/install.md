@@ -24,7 +24,7 @@ Odoo Community and Enterprise, on Odoo.sh or your own server. Odoo Online does n
 
 | App | Technical name | Edition | License | Also needs |
 |---|---|---|---|---|
-| WooCommerce Connector | `novator_woocommerce_connector` | Paid, $399 | OPL-1 | the free Commerce Bridge (engine, $49, added to the cart with the connector) |
+| WooCommerce Connector | `novator_woocommerce_connector` | Paid, $399 | OPL-1 | the Commerce Bridge (engine, $49, added to the cart with the connector) |
 
 - The Python library `requests` must be available on the server. It ships with Odoo, so a standard installation already has it.
 

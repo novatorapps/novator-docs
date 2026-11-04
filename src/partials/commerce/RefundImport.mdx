@@ -1,0 +1,18 @@
+With **Import Refunds as Credit Notes** on, each refund made in {props.platform} becomes a credit note in Odoo, linked to the order. Refunds are read when the order is imported or updated.
+
+### How the credit note is built
+
+1. Odoo records the refund (amount, reason, **From the store**) on the order's **Online Store** tab and in **Online Stores > Sales > Refunds**. Each refund is recorded once.
+2. **No posted invoice yet**: nothing else happens. The log notes that there is no invoice to credit; handle it when you invoice.
+3. **Posted invoice**: Odoo creates a credit note for the customer of the invoice, in the same journal and currency, reversing that invoice:
+   - one line per refunded order line, with the refunded quantity and amount and the line's taxes (the mapped store taxes, or the order line's taxes);
+   - when the refund is more than those lines (for example refunded shipping or an amount-only refund), one more line with the rest, without tax, on the account of the invoice's first line, labelled with the refund reason.
+4. The credit note is posted. It is not sent back to {props.platform}.
+5. When the money went back to the customer in {props.platform} and the payment method registers payments, Odoo also registers the refund payment in the payment method's journal.
+
+### Good to know
+
+:::note
+- The credit note is not reconciled with the invoice automatically. When the refund payment is registered (step 5), the credit note is paid. Otherwise reconcile it as you would any credit note (on an unpaid invoice Odoo shows it as an outstanding credit you can add).
+- To refund in Odoo first and send it to {props.platform}, post a credit note yourself (see sending refunds).
+:::

@@ -16,6 +16,21 @@
       "icon": "img/woocommerce-connector/icon.png"
     },
     {
+      "slug": "shopify-connector",
+      "title": "Shopify Connector",
+      "summary": "Orders, products, stock per location, prices, Markets, refunds, fulfillments and Shopify Payments payouts in sync between Shopify and Odoo.",
+      "free": null,
+      "pro": "novator_shopify_connector",
+      "price": "$399",
+      "versions": "17.0 - 20.0",
+      "guide": true,
+      "category": "eCommerce",
+      "store": "https://apps.odoo.com/apps/modules/20.0/novator_shopify_connector",
+      "store_free": "",
+      "store_pro": "https://apps.odoo.com/apps/modules/20.0/novator_shopify_connector",
+      "icon": "img/shopify-connector/icon.png"
+    },
+    {
       "slug": "dashboard-builder",
       "title": "Dashboard Builder",
       "summary": "KPI tiles, 13 chart types and lists from any Odoo data. Pro: AI, drill-down, TV mode, SQL, email digests.",

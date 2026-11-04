@@ -1,0 +1,19 @@
+The **Products** tab decides how {props.platform} products are matched with, and created as, Odoo products.
+
+### Matching
+
+| Field | Default | What it does |
+|---|---|---|
+| **Match Products By** | Internal Reference, then Barcode = SKU | *Internal Reference = SKU*: a store product matches the Odoo product whose **Internal Reference** equals its SKU. *Internal Reference, then Barcode = SKU*: when no internal reference matches, Odoo also tries the **Barcode**. |
+| **Import Unknown Products With Orders** | On | When an order contains a product that is not linked yet and no SKU matches, Odoo imports that product from {props.platform} first, then the order. Off: the order waits in the queue with *Products not found in Odoo*. |
+| **Category for New Products** | Empty | Product category of products created by an import. A store category mapped to an Odoo category wins (**Catalog > Store Categories**). Empty: Odoo's default category. |
+| **Import Images** | On | Downloads the main image (and variant images) of products Odoo creates, and of linked products that have no image yet. Images over 10 MB or files that are not images are skipped. |
+
+### Prices
+
+| Field | Default | What it does |
+|---|---|---|
+| **Send Prices Automatically** | Off | Every hour, Odoo sends prices that changed. Off: prices are sent only when you ask. |
+| **Sale Price Pricelist** | Empty | Optional. When this pricelist gives a lower price than the store **Pricelist**, the lower price is sent as the sale price. |
+
+The regular price comes from the **Pricelist** on the **Orders** tab, or the product's **Sales Price** when no pricelist is set.

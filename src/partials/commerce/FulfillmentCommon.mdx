@@ -1,0 +1,8 @@
+With **Send Deliveries to the Store** on, validating the delivery of an imported order sends it to {props.platform}.
+
+1. Validate the delivery (outgoing transfer) of the order.
+2. About 30 seconds later, a job *Send delivery of ...* runs. Several deliveries of the same order validated together become one job.
+3. The tracking number of the delivery (**Tracking Reference**, available when Odoo's delivery app is installed) is sent with it.
+4. When everything is delivered, **Delivery Sent to Store** is set on the order's **Online Store** tab.
+
+You can also send it by hand: **Send Delivery to Store** on the order. The filter **Delivered, Not Sent to Store** on **Orders** lists deliveries that were not sent. In a test copy of the database, nothing is sent.

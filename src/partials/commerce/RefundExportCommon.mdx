@@ -1,0 +1,7 @@
+With **Send Credit Notes to the Store as Refunds** on, posting a credit note for an imported order creates a refund in {props.platform}.
+
+1. Create the credit note as usual: open the invoice, click **Credit Note**, adjust the lines (keep only the refunded products and quantities), and post it.
+2. When it is posted, Odoo queues a job *Send refund ...* (one per credit note). The credit note is found from its lines' sales order, or from the invoice it reverses.
+3. When the job is done, the refund appears on the order's **Online Store** tab with the direction **Sent to the store**.
+
+A credit note is sent once. Credit notes that came from {props.platform} refunds are never sent back. In a test copy of the database, nothing is sent.

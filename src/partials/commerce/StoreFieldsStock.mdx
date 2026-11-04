@@ -1,0 +1,11 @@
+The **Stock** tab decides which quantity {props.platform} shows for each linked product.
+
+| Field | Default | What it does |
+|---|---|---|
+| **Send Stock Automatically** | On | Odoo sends stock when it moves in Odoo (about a minute after the move), and every hour as a safety net. |
+| **Stock Source** | Free to use (on hand minus reserved) | *Free to use*: on hand minus what is already reserved for other deliveries. *On hand*: everything in stock. *Forecasted*: on hand plus incoming minus outgoing. |
+| **Stock From Warehouses** | Empty | The quantity is the sum of these warehouses. Empty: the **Order Warehouse** only. |
+| **Stock Buffer** | Send the full quantity | *Keep back a fixed quantity* or *Send a percentage*, to avoid overselling the last items. |
+| **Buffer Value** | 0 | The quantity to keep back, or the percentage to send. Cannot be negative. |
+
+Quantities are rounded down to whole units and never go below zero.

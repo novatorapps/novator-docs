@@ -9,6 +9,14 @@ description: "Version history of WooCommerce Connector for Odoo."
 
 The newest release is first. In Odoo the version number starts with the Odoo version, so release 1.1.0 for Odoo 20.0 shows as `20.0.1.1.0`.
 
+## 1.0.2
+
+*2026-11-04, Odoo 17.0 - 20.0*
+
+- The app is now listed as Odoo WooCommerce Connector.
+- Commerce Bridge 1.0.2: Stock From Warehouses is respected on Odoo 18.0 - 20.0; a store refund no longer leads to a second invoice when the order is updated later.
+- Commerce Bridge 1.0.3: clearer notes in the Sync wizard; the delivery setting is now called Send Deliveries to the Store.
+
 ## 1.0.1
 
 *2026-11-03, Odoo 17.0 - 20.0*

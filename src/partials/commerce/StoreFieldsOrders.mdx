@@ -1,0 +1,53 @@
+The **Orders** tab of a store decides how {props.platform} orders become Odoo sales orders. Open it from **Online Stores > Stores**, click the store, then the **Orders** tab.
+
+<img src={props.img + '/store_orders_settings.png'} alt="The Orders tab of a store" />
+
+### Import
+
+| Field | Default | What it does |
+|---|---|---|
+| **Import Orders Automatically** | On | Every 15 minutes Odoo asks {props.platform} for orders created or changed since the last check. This is the safety net next to webhooks: orders placed while Odoo was offline or while a webhook failed still arrive. |
+| **Import Orders From** | The moment the store was created | The scheduled check never goes further back than this date. Set it before the first check if you want older orders; leave it if you only want new orders. |
+| **Last Order Check** | Empty | Read only. When the scheduled check last ran. The next check starts from here (minus two minutes, so nothing on the edge is missed). Empty means the next check starts from **Import Orders From**. |
+| **Order Prefix** | <code>{props.prefix}</code> | Added in front of the {props.platform} order number to build the Odoo order reference, for example <code>{props.prefix + "1001"}</code>. The plain store number is also kept in **Customer Reference** and **Store Order Number**. Change it before the first import: existing orders keep their names. |
+| **Order Warehouse** | The first warehouse of the company | Imported orders are delivered from this warehouse. |
+| **Pricelist** | Empty | The pricelist of imported orders, and the regular prices sent to the store (see prices). When an order comes in another currency, Odoo uses a pricelist in that currency instead (see below). |
+
+:::note Orders in another currency
+When an order's currency differs from the store **Pricelist**, Odoo takes the first pricelist of the company in that currency. If there is none, Odoo creates one named after the store and the currency (for example *Northwind Store CAD*) and activates the currency if needed. If the currency does not exist in Odoo at all, the order stops with *Currency XXX does not exist in Odoo.*
+:::
+
+### Sales
+
+| Field | Default | What it does |
+|---|---|---|
+| **Sales Team** | Empty | Sales team of imported orders. |
+| **Salesperson** | Empty | Salesperson of imported orders. Empty: the salesperson of the customer, if the customer has one, otherwise none. The background jobs never set themselves as salesperson. |
+| **Payment Term** | Empty | Payment term of imported orders. A payment term on the payment method wins over this one. |
+| **Fiscal Position** | Empty | Optional. Empty: Odoo picks one from the customer address, as for any sales order. |
+| **Default Payment Journal** | Empty | Given to every payment method Odoo sees for the first time in an order, and **Register Payment When Paid** is switched on for it when a journal is set. Change it per method later in **Configuration > Payment Methods**. |
+
+### Taxes and Extra Lines
+
+| Field | Default | What it does |
+|---|---|---|
+| **Tax Mode** | Use the taxes charged by the store | *Use the taxes charged by the store*: every line gets the Odoo tax mapped to the tax {props.platform} charged. *Use the Odoo product taxes*: lines get the taxes of the Odoo product and fiscal position, as in a manual quotation. See taxes. |
+| **Create Missing Taxes** | On | Only with store taxes. When no Odoo tax matches a store tax, Odoo creates one. Off: the order waits in the queue until you map the tax. |
+| **Shipping Product** | Shipping (online store) `CB-SHIP` | Product of shipping lines, unless the shipping method has its own product. |
+| **Discount Product** | Discount (online store) `CB-DISC` | Product of the discount lines. |
+| **Fee Product** | Fee (online store) `CB-FEE` | Product of extra fee lines, for platforms that send fees. |
+
+### Status Changes
+
+| Field | Default | What it does |
+|---|---|---|
+| **Cancel Orders Cancelled in the Store** | On | An order cancelled in {props.platform} is cancelled in Odoo, unless it is already delivered or invoiced. |
+| **Cancel in the Store When Cancelled in Odoo** | On | Cancelling an imported order in Odoo cancels it in {props.platform}. |
+| **Send Deliveries to the Store** | On | When the delivery of an imported order is validated in Odoo, the delivery (with tracking number) is sent to {props.platform}. |
+| **Send Tracking Note to the Customer** | On | Shown when the field above is on. {props.platform} tells the customer about the shipment. |
+| **Import Refunds as Credit Notes** | On | Refunds made in {props.platform} become credit notes in Odoo. |
+| **Send Credit Notes to the Store as Refunds** | On | Posting a credit note for an imported order creates a refund in {props.platform}. |
+
+:::tip
+What Odoo does after an order is imported (confirm, deliver, invoice, register the payment) is not on this tab. It is set per payment method in **Configuration > Payment Methods**.
+:::

@@ -1,0 +1,16 @@
+Set the access in **Settings > Users & Companies > Users**, section **Online Stores**.
+
+| | User | Administrator |
+|---|---|---|
+| See stores, store orders, product and customer links, jobs and log | Yes | Yes |
+| Run imports, **Sync...**, send stock and prices, send products | Yes | Yes |
+| Retry, run and cancel jobs | Yes | Yes |
+| **Configuration** menu (payment methods, taxes, shipping methods) | No | Yes |
+| Create stores, change settings, **Test Connection** | No | Yes |
+| See the **Connection** tab, keys, secrets and tokens | No | Yes |
+| **Use in This Database** | No | Yes |
+
+- Odoo administrators (**Settings** access) are store administrators automatically.
+- Salespeople without an Online Stores role still see the store details on orders (store, status, payment method, refunds).
+- Jobs run in the background as OdooBot, so imported orders, contacts and invoices are created whatever the rights of the person who started them. **Run Now** on a job is the exception: it runs with your own rights.
+- Each store belongs to a company. In a multi-company database, users only see the stores, jobs and logs of their allowed companies.

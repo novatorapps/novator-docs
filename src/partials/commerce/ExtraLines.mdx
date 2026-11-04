@@ -1,0 +1,28 @@
+Besides product lines, an imported order can have shipping, discount and fee lines. Each uses a product, so they land on the right accounts and reports.
+
+### Shipping
+
+- Every shipping method {props.platform} uses gets a line in **Online Stores > Configuration > Shipping Methods** (name and **Store Code**) the first time it appears.
+- Set an **Odoo Product** on a method to book its shipping lines on that product, for example one product per carrier. Empty: the store's **Shipping Product** (*Shipping (online store)*, `CB-SHIP`).
+- The line amount is the shipping price after shipping discounts, without tax, with the tax the store charged on shipping.
+- Without any shipping product, the order waits with *Set a shipping product on the store.*
+
+### Discounts
+
+Product lines are imported at their price **before** discounts. The discounts (discount codes, automatic discounts, coupons) become discount lines with the **Discount Product** (*Discount (online store)*, `CB-DISC`), with a negative price:
+
+- one discount line per combination of taxes, so each discount reduces the right tax (a store with 13% and 5% products gets two discount lines);
+- labelled *Discount*, or *Discount (CODE1, CODE2)* with the codes used; the codes are also shown in **Coupons** on the order's **Online Store** tab.
+
+:::tip
+Separate discount lines keep the product prices clean in your sales reports, and show the total discount given per order.
+:::
+
+### Fees
+
+Fee lines (sent by some platforms, for example a payment surcharge or gift wrap) use the **Fee Product** (*Fee (online store)*, `CB-FEE`). Without a fee product, such an order waits with *Set a fee product on the store.*
+
+### Good to know
+
+- The three products are created when the app is installed. You can rename them, change their accounts and taxes, or choose other products on the store.
+- Change the products before the first import: existing orders keep their lines.
