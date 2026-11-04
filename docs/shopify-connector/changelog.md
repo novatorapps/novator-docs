@@ -9,6 +9,12 @@ description: "Version history of Shopify Connector for Odoo."
 
 The newest release is first. In Odoo the version number starts with the Odoo version, so release 1.1.0 for Odoo 20.0 shows as `20.0.1.1.0`.
 
+## 1.0.2
+
+*2026-11-04, Odoo 17.0 - 20.0*
+
+- App description update only: the app's website link on the Odoo Apps Store opens this user guide, and the guide address is shown on the page.
+
 ## 1.0.1
 
 *2026-11-04, Odoo 17.0 - 20.0*
