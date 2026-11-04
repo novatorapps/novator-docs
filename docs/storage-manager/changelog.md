@@ -9,6 +9,12 @@ description: "Version history of Storage Manager for Odoo."
 
 The newest release is first. In Odoo the version number starts with the Odoo version, so release 1.1.0 for Odoo 20.0 shows as `20.0.1.1.0`.
 
+## Storage Manager 1.6.3 (1.6.4 on Odoo 17.0), Storage Analyzer 1.0.4
+
+*2026-11-04, Odoo 17.0 - 20.0*
+
+- App description update only: the user guide button on the Odoo Apps Store page now shows the guide address, because the store does not make outside links clickable. No change to how the app works.
+
 ## Storage Manager 1.6.2 (1.6.3 on Odoo 17.0), Storage Analyzer 1.0.3
 
 *2026-11-03, Odoo 17.0 - 20.0*

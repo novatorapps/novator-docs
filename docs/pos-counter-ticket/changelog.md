@@ -9,6 +9,12 @@ description: "Version history of POS Counter Ticket for Odoo."
 
 The newest release is first. In Odoo the version number starts with the Odoo version, so release 1.1.0 for Odoo 20.0 shows as `20.0.1.1.0`.
 
+## 3.5.2
+
+*2026-11-04, Odoo 17.0 - 20.0*
+
+- App description update only: the user guide button on the Odoo Apps Store page now shows the guide address, because the store does not make outside links clickable. No change to how the app works.
+
 ## 3.5.1
 
 *2026-11-03, Odoo 17.0 - 20.0*

@@ -57,6 +57,18 @@
   ],
   "dashboard-builder": [
     {
+      "version": "Free 1.0.2, Pro 1.0.2",
+      "modules": [
+        "novator_dashboard",
+        "novator_dashboard_pro"
+      ],
+      "series": "17.0 - 20.0",
+      "date": "2026-11-04",
+      "notes": [
+        "App description update only: the user guide button on the Odoo Apps Store page now shows the guide address, because the store does not make outside links clickable. No change to how the app works."
+      ]
+    },
+    {
       "version": "1.0.1",
       "modules": [
         "novator_dashboard",
@@ -84,6 +96,18 @@
     }
   ],
   "access-manager": [
+    {
+      "version": "Free 1.0.3, Pro 1.1.2",
+      "modules": [
+        "novator_access",
+        "novator_access_pro"
+      ],
+      "series": "17.0 - 20.0",
+      "date": "2026-11-04",
+      "notes": [
+        "App description update only: the user guide button on the Odoo Apps Store page now shows the guide address, because the store does not make outside links clickable. No change to how the app works."
+      ]
+    },
     {
       "version": "Free 1.0.2, Pro 1.1.1",
       "modules": [
@@ -124,6 +148,18 @@
   ],
   "ai-connector": [
     {
+      "version": "Free 1.0.3, Pro 1.0.2",
+      "modules": [
+        "novator_mcp",
+        "novator_mcp_pro"
+      ],
+      "series": "17.0 - 20.0",
+      "date": "2026-11-04",
+      "notes": [
+        "App description update only: the user guide button on the Odoo Apps Store page now shows the guide address, because the store does not make outside links clickable. No change to how the app works."
+      ]
+    },
+    {
       "version": "Free 1.0.2, Pro 1.0.1",
       "modules": [
         "novator_mcp",
@@ -160,6 +196,17 @@
     }
   ],
   "direct-print": [
+    {
+      "version": "1.1.2",
+      "modules": [
+        "novator_direct_print"
+      ],
+      "series": "13.0 - 20.0",
+      "date": "2026-11-04",
+      "notes": [
+        "App description update only: the user guide button on the Odoo Apps Store page now shows the guide address, because the store does not make outside links clickable. No change to how the app works."
+      ]
+    },
     {
       "version": "1.1.1",
       "modules": [
@@ -198,6 +245,18 @@
     }
   ],
   "storage-manager": [
+    {
+      "version": "Storage Manager 1.6.3 (1.6.4 on Odoo 17.0), Storage Analyzer 1.0.4",
+      "modules": [
+        "novator_storage_manager",
+        "novator_storage_analyzer"
+      ],
+      "series": "17.0 - 20.0",
+      "date": "2026-11-04",
+      "notes": [
+        "App description update only: the user guide button on the Odoo Apps Store page now shows the guide address, because the store does not make outside links clickable. No change to how the app works."
+      ]
+    },
     {
       "version": "Storage Manager 1.6.2 (1.6.3 on Odoo 17.0), Storage Analyzer 1.0.3",
       "modules": [
@@ -249,6 +308,18 @@
   ],
   "device-access-control": [
     {
+      "version": "Device Access Control 1.2.3, Login Audit 1.0.3",
+      "modules": [
+        "device_access_control",
+        "novator_login_audit"
+      ],
+      "series": "17.0 - 20.0",
+      "date": "2026-11-04",
+      "notes": [
+        "App description update only: the user guide button on the Odoo Apps Store page now shows the guide address, because the store does not make outside links clickable. No change to how the app works."
+      ]
+    },
+    {
       "version": "Device Access Control 1.2.2, Login Audit 1.0.2",
       "modules": [
         "device_access_control",
@@ -287,6 +358,17 @@
   ],
   "pos-counter-ticket": [
     {
+      "version": "3.5.2",
+      "modules": [
+        "pos_bakery_ticket"
+      ],
+      "series": "17.0 - 20.0",
+      "date": "2026-11-04",
+      "notes": [
+        "App description update only: the user guide button on the Odoo Apps Store page now shows the guide address, because the store does not make outside links clickable. No change to how the app works."
+      ]
+    },
+    {
       "version": "3.5.1",
       "modules": [
         "pos_bakery_ticket"
@@ -323,6 +405,17 @@
   ],
   "price-checker-kiosk": [
     {
+      "version": "1.1.2",
+      "modules": [
+        "retail_price_checker_kiosk"
+      ],
+      "series": "16.0 - 20.0",
+      "date": "2026-11-04",
+      "notes": [
+        "App description update only: the user guide button on the Odoo Apps Store page now shows the guide address, because the store does not make outside links clickable. No change to how the app works."
+      ]
+    },
+    {
       "version": "1.1.1",
       "modules": [
         "retail_price_checker_kiosk"
@@ -358,6 +451,17 @@
     }
   ],
   "daily-stock-ledger": [
+    {
+      "version": "1.1.2",
+      "modules": [
+        "daily_stock_ledger"
+      ],
+      "series": "17.0 - 20.0",
+      "date": "2026-11-04",
+      "notes": [
+        "App description update only: the user guide button on the Odoo Apps Store page now shows the guide address, because the store does not make outside links clickable. No change to how the app works."
+      ]
+    },
     {
       "version": "1.1.1",
       "modules": [
@@ -397,6 +501,17 @@
     }
   ],
   "pos-scale": [
+    {
+      "version": "3.0.3",
+      "modules": [
+        "pos_scale_webserial"
+      ],
+      "series": "13.0 - 20.0",
+      "date": "2026-11-04",
+      "notes": [
+        "App description update only: the user guide button on the Odoo Apps Store page now shows the guide address, because the store does not make outside links clickable. No change to how the app works."
+      ]
+    },
     {
       "version": "3.0.2",
       "modules": [
@@ -460,6 +575,17 @@
   ],
   "bank-alfalah": [
     {
+      "version": "1.3.3",
+      "modules": [
+        "payment_bank_alfalah"
+      ],
+      "series": "17.0 - 20.0",
+      "date": "2026-11-04",
+      "notes": [
+        "App description update only: the user guide button on the Odoo Apps Store page now shows the guide address, because the store does not make outside links clickable. No change to how the app works."
+      ]
+    },
+    {
       "version": "1.3.2",
       "modules": [
         "payment_bank_alfalah"
@@ -507,6 +633,17 @@
     }
   ],
   "fatora": [
+    {
+      "version": "1.2.2",
+      "modules": [
+        "payment_fatora"
+      ],
+      "series": "18.0",
+      "date": "2026-11-04",
+      "notes": [
+        "App description update only: the user guide button on the Odoo Apps Store page now shows the guide address, because the store does not make outside links clickable. No change to how the app works."
+      ]
+    },
     {
       "version": "1.2.1",
       "modules": [

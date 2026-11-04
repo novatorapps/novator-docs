@@ -9,6 +9,12 @@ description: "Version history of Dashboard Builder for Odoo."
 
 The newest release is first. In Odoo the version number starts with the Odoo version, so release 1.1.0 for Odoo 20.0 shows as `20.0.1.1.0`.
 
+## Free 1.0.2, Pro 1.0.2
+
+*2026-11-04, Odoo 17.0 - 20.0*
+
+- App description update only: the user guide button on the Odoo Apps Store page now shows the guide address, because the store does not make outside links clickable. No change to how the app works.
+
 ## 1.0.1
 
 *2026-11-03, Odoo 17.0 - 20.0*
