@@ -15,7 +15,7 @@ import AppSchema from '@site/src/components/AppSchema';
 
 Run your WooCommerce store from Odoo. New orders arrive in Odoo within seconds, with the right customer, taxes, coupons and shipping. Odoo confirms, invoices and registers the payment for you, sends stock and prices back to the store, and completes the store order with the tracking number when you deliver. Changes, cancellations and refunds follow in both directions.
 
-<span className="version-pill">Odoo 17.0 - 20.0</span> <span className="version-pill">Community &amp; Enterprise</span> <span className="version-pill">$399 one-time ($350 + $49 engine)</span>
+<span className="version-pill">Odoo 13.0 - 20.0</span> <span className="version-pill">Community &amp; Enterprise</span> <span className="version-pill">$399 one-time ($350 + $49 engine)</span>
 
 ![WooCommerce orders in Odoo with their store status](/img/woocommerce-connector/store_orders.png)
 

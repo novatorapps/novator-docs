@@ -10,9 +10,9 @@ description: "Supported Odoo versions, required apps and installation steps for 
 
 ## Supported versions
 
-| Odoo version | 17.0 | 18.0 | 19.0 | 20.0 |
-|---|---|---|---|---|
-| Supported | Yes | Yes | Yes | Yes |
+| Odoo version | 13.0 | 14.0 | 15.0 | 16.0 | 17.0 | 18.0 | 19.0 | 20.0 |
+|---|---|---|---|---|---|---|---|---|
+| Supported | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
 
 import VersionRequest from '@site/src/components/VersionRequest';
 

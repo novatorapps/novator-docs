@@ -39,4 +39,4 @@ A new code creates a payment method automatically, using the store's **Default P
 | `Bank Deposit` | On | Off | On | Off, or on once your bank shows the money. |
 | `manual` | On | Off | On | Your choice. |
 
-Unpaid orders (cash on delivery, bank deposit) are confirmed only when **Confirm Unpaid Orders** is on. Their invoice is created when Shopify marks them paid, on the next update of the order. See [Order status](../orders/order-status.md).
+Unpaid orders (cash on delivery, bank deposit) are confirmed only when **Unpaid: Confirm** is on for their payment method. Their invoice is created when Shopify marks them paid, on the next update of the order. See [Order status](../orders/order-status.md).

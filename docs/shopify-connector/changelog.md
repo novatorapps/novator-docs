@@ -9,6 +9,33 @@ description: "Version history of Shopify Connector for Odoo."
 
 The newest release is first. In Odoo the version number starts with the Odoo version, so release 1.1.0 for Odoo 20.0 shows as `20.0.1.1.0`.
 
+## 1.0.4
+
+*2026-11-05, Odoo 13.0 - 20.0*
+
+- Platform badge on imported sales orders: WooCommerce, Shopify or Amazon in the platform colour, next to the order number, with the store name when you have several stores.
+- Order number: name orders after the store number (as before) or let Odoo number them; the store number stays on the order and under the badge.
+- Payment methods have separate settings for unpaid orders (cash on delivery, bank transfer): confirm, validate the delivery, and invoice when completed, at import or never.
+- Taxes: new choice to use the store taxes and then apply the fiscal position; tax accounts for the taxes the store creates; tax rate decimals to match rates like 15.0199% to 15.02%.
+- Shopify fraud analysis on the order (risk level, recommendation and reasons), a Fraud Risk filter, and an option to hold risky orders as quotations.
+- Custom items and gift cards import on their own products (custom item, custom item shipped, gift card) instead of stopping the order.
+- The store setting Confirm Unpaid Orders moved to each payment method (Unpaid: Confirm); your current choice is kept when you update.
+- Commerce Bridge 1.0.10: update Commerce Bridge as well.
+
+## 1.0.3
+
+*2026-11-05, Odoo 13.0 - 16.0*
+
+- Now available for Odoo 13.0, 14.0, 15.0 and 16.0, with the same features as on Odoo 17.0 - 20.0 (Commerce Bridge 1.0.9). On Odoo 13.0 the payout entry moves the payments from the payment journal's account to the bank, as Odoo 13.0 has no outstanding payment accounts.
+
+## 1.0.3
+
+*2026-11-05, Odoo 17.0 - 20.0*
+
+- New store dashboard: one card per store with orders and sales of the last 7 days, a daily chart, Queued and Failed Jobs tiles, the last sync time and Sync Orders, More and Open Store buttons.
+- Several stores per company: the same Shopify shop cannot be connected twice in one company, so orders are never imported twice.
+- Imported orders keep the date the customer ordered. Before, confirming the order in Odoo set the order date to the import time (Commerce Bridge 1.0.9: update Commerce Bridge as well).
+
 ## 1.0.2
 
 *2026-11-04, Odoo 17.0 - 20.0*

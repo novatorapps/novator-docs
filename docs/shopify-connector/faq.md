@@ -44,7 +44,7 @@ Open **Configuration > Taxes** and check that each Shopify tax (`title|rate`) po
 
 ### A cash on delivery order is confirmed but has no invoice
 
-That is expected: the invoice is created when you mark the order paid in Shopify ([Order status](./orders/order-status.md)). To keep such orders as quotations, turn off **Confirm Unpaid Orders**.
+That is expected: the invoice is created when you mark the order paid in Shopify ([Order status](./orders/order-status.md)). To keep such orders as quotations, turn off **Unpaid: Confirm** on their payment method (**Configuration > Payment Methods**).
 
 ### I removed an item from a Shopify order and Odoo still has it
 

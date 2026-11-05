@@ -2,7 +2,7 @@
 title: Odoo Shopify Connector
 sidebar_label: Overview
 sidebar_position: 1
-description: "Odoo Shopify Connector: orders, customers, products, stock per location, prices, Shopify Markets, fulfillments, refunds and Shopify Payments payouts in sync between Shopify and Odoo 17 to 20."
+description: "Odoo Shopify Connector: orders, customers, products, stock per location, prices, Shopify Markets, fulfillments, refunds and Shopify Payments payouts in sync between Shopify and Odoo 13 to 20."
 ---
 
 import AppSchema from '@site/src/components/AppSchema';
@@ -15,7 +15,7 @@ import AppSchema from '@site/src/components/AppSchema';
 
 Run your Shopify store from Odoo. New orders arrive in Odoo within seconds, with the right customer, taxes, discount codes and shipping. Odoo confirms, invoices and registers the payment, sends stock to each Shopify location and prices to your Markets, and fulfills the Shopify order with the tracking number when you deliver. Cancellations and refunds follow in both directions, and Shopify Payments payouts become journal entries matched with the order payments.
 
-<span className="version-pill">Odoo 17.0 - 20.0</span> <span className="version-pill">Community &amp; Enterprise</span> <span className="version-pill">$399 one-time ($350 + $49 engine)</span>
+<span className="version-pill">Odoo 13.0 - 20.0</span> <span className="version-pill">Community &amp; Enterprise</span> <span className="version-pill">$399 one-time ($350 + $49 engine)</span>
 
 ![Shopify orders in Odoo with their store status](/img/shopify-connector/store_orders.png)
 

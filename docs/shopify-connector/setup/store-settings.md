@@ -56,7 +56,6 @@ Only Online Stores administrators see this tab.
 
 | Field | Default | What it does |
 |---|---|---|
-| **Confirm Unpaid Orders** *Shopify* | On | Under **Import Orders From**. Orders whose payment is pending in Shopify (cash on delivery, bank deposit, other manual payments) are confirmed in Odoo, so the warehouse can ship them. Off: they stay quotations until Shopify marks them paid. See [Order status](../orders/order-status.md). |
 | **Refund the Payment When Cancelling** *Shopify* | Off | Under **Cancel in the Store When Cancelled in Odoo**. When Odoo cancels the order in Shopify, Shopify also refunds the payment to the original payment method. Off: the order is cancelled without a refund. |
 | **Refund the Money Through Shopify** *Shopify* | Off | Under **Send Credit Notes to the Store as Refunds**. On: the Shopify refund moves the money back through the original payment. Off: Shopify only records which items were refunded. See [Refunds](../orders/refunds.md). |
 | **Restock Refunded Items in Shopify** *Shopify* | Off | Refunded items are put back in Shopify stock (restock type *Return*). Off: no restock in Shopify. Odoo stock is not changed by this setting. |

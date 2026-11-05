@@ -1,6 +1,61 @@
 {
   "woocommerce-connector": [
     {
+      "version": "1.0.6",
+      "date": "2026-11-05",
+      "modules": [
+        "novator_woocommerce_connector",
+        "commerce_bridge"
+      ],
+      "series": "13.0 - 20.0",
+      "notes": [
+        "Platform badge on imported sales orders: WooCommerce, Shopify or Amazon in the platform colour, next to the order number, with the store name when you have several stores.",
+        "Order number: name orders after the store number (as before) or let Odoo number them; the store number stays on the order and under the badge.",
+        "Payment methods have separate settings for unpaid orders (cash on delivery, bank transfer): confirm, validate the delivery, and invoice when completed, at import or never.",
+        "Taxes: new choice to use the store taxes and then apply the fiscal position; tax accounts for the taxes the store creates; tax rate decimals to match rates like 15.0199% to 15.02%.",
+        "Lines of products deleted in WooCommerce after the order now import on a custom item product instead of stopping the order.",
+        "Commerce Bridge 1.0.10: update Commerce Bridge as well."
+      ]
+    },
+    {
+      "version": "1.0.5",
+      "date": "2026-11-05",
+      "modules": [
+        "novator_woocommerce_connector",
+        "commerce_bridge"
+      ],
+      "series": "13.0 - 16.0",
+      "notes": [
+        "Now available for Odoo 13.0, 14.0, 15.0 and 16.0, with the same features as on Odoo 17.0 - 20.0 (Commerce Bridge 1.0.9)."
+      ]
+    },
+    {
+      "version": "1.0.5",
+      "date": "2026-11-05",
+      "modules": [
+        "novator_woocommerce_connector",
+        "commerce_bridge"
+      ],
+      "series": "17.0 - 20.0",
+      "notes": [
+        "Imported orders keep the date the customer ordered. Before, confirming the order in Odoo set the order date to the import time (Commerce Bridge 1.0.9)."
+      ]
+    },
+    {
+      "version": "1.0.4",
+      "date": "2026-11-05",
+      "modules": [
+        "novator_woocommerce_connector",
+        "commerce_bridge"
+      ],
+      "series": "17.0 - 20.0",
+      "notes": [
+        "New store dashboard: one card per store with orders and sales of the last 7 days, a daily chart, Queued and Failed Jobs tiles, the last sync time and Sync Orders, More and Open Store buttons.",
+        "Several stores per company: the same WooCommerce site cannot be connected twice in one company, so orders are never imported twice.",
+        "Commerce Bridge 1.0.8."
+      ]
+    },
+    {
       "version": "1.0.3",
       "date": "2026-11-04",
       "modules": [
@@ -693,6 +748,51 @@
   ],
   "shopify-connector": [
     {
+      "version": "1.0.4",
+      "date": "2026-11-05",
+      "modules": [
+        "novator_shopify_connector",
+        "commerce_bridge"
+      ],
+      "series": "13.0 - 20.0",
+      "notes": [
+        "Platform badge on imported sales orders: WooCommerce, Shopify or Amazon in the platform colour, next to the order number, with the store name when you have several stores.",
+        "Order number: name orders after the store number (as before) or let Odoo number them; the store number stays on the order and under the badge.",
+        "Payment methods have separate settings for unpaid orders (cash on delivery, bank transfer): confirm, validate the delivery, and invoice when completed, at import or never.",
+        "Taxes: new choice to use the store taxes and then apply the fiscal position; tax accounts for the taxes the store creates; tax rate decimals to match rates like 15.0199% to 15.02%.",
+        "Shopify fraud analysis on the order (risk level, recommendation and reasons), a Fraud Risk filter, and an option to hold risky orders as quotations.",
+        "Custom items and gift cards import on their own products (custom item, custom item shipped, gift card) instead of stopping the order.",
+        "The store setting Confirm Unpaid Orders moved to each payment method (Unpaid: Confirm); your current choice is kept when you update.",
+        "Commerce Bridge 1.0.10: update Commerce Bridge as well."
+      ]
+    },
+    {
+      "version": "1.0.3",
+      "date": "2026-11-05",
+      "modules": [
+        "novator_shopify_connector",
+        "commerce_bridge"
+      ],
+      "series": "13.0 - 16.0",
+      "notes": [
+        "Now available for Odoo 13.0, 14.0, 15.0 and 16.0, with the same features as on Odoo 17.0 - 20.0 (Commerce Bridge 1.0.9). On Odoo 13.0 the payout entry moves the payments from the payment journal's account to the bank, as Odoo 13.0 has no outstanding payment accounts."
+      ]
+    },
+    {
+      "version": "1.0.3",
+      "date": "2026-11-05",
+      "modules": [
+        "novator_shopify_connector",
+        "commerce_bridge"
+      ],
+      "series": "17.0 - 20.0",
+      "notes": [
+        "New store dashboard: one card per store with orders and sales of the last 7 days, a daily chart, Queued and Failed Jobs tiles, the last sync time and Sync Orders, More and Open Store buttons.",
+        "Several stores per company: the same Shopify shop cannot be connected twice in one company, so orders are never imported twice.",
+        "Imported orders keep the date the customer ordered. Before, confirming the order in Odoo set the order date to the import time (Commerce Bridge 1.0.9: update Commerce Bridge as well)."
+      ]
+    },
+    {
       "version": "1.0.2",
       "date": "2026-11-04",
       "modules": [
@@ -732,6 +832,56 @@
         "Products and variants in both directions, with images.",
         "Shopify Payments payouts as journal entries matched with the order payments.",
         "Needs Commerce Bridge 1.0.2."
+      ]
+    }
+  ],
+  "label-designer": [
+    {
+      "version": "1.0.1",
+      "date": "2026-11-04",
+      "modules": [
+        "novator_label_designer",
+        "novator_label_designer_mrp"
+      ],
+      "series": "17.0 - 20.0",
+      "notes": [
+        "Two editions on the Apps Store: Community ($99) and Enterprise ($149, adds labels in work order Print Labels steps; $50 for owners of the Community edition).",
+        "App descriptions updated."
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "date": "2026-11-04",
+      "modules": [
+        "novator_label_designer",
+        "novator_label_designer_mrp"
+      ],
+      "series": "17.0 - 20.0",
+      "notes": [
+        "First release: drag-and-drop label designer inside Odoo with text, fields, barcodes (Code 128, EAN-13, EAN-8, UPC-A, Code 39), QR codes, Data Matrix, boxes, lines, circles, images, line tables and nested labels (another design for each line of a list); text, barcodes and images can be rotated.",
+        "Formats in fields such as `{lst_price|money}`, `{name|upper}`, `{date|date:%d.%m.%Y}` and `{partner_id|address}`; Python formulas, off until an administrator switches them on.",
+        "ZPL II output for 203, 300 and 600 dpi printers, in UTF-8, Windows-1252 or code page 850, and PDF output from the same design.",
+        "Print actions in the Print menu of any model, a Label Designer format in Odoo's Print Labels window for products and for lots and serial numbers of transfers, a default design per window, and designs in the Print Labels steps of work orders (Odoo Enterprise, with the included Work Orders module).",
+        "Label previews in the list of designs, label size in millimetres or inches, Duplicate button.",
+        "Eight example designs: product labels 50 x 25 mm and 100 x 50 mm, lot, package, package contents with nested lines, location and a 100 x 150 mm shipping label."
+      ]
+    }
+  ],
+  "amazon-connector": [
+    {
+      "version": "1.0.0",
+      "date": "2026-11-06",
+      "modules": [
+        "novator_amazon_connector",
+        "commerce_bridge"
+      ],
+      "series": "17.0 - 20.0",
+      "notes": [
+        "First release, on the Amazon Selling Partner API with your own developer app. Link with Amazon (one click) is coming soon.",
+        "FBM and FBA orders with VAT per marketplace (price-included taxes supported), shipping, gift wrap and promotions; cancellations both ways.",
+        "Shipment confirmation with carrier and tracking, feed results checked; FBM stock and prices per marketplace; listings import with offers per marketplace.",
+        "FBA warehouse with stock every 6 hours, FBA customer returns, refunds as credit notes, settlements as journal entries with fees and reconciled order payments.",
+        "Take over orders and SKUs from Odoo Enterprise's Amazon connector; several seller accounts per company; buyer data removal."
       ]
     }
   ]

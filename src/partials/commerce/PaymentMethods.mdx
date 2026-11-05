@@ -9,10 +9,13 @@ What Odoo does with an imported order depends on how it was paid. Each payment m
 | **Store** | | The store the method belongs to. Each store has its own methods. |
 | **Name** | The name {props.platform} sends | Shown in the order's **Online Store** tab. |
 | **Store Code** | The code {props.platform} sends | How Odoo recognises the method. Do not change it. |
-| **Confirm Order** | On | Confirm the quotation into a sales order. |
-| **Validate Delivery** | Off | Validate the delivery right away when every product is in stock. For digital goods, services or stock shipped by a third party. |
-| **Create and Post Invoice** | On | Create the invoice and post it. |
-| **Register Payment When Paid** | On when the store has a **Default Payment Journal** | Register the payment on the invoice in the journal below. |
+| **Paid: Confirm** (Confirm Order) | On | Confirm the quotation into a sales order. Off: no order of this method is confirmed automatically, paid or not. |
+| **Paid: Deliver** (Validate Delivery) | Off | For paid orders: validate the delivery right away when every product is in stock. For digital goods, services or stock shipped by a third party. |
+| **Paid: Invoice** (Create and Post Invoice) | On | Create the invoice and post it. Off: no order of this method is invoiced automatically. |
+| **Paid: Payment** (Register Payment When Paid) | On when the store has a **Default Payment Journal** | Register the payment on the invoice in the journal below, once the store marks the order paid. |
+| **Unpaid: Confirm** (Confirm Unpaid Orders) | On | For orders not paid yet in the store (cash on delivery, bank transfer, pending): confirm them, so the warehouse can ship. Off: they stay quotations until the store marks them paid. |
+| **Unpaid: Deliver** (Validate Delivery of Unpaid Orders) | Off | The same as **Paid: Deliver**, for unpaid orders. |
+| **Unpaid: Invoice** (Invoice Unpaid Orders) | When the store completes the order | *When the store completes the order*: invoiced once the store marks it completed or paid. *At import*: invoiced right away, the payment follows when the store marks it paid. *Never*: only once paid. |
 | **Payment Journal** | The store's **Default Payment Journal** | Bank or cash journal of the payment. Required when **Register Payment When Paid** is on. |
 | **Payment Term** | Empty | Payment term of orders paid this way. Wins over the store's **Payment Term**. |
 
@@ -20,9 +23,9 @@ What Odoo does with an imported order depends on how it was paid. Each payment m
 
 Each time an order is imported or updated, Odoo runs these steps. A step that is already done is skipped.
 
-1. **Confirm**, when **Confirm Order** is on and the store status is one the connector treats as confirmed (paid, processing, on hold or completed). Unpaid orders the connector imports as *pending* stay quotations.
-2. **Validate the delivery**, when **Validate Delivery** is on and every product can be reserved. If something is missing, the delivery stays open and Odoo tries again at the next update of the order. A delivery that needs a decision (for example lots or serial numbers) is left for you, with a warning in the log.
-3. **Invoice**, when **Create and Post Invoice** is on and the order is **paid in the store** or **completed**. An order is invoiced once: credit notes of later refunds never lead to a second invoice.
+1. **Confirm**, when **Paid: Confirm** is on (and, for an unpaid order, **Unpaid: Confirm** too) and the store status is one the connector treats as confirmed (paid, processing, on hold or completed). Unpaid orders the connector imports as *pending* stay quotations. With **Hold Risky Orders** on the store, an order the store flags as fraud risk stays a quotation with a to-do.
+2. **Validate the delivery**, when **Paid: Deliver** (paid orders) or **Unpaid: Deliver** (unpaid orders) is on and every product can be reserved. If something is missing, the delivery stays open and Odoo tries again at the next update of the order. A delivery that needs a decision (for example lots or serial numbers) is left for you, with a warning in the log.
+3. **Invoice**, when **Paid: Invoice** is on and the order is **paid in the store**, or, for an unpaid order, as **Unpaid: Invoice** says (when completed, at import, or never). An order is invoiced once: credit notes of later refunds never lead to a second invoice.
 4. **Register the payment**, when **Register Payment When Paid** is on, a journal is set and the order is paid in the store.
 
 Without a payment method (some orders have none, for example a free order), Odoo confirms the order and invoices it once it is paid or completed, but registers no payment.
@@ -37,7 +40,7 @@ A step that fails (for example an invoice that cannot be posted because of a mis
 |---|---|---|---|---|---|
 | Card gateway (paid at checkout) | On | Off | On | On | A bank or clearing journal for that gateway |
 | Bank transfer | On | Off | On | On | Your bank journal (the payment is registered when the store marks the order paid) |
-| Cash on delivery | On | Off | On | On | A cash or courier journal. The invoice is created once the store marks the order paid or completed. |
+| Cash on delivery | On (Unpaid: Confirm on) | Off | On (Unpaid: Invoice *at import* if you want the invoice with the parcel) | On | A cash or courier journal. The payment is registered once the store marks the order paid. |
 | Marketplace or gift card paid elsewhere | On | Off | On | Off | Reconcile the payout yourself |
 
 ### FAQ

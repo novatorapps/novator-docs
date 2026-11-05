@@ -8,7 +8,7 @@
       "free": null,
       "pro": "novator_woocommerce_connector",
       "price": "$399",
-      "versions": "17.0 - 20.0",
+      "versions": "13.0 - 20.0",
       "guide": true,
       "category": "eCommerce"
     },
@@ -18,6 +18,17 @@
       "summary": "Orders, products, stock per location, prices, Markets, refunds, fulfillments and Shopify Payments payouts in sync between Shopify and Odoo.",
       "free": null,
       "pro": "novator_shopify_connector",
+      "price": "$399",
+      "versions": "13.0 - 20.0",
+      "guide": true,
+      "category": "eCommerce"
+    },
+    {
+      "slug": "amazon-connector",
+      "title": "Amazon Connector",
+      "summary": "FBM and FBA orders with VAT, listings, stock and prices, shipment confirmation, FBA stock and returns, refunds and settlements between Amazon and Odoo.",
+      "free": null,
+      "pro": "novator_amazon_connector",
       "price": "$399",
       "versions": "17.0 - 20.0",
       "guide": true,
@@ -64,6 +75,17 @@
       "pro": "novator_direct_print",
       "price": "$99",
       "versions": "13.0 - 20.0",
+      "guide": true,
+      "category": "Printing"
+    },
+    {
+      "slug": "label-designer",
+      "title": "Barcode Label Designer",
+      "summary": "Design ZPL and PDF labels inside Odoo: fields, barcodes, QR codes, line tables and nested labels for any model; work order labels in the Enterprise edition.",
+      "free": null,
+      "pro": "novator_label_designer",
+      "price": "$99 / $149",
+      "versions": "17.0 - 20.0",
       "guide": true,
       "category": "Printing"
     },

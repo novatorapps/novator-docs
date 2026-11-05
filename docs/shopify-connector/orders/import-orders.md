@@ -34,7 +34,7 @@ Every Shopify order you want in Odoo becomes a sales order, named with the store
 | Shopify order | Imported? |
 |---|---|
 | Paid, partially paid, authorized, refunded | Yes |
-| Payment pending (cash on delivery, bank deposit, manual) | Yes: confirmed, or a quotation when **Confirm Unpaid Orders** is off |
+| Payment pending (cash on delivery, bank deposit, manual) | Yes: confirmed, or a quotation when **Unpaid: Confirm** is off on its payment method |
 | Cancelled before the first import | No |
 | Voided or expired payment | No |
 | Draft orders (not completed) | No: Shopify only lists real orders |

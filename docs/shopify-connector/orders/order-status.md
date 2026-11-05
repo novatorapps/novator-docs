@@ -19,8 +19,7 @@ Shopify has a payment status (financial status), a fulfillment status and a canc
 | Paid, partially refunded, refunded; not (fully) fulfilled | *paid* | Yes | Confirm, invoice, register payment (per payment method). |
 | Authorized (captured later) | *processing* | No | Confirm. Invoice and payment follow when Shopify marks it paid. |
 | Partially paid | *processing* | No | Confirm. |
-| Pending, **Confirm Unpaid Orders** on | *on-hold* | No | Confirm, so it can be shipped. |
-| Pending, **Confirm Unpaid Orders** off | *pending* | No | Stays a quotation until paid. |
+| Pending | *on-hold* | No | Confirm, so it can be shipped, unless **Unpaid: Confirm** is off on its payment method: then it stays a quotation until paid. |
 | Voided, expired | *voided*, *expired* | No | Not imported. Already imported orders are left as they are. |
 
 **Paid** is the **Paid in the Store** box of the order. Once set, it stays set even if Shopify later refunds the order.
@@ -33,11 +32,17 @@ Shopify marks orders paid with a manual method (cash on delivery, bank deposit, 
 
 | Step | What happens |
 |---|---|
-| Order placed | Imported with status *on-hold* and confirmed (with **Confirm Unpaid Orders** on). The warehouse can deliver it. No invoice yet. |
+| Order placed | Imported with status *on-hold* and confirmed (with **Unpaid: Confirm** on). The warehouse can deliver it. No invoice yet, unless **Unpaid: Invoice** is *At import*. |
 | You deliver it in Odoo | Fulfilled in Shopify with the tracking number. |
 | The courier pays, you click **Mark as paid** in Shopify | Shopify sends an update; Odoo sets **Paid in the Store**, creates and posts the invoice, and registers the payment if the payment method says so. |
 
 If you prefer to register cash yourself, turn off **Register Payment When Paid** on that payment method and register the payment in Odoo when the money arrives.
+
+## Fraud analysis
+
+Shopify checks every order for fraud. Odoo reads the result with the order and shows it on the **Online Store** tab: **Fraud Risk** (low, medium, high), **Fraud Recommendation** (accept, investigate, cancel) and the reasons Shopify gives. When Shopify recommends to investigate or cancel, the order shows a red banner, and the filter **Fraud Risk** on **Orders** lists such orders.
+
+With **Hold Risky Orders** on the store's **Orders** tab, such orders stay quotations with a to-do *Fraud risk: check before confirming*. When Shopify accepts the order later (for example after you approve it in Shopify), the next update confirms it; you can also confirm it yourself.
 
 ## Good to know
 

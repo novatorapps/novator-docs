@@ -1,8 +1,9 @@
-Odoo can take the taxes from {props.platform} or from the Odoo products. Choose with **Tax Mode** on the store's **Orders** tab.
+Odoo can take the taxes from {props.platform} or from the Odoo products. Choose with **Taxes** on the store's **Orders** tab.
 
-| Tax Mode | Lines get | Use it when |
+| Taxes | Lines get | Use it when |
 |---|---|---|
-| **Use the taxes charged by the store** (default) | The Odoo tax mapped to each tax {props.platform} charged on that line. A line without store tax gets no tax. | {props.platform} calculates your taxes (the usual case). Odoo then matches the store total. |
+| **Use the taxes charged by the store** (default) | The Odoo tax mapped to each tax {props.platform} charged on that line. A line without store tax gets no tax. No fiscal position mapping. | {props.platform} calculates your taxes (the usual case). Odoo then matches the store total. |
+| **Use the store taxes, then apply the fiscal position** | The mapped store taxes, then replaced as the order's fiscal position says (the store's **Fiscal Position**, or the one Odoo picks from the customer address) | {props.platform} charges the tax, but your accounting needs other taxes for some customers (for example export, intra-community or exempt). |
 | **Use the Odoo product taxes** | The taxes of the Odoo product, adjusted by the fiscal position | Odoo is the reference for taxes and the store only shows prices. The Odoo total can then differ from the store total. |
 
 ### Tax mapping
@@ -21,11 +22,11 @@ With store taxes, each tax {props.platform} uses gets a line in **Online Stores 
 
 When a new store tax appears, Odoo fills **Odoo Tax** with the first sales tax of the store's company that is a percentage, has the same rate and is not included in the price. If there is none:
 
-- with **Create Missing Taxes** on, Odoo creates one, named after the store tax and its rate (for example *HST 13%*), tax excluded, and notes it in the log;
+- with **Create Missing Taxes** on, Odoo creates one, named after the store tax and its rate (for example *HST 13%*), tax excluded, with the store's **Tax Account** and **Tax Account on Credit Notes** when set, and notes it in the log;
 - with it off, the order waits in the queue with *Store tax "X" (r%) has no Odoo tax. Map it in Configuration > Taxes.* Map it, then click **Retry** on the job.
 
 :::warning
-Check every created tax once, before the first invoices are posted. Odoo creates it without a tax account and without tax grids, so its amount would be booked on the income account and missing from tax reports. Set the accounts and grids on the tax, or map the store tax to an existing Odoo tax instead.
+Check every created tax once, before the first invoices are posted. Without a **Tax Account** on the store, Odoo creates it without a tax account, and always without tax grids, so its amount could be booked on the income account and be missing from tax reports. Set the account on the store before the first import, check the grids on the tax, or map the store tax to an existing Odoo tax instead.
 :::
 
 ### Totals that differ

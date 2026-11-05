@@ -37,7 +37,8 @@ export default function Contact() {
             <li>Official Odoo Partner: <a href="https://www.odoo.com/partners/novator-825459" target="_blank" rel="noopener">our listing on odoo.com</a></li>
             <li>Company website: <a href="https://www.novator.co" target="_blank" rel="noopener">www.novator.co</a></li>
             <li>Source code of our free apps: <a href="https://github.com/novatorapps" target="_blank" rel="noopener">github.com/novatorapps</a></li>
-            <li>Karachi, Pakistan</li>
+            <li>Novator Technologies (SMC-Private) Limited, Karachi-75300, Sindh, Pakistan</li>
+            <li><Link to="/privacy">Privacy Policy</Link> and <Link to="/terms">Terms of Service</Link></li>
           </ul>
         </section>
       </main>

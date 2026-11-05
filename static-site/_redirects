@@ -11,6 +11,8 @@
 /ai-connector/* https://docs.novatorapps.com/ai-connector/:splat 301
 /direct-print https://docs.novatorapps.com/direct-print 301
 /direct-print/* https://docs.novatorapps.com/direct-print/:splat 301
+/label-designer https://docs.novatorapps.com/label-designer 301
+/label-designer/* https://docs.novatorapps.com/label-designer/:splat 301
 /storage-manager https://docs.novatorapps.com/storage-manager 301
 /storage-manager/* https://docs.novatorapps.com/storage-manager/:splat 301
 /device-access-control https://docs.novatorapps.com/device-access-control 301

@@ -22,7 +22,13 @@ Separate discount lines keep the product prices clean in your sales reports, and
 
 Fee lines (sent by some platforms, for example a payment surcharge or gift wrap) use the **Fee Product** (*Fee (online store)*, `CB-FEE`). Without a fee product, such an order waits with *Set a fee product on the store.*
 
+### Custom items, deleted products and gift cards
+
+- A line without a product in {props.platform} (a Shopify custom item added by hand, or a product deleted in the store after the order) uses the store's **Custom Item Product** (*Custom item (online store)*, `CB-CUSTOM`), with the store's line name and price. Set **Custom Item Product (shipped)** to use a storable product for custom items that need shipping.
+- Gift cards sold in the store use the **Gift Card Product** (*Gift card (online store)*, `CB-GIFTCARD`), a service.
+- Without such a product, the order waits with *Set a custom item product on the store (Orders tab).*
+
 ### Good to know
 
-- The three products are created when the app is installed. You can rename them, change their accounts and taxes, or choose other products on the store.
+- The products are created when the app is installed. You can rename them, change their accounts and taxes, or choose other products on the store.
 - Change the products before the first import: existing orders keep their lines.

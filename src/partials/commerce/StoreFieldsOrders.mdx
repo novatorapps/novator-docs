@@ -9,7 +9,8 @@ The **Orders** tab of a store decides how {props.platform} orders become Odoo sa
 | **Import Orders Automatically** | On | Every 15 minutes Odoo asks {props.platform} for orders created or changed since the last check. This is the safety net next to webhooks: orders placed while Odoo was offline or while a webhook failed still arrive. |
 | **Import Orders From** | The moment the store was created | The scheduled check never goes further back than this date. Set it before the first check if you want older orders; leave it if you only want new orders. |
 | **Last Order Check** | Empty | Read only. When the scheduled check last ran. The next check starts from here (minus two minutes, so nothing on the edge is missed). Empty means the next check starts from **Import Orders From**. |
-| **Order Prefix** | <code>{props.prefix}</code> | Added in front of the {props.platform} order number to build the Odoo order reference, for example <code>{props.prefix + "1001"}</code>. The plain store number is also kept in **Customer Reference** and **Store Order Number**. Change it before the first import: existing orders keep their names. |
+| **Order Number** | Store order number | *Store order number*: the Odoo order is named after the {props.platform} order, with the prefix below. *Odoo sequence*: Odoo numbers the order as usual (for example S00042); the store number is shown under the platform badge on the order and kept in **Customer Reference** and **Store Order Number**, so you can still search by it. Changing it affects new orders only. |
+| **Order Prefix** | <code>{props.prefix}</code> | Only with *Store order number*. Added in front of the {props.platform} order number to build the Odoo order reference, for example <code>{props.prefix + "1001"}</code>. The plain store number is also kept in **Customer Reference** and **Store Order Number**. Change it before the first import: existing orders keep their names. |
 | **Order Warehouse** | The first warehouse of the company | Imported orders are delivered from this warehouse. |
 | **Pricelist** | Empty | The pricelist of imported orders, and the regular prices sent to the store (see prices). When an order comes in another currency, Odoo uses a pricelist in that currency instead (see below). |
 
@@ -31,11 +32,17 @@ When an order's currency differs from the store **Pricelist**, Odoo takes the fi
 
 | Field | Default | What it does |
 |---|---|---|
-| **Tax Mode** | Use the taxes charged by the store | *Use the taxes charged by the store*: every line gets the Odoo tax mapped to the tax {props.platform} charged. *Use the Odoo product taxes*: lines get the taxes of the Odoo product and fiscal position, as in a manual quotation. See taxes. |
+| **Taxes** | Use the taxes charged by the store | *Use the taxes charged by the store*: every line gets the Odoo tax mapped to the tax {props.platform} charged. *Use the store taxes, then apply the fiscal position*: the same, then the order's fiscal position maps them (for example to export or exempt taxes). *Use the Odoo product taxes*: lines get the taxes of the Odoo product and fiscal position, as in a manual quotation. See taxes. |
 | **Create Missing Taxes** | On | Only with store taxes. When no Odoo tax matches a store tax, Odoo creates one. Off: the order waits in the queue until you map the tax. |
+| **Tax Rate Decimals** | 4 | Only with store taxes. Store rates are rounded to this many decimals before Odoo looks for a tax of the same rate. With 2, a rate the store reports as 15.0199% matches your 15.02% tax. |
+| **Tax Account** | Empty | Only with store taxes and **Create Missing Taxes**. Set on the taxes this store creates, so their amounts are booked on your tax account. Empty: Odoo's default. |
+| **Tax Account on Credit Notes** | Empty | The same, for credit notes. Empty: the **Tax Account** above. |
 | **Shipping Product** | Shipping (online store) `CB-SHIP` | Product of shipping lines, unless the shipping method has its own product. |
 | **Discount Product** | Discount (online store) `CB-DISC` | Product of the discount lines. |
 | **Fee Product** | Fee (online store) `CB-FEE` | Product of extra fee lines, for platforms that send fees. |
+| **Custom Item Product** | Custom item (online store) `CB-CUSTOM` | Product of lines that have no product in the store: Shopify custom items, or products deleted in the store after the order. The line keeps its store name and price. |
+| **Custom Item Product (shipped)** | Empty | Optional. Used instead of the product above for custom items that need shipping, for example a storable product so they appear on the delivery. |
+| **Gift Card Product** | Gift card (online store) `CB-GIFTCARD` | Product of gift cards sold in the store (a service). |
 
 ### Status Changes
 
@@ -47,6 +54,7 @@ When an order's currency differs from the store **Pricelist**, Odoo takes the fi
 | **Send Tracking Note to the Customer** | On | Shown when the field above is on. {props.platform} tells the customer about the shipment. |
 | **Import Refunds as Credit Notes** | On | Refunds made in {props.platform} become credit notes in Odoo. |
 | **Send Credit Notes to the Store as Refunds** | On | Posting a credit note for an imported order creates a refund in {props.platform}. |
+| **Hold Risky Orders** | Off | For stores that send a fraud analysis (Shopify). Orders the store recommends to *Investigate* or *Cancel* stay quotations with a to-do *Fraud risk: check before confirming*, until the store accepts them or you confirm them yourself. Off: they follow the usual workflow, with a red banner on the order. |
 
 :::tip
 What Odoo does after an order is imported (confirm, deliver, invoice, register the payment) is not on this tab. It is set per payment method in **Configuration > Payment Methods**.

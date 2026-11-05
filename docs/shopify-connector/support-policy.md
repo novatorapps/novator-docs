@@ -8,4 +8,4 @@ import SupportPolicy from '@site/src/partials/commerce/SupportPolicy.mdx';
 
 # Support policy
 
-<SupportPolicy platform="Shopify" versions="17.0 - 20.0" />
+<SupportPolicy platform="Shopify" versions="13.0 - 20.0" />
