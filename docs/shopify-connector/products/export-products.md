@@ -4,6 +4,9 @@ sidebar_position: 3
 description: Create or update Shopify products from Odoo, with options, variants, SKUs, barcodes, prices, weight, images, stock and status.
 ---
 
+import StoreText from '@site/src/partials/commerce/StoreText.mdx';
+
+
 # Send products to Shopify
 
 You can create products in Odoo and send them to Shopify, or update products that are already linked.
@@ -39,8 +42,10 @@ There is no automatic product export. Stock and prices of linked products are se
 
 | Odoo | Shopify |
 |---|---|
-| **Name** | Title |
-| **Description** (or **Sales Description** when the description is empty) | Description |
+| **Name** (or **Title in This Store**) | Title |
+| **Description** (or **Sales Description** when the description is empty; **Description in This Store** wins over both) | Description |
+| **Tags** (with **Send Product Tags**) | Tags |
+| Odoo category, through its collection (with **Send Collections**) | Manual collection |
 | **Product Category** name | Product type |
 | Attributes and values | Options and option values. A simple product gets Shopify's default option *Title / Default Title*. |
 | Per variant: **Internal Reference** | SKU |
@@ -48,6 +53,8 @@ There is no automatic product export. Stock and prices of linked products are se
 | Per variant: price of the store **Pricelist**, and sale price of the **Sale Price Pricelist** | Price; when there is a sale price, the price is the sale price and the regular price goes to compare-at |
 | Per variant: **Weight** | Weight in kilograms |
 | Quantity tracking | Always on |
+| **Keep Selling When Out of Stock** / product **Shopify: When Out of Stock** | Inventory policy (deny or continue) |
+| Customer taxes of the product (with **Taxable From Odoo Taxes**) | Taxable |
 | **Image** and variant images | Product media (main image, variant images) |
 
 ## What happens step by step
@@ -66,6 +73,12 @@ There is no automatic product export. Stock and prices of linked products are se
 | *Do not send images* | No media are sent. | Images are managed in Shopify. |
 
 The main image is sent again only when it changed since the last send. Variant images are sent with each send.
+
+## A title and description for this store only
+
+![The Store Text tab of a store product](/img/shopify-connector/store_text.png)
+
+<StoreText platform="Shopify" />
 
 ## Good to know
 

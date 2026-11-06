@@ -23,7 +23,7 @@ On Odoo 18, 19 and 20, **Stock From Warehouses** is respected from Commerce Brid
 | When | What is sent |
 |---|---|
 | Stock moves in Odoo (a delivery or receipt is validated, products are reserved or unreserved, an inventory adjustment is applied) | About one minute later, one job sends every linked product whose quantity changed since it was last sent. Many moves within that minute become one job. |
-| Every hour | The same check, as a safety net. |
+| Every hour (the store's **Schedules** tab) | The same check, as a safety net. |
 | **Send All Stock** on the store, or **Sync... > Send stock to the store** | Every linked product, also when nothing changed. |
 | **Product Links**, select lines, **Action > Send Stock to Store** | The selected products, also when nothing changed. |
 

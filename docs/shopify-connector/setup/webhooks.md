@@ -20,14 +20,17 @@ A webhook is a call Shopify makes to Odoo the moment something happens, for exam
 2. Odoo first removes the subscriptions it created before for this store, then subscribes to the topics below.
 3. The chatter lists the topics and **Status** on the **Connection** tab shows *N active*.
 
-Click **Set Up Webhooks** again whenever you change **Import New Products Instantly**, move Odoo to another address, or reconnect the app.
+Click **Set Up Webhooks** again whenever you change **Product Changes Instantly** or **Import New Customers Instantly**, move Odoo to another address, or reconnect the app.
 
 | Topic | Subscribed | What Odoo does |
 |---|---|---|
 | Order created (`ORDERS_CREATE`) | Always | Queues the import of that order. |
 | Order updated (`ORDERS_UPDATED`) | Always | Queues an update of that order. Shopify sends it for payments, fulfillments, cancellations, refunds and edits too. |
 | App uninstalled (`APP_UNINSTALLED`) | Always | Sets the store to **Connection Error**, removes the access token and the webhook list, and posts *The app was uninstalled from the Shopify store. Reconnect to resume syncing.* |
-| Product created (`PRODUCTS_CREATE`) | When **Import New Products Instantly** is on | Queues the import of the product about 30 seconds later, so Shopify has saved its variants and images. |
+| Product created (`PRODUCTS_CREATE`) | When **Product Changes Instantly** is on | Queues the import of the product about 30 seconds later, so Shopify has saved its variants and images. |
+| Product updated (`PRODUCTS_UPDATE`) | When **Product Changes Instantly** is on | When the status changed (active, draft, archived) or a variant is not linked yet, Odoo refreshes the link: status, variants, collections. Shopify also sends this after every stock change, including Odoo's own; those are ignored. The Odoo product itself is never overwritten. |
+| Product deleted (`PRODUCTS_DELETE`) | When **Product Changes Instantly** is on | Removes the links of the product (store product and variant links). The Odoo product is kept, with a note in its chatter. |
+| Customer created (`CUSTOMERS_CREATE`) | When **Import New Customers Instantly** is on | Queues the import of the customer, so new accounts are in Odoo before their first order. |
 
 Odoo also accepts the topics orders paid, orders cancelled, orders fulfilled and refunds created if you add them yourself; each queues an update of the order.
 
@@ -39,12 +42,12 @@ Odoo also accepts the topics orders paid, orders cancelled, orders fulfilled and
 4. Several webhooks for the same order before the job runs are merged into one job.
 
 :::tip Nothing is lost when Odoo is offline
-Shopify retries a failed webhook for a while and removes subscriptions that fail for days. Independently, Odoo's scheduled check (**Import Orders Automatically**, every 15 minutes) imports every order changed since the last check. If you see *Not set up* after a long outage, click **Set Up Webhooks** again.
+Shopify retries a failed webhook for a while and removes subscriptions that fail for days. Independently, Odoo's scheduled check (**Import Orders Automatically**, every 15 minutes by default, see [Schedules](../operations/schedules.md)) imports every order changed since the last check. If you see *Not set up* after a long outage, click **Set Up Webhooks** again.
 :::
 
 ## Remove webhooks
 
-Click **Remove Webhooks** on the **Connection** tab. Odoo deletes every subscription of this store, including old ones that point to this store's address. Orders keep arriving with the 15-minute check.
+Click **Remove Webhooks** on the **Connection** tab. Odoo deletes every subscription of this store, including old ones that point to this store's address. Orders keep arriving with the scheduled check.
 
 ## Good to know
 

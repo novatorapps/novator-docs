@@ -42,3 +42,6 @@ Images used: only files present in both `static/img/shopify-connector` and `stat
 | SupportPolicy.mdx | platform, versions | Included, not included, what to include when writing |
 
 Connector pages still have to cover: connection and keys, platform status mapping, which store fields map to the neutral order, webhooks, platform-specific options (for example Shopify locations, Markets, payouts; WooCommerce tracking modes, images), and the platform side of refunds, cancellations and deliveries.
+| Schedules.mdx | platform | Schedules tab: intervals, last run, Run Now, the 5-minute scheduler, test copies |
+| Alerts.mdx | platform | Alerts tab: alert users, activity, log level; what to do with an alert |
+| StoreText.mdx | platform | Store Text tab of a store product: title and description for one store |

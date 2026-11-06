@@ -20,7 +20,7 @@ Run your WooCommerce store from Odoo. New orders arrive in Odoo within seconds, 
 ![WooCommerce orders in Odoo with their store status](/img/woocommerce-connector/store_orders.png)
 
 - **Orders stay in sync**, not only at the first import: quantities, addresses, payment, cancellations and refunds.
-- **Nothing gets lost**: webhooks plus a check every 15 minutes, and a job queue you can see and retry.
+- **Nothing gets lost**: webhooks plus a scheduled check (every 15 minutes by default, set per store), a job queue you can see and retry, and alerts to the users you choose when a job fails.
 - **Only your two systems**: Odoo talks to your store directly. No middleware and no subscription.
 - **Free setup call** with every purchase: write to **support@novator.co**.
 

@@ -6,7 +6,7 @@ The **Orders** tab of a store decides how {props.platform} orders become Odoo sa
 
 | Field | Default | What it does |
 |---|---|---|
-| **Import Orders Automatically** | On | Every 15 minutes Odoo asks {props.platform} for orders created or changed since the last check. This is the safety net next to webhooks: orders placed while Odoo was offline or while a webhook failed still arrive. |
+| **Import Orders Automatically** | On | Every 15 minutes (change it on the **Schedules** tab) Odoo asks {props.platform} for orders created or changed since the last check. This is the safety net next to webhooks: orders placed while Odoo was offline or while a webhook failed still arrive. |
 | **Import Orders From** | The moment the store was created | The scheduled check never goes further back than this date. Set it before the first check if you want older orders; leave it if you only want new orders. |
 | **Last Order Check** | Empty | Read only. When the scheduled check last ran. The next check starts from here (minus two minutes, so nothing on the edge is missed). Empty means the next check starts from **Import Orders From**. |
 | **Order Number** | Store order number | *Store order number*: the Odoo order is named after the {props.platform} order, with the prefix below. *Odoo sequence*: Odoo numbers the order as usual (for example S00042); the store number is shown under the platform badge on the order and kept in **Customer Reference** and **Store Order Number**, so you can still search by it. Changing it affects new orders only. |
@@ -25,6 +25,11 @@ When an order's currency differs from the store **Pricelist**, Odoo takes the fi
 | **Sales Team** | Empty | Sales team of imported orders. |
 | **Salesperson** | Empty | Salesperson of imported orders. Empty: the salesperson of the customer, if the customer has one, otherwise none. The background jobs never set themselves as salesperson. |
 | **Payment Term** | Empty | Payment term of imported orders. A payment term on the payment method wins over this one. |
+| **Shipping Policy** | Empty | *As soon as possible*: products in stock are delivered first, the rest follows in a backorder. *When all products are ready*: one delivery when everything is available. Empty: Odoo's default (Inventory settings). |
+| **Lock Confirmed Orders** | Off | Orders confirmed by the workflow are locked, so nobody changes them by mistake. Updates from the store still apply. Unlock an order from its **Unlock** button. |
+| **Customer Receivable Account** | Empty | Set on the customers this store creates (and their company), so their invoices are booked on it. Useful to reconcile each store's receivables on their own account. Existing customers keep theirs. Empty: Odoo's default. |
+| **Invoice and Payment on the Order Date** | Off | Invoices and payments created by the workflow are dated on the store order date instead of the import date. Useful when orders are imported late (first import, Odoo offline). |
+| **Store Order Number as Payment Reference** | Off | Invoices carry the store order number (for example `#1001`) as their payment reference, so bank and payout lines match them easily. Off: Odoo's own invoice reference. |
 | **Fiscal Position** | Empty | Optional. Empty: Odoo picks one from the customer address, as for any sales order. |
 | **Default Payment Journal** | Empty | Given to every payment method Odoo sees for the first time in an order, and **Register Payment When Paid** is switched on for it when a journal is set. Change it per method later in **Configuration > Payment Methods**. |
 
@@ -43,6 +48,8 @@ When an order's currency differs from the store **Pricelist**, Odoo takes the fi
 | **Custom Item Product** | Custom item (online store) `CB-CUSTOM` | Product of lines that have no product in the store: Shopify custom items, or products deleted in the store after the order. The line keeps its store name and price. |
 | **Custom Item Product (shipped)** | Empty | Optional. Used instead of the product above for custom items that need shipping, for example a storable product so they appear on the delivery. |
 | **Gift Card Product** | Gift card (online store) `CB-GIFTCARD` | Product of gift cards sold in the store (a service). |
+| **Tip Product** | Tip (online store) `CB-TIP` | Product of tips customers add at checkout (a service). Book it on its own income account if tips go to staff. |
+| **Duties Product** | Duties (online store) `CB-DUTIES` | Product of import duties charged on cross-border orders (Shopify Markets). |
 
 ### Status Changes
 

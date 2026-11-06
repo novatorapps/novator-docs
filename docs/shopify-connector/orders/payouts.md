@@ -49,7 +49,7 @@ For each payout Odoo also reads its balance transactions: charges, refunds, adju
 | Fees | **Fees Account** | Total fees | |
 | Each charge of an order | The account of that order's payment (see below) | | Gross charge |
 | Each refund of an order | The account of that order's refund payment | Refund | |
-| Adjustments without order | The clearing account | as Shopify reports | as Shopify reports |
+| Adjustments without order | The clearing account, or the account set for its type (below) | as Shopify reports | as Shopify reports |
 
 Example: two orders of 4,019.72 and 2,485.94, one refund of 790.94, fees 120.00:
 
@@ -62,6 +62,23 @@ Example: two orders of 4,019.72 and 2,485.94, one refund of 790.94, fees 120.00:
 | refund #1002 | 790.94 | |
 
 The entry is posted, and the payout's bank line (the net amount) can be matched with the payout line in the bank reconciliation.
+
+## Accounts per transaction type
+
+Besides charges and refunds, a payout can hold disputes (chargebacks), reserved funds, adjustments, Shopify bills, shipping labels and taxes. By default they go to the clearing account. To book each type on its own account, fill the list **Accounts per Transaction Type** at the bottom of the store's **Payouts** tab:
+
+![Accounts per transaction type on the Payouts tab](/img/shopify-connector/store_payout_accounts.png)
+
+| Transaction Type | Typical account |
+|---|---|
+| Dispute (chargeback), Dispute Reversal, Dispute Withdrawal | Chargebacks or disputes receivable |
+| Reserved Funds, Reserved Funds Released | Shopify reserve (a current asset) |
+| Adjustment, Adjustment Reversal | Shopify adjustments |
+| Shopify Bill, Shipping Label, Application Fee Refund | Shopify subscription and services expense |
+| Tax, Tax Adjustment | Tax on Shopify fees |
+| Charge, Refund, Failed Refund, Transfer | Normally left empty, so charges and refunds stay matched with the order payments |
+
+A type with an account always goes to that account, also when it belongs to an order, and is not matched with the order payments. One account per type and store.
 
 ## Matching with the order payments
 

@@ -20,7 +20,7 @@ Open **Online Stores > Stores** and click the store. This page explains every fi
 | **Test Connection** | Gets a token, reads the shop, locations and Markets, sets **Connected**. |
 | **Set Up Webhooks** | Creates the webhook subscriptions in Shopify. See [Webhooks](./webhooks.md). |
 | **Sync...** | Bulk operations in the background. See [Sync With Store](../operations/sync-wizard.md). |
-| **Check Orders Now** | Queues the order check at once instead of waiting for the next 15 minutes. |
+| **Check Orders Now** | Queues the order check at once instead of waiting for the next scheduled check. |
 | **Send All Stock** | Sends the quantity of every linked product to Shopify. |
 | **Use in This Database** | Only in a copy of the database. See [Test copies](../operations/test-databases.md). |
 
@@ -45,7 +45,8 @@ Only Online Stores administrators see this tab.
 | Field | Default | What it does |
 |---|---|---|
 | **Status** | Not set up | *N active* after **Set Up Webhooks**. |
-| **Import New Products Instantly** *Shopify* | Off | Also subscribe to new products: a product created in Shopify is imported about 30 seconds later. Click **Set Up Webhooks** again after changing it. |
+| **Product Changes Instantly** *Shopify* | Off | Also subscribe to product webhooks: new Shopify products are imported, changed ones refresh their link, deleted ones are unlinked. Click **Set Up Webhooks** again after changing it. See [Webhooks](./webhooks.md). |
+| **Import New Customers Instantly** *Shopify* | Off | Also subscribe to new customers: they are imported as soon as they create an account. |
 | **Remove Webhooks** | | Deletes the subscriptions Odoo created for this store. |
 
 ## Orders tab
@@ -56,6 +57,9 @@ Only Online Stores administrators see this tab.
 
 | Field | Default | What it does |
 |---|---|---|
+| **Import by Shipping Status** *Shopify* | All orders | Leave out new orders by their Shopify shipping status. See [Point of sale, pickup and order source](../orders/pos-and-pickup.md#import-by-shipping-status). |
+| **Import Point of Sale Orders** *Shopify* | On | Off: new Shopify POS orders are left out. |
+| **Customer for Walk-in Shop Sales** *Shopify* | Empty | Customer of POS sales without a customer. Empty: Odoo creates one from the order. |
 | **Refund the Payment When Cancelling** *Shopify* | Off | Under **Cancel in the Store When Cancelled in Odoo**. When Odoo cancels the order in Shopify, Shopify also refunds the payment to the original payment method. Off: the order is cancelled without a refund. |
 | **Refund the Money Through Shopify** *Shopify* | Off | Under **Send Credit Notes to the Store as Refunds**. On: the Shopify refund moves the money back through the original payment. Off: Shopify only records which items were refunded. See [Refunds](../orders/refunds.md). |
 | **Restock Refunded Items in Shopify** *Shopify* | Off | Refunded items are put back in Shopify stock (restock type *Return*). Off: no restock in Shopify. Odoo stock is not changed by this setting. |
@@ -71,6 +75,10 @@ Only Online Stores administrators see this tab.
 | Field | Default | What it does |
 |---|---|---|
 | **Product Images** *Shopify* | Odoo uploads them to Shopify | How the main image and variant images of products sent from Odoo reach Shopify. *Odoo uploads them to Shopify*: Odoo uploads the file itself (works when Odoo is not public). *Shopify downloads them from Odoo*: Shopify fetches a signed link (Odoo must be reachable from the internet). *Do not send images*. |
+| **Keep Selling When Out of Stock** *Shopify* | Off | Default inventory policy of products sent to Shopify; each product can override it. See [Collections, tags and selling rules](../products/collections-tags.md). |
+| **Taxable From Odoo Taxes** *Shopify* | On | Products without customer taxes in Odoo are sent as not taxable. |
+| **Send Product Tags** *Shopify* | Off | Odoo product tags become the Shopify tags (Shopify keeps only these). |
+| **Send Collections** *Shopify* | Off | Products go to the manual collection mapped to their Odoo category. **Create Missing Collections** creates the collection when there is none. **Import Collections** reads the store's collections. |
 | **Status of New Products** *Shopify* | Draft | Status of a product created in Shopify from Odoo when you send it as *Draft*. Choose *Active* to publish new products directly. Sending with *Published* always makes the product Active. See [Send products](../products/export-products.md). |
 
 ## Stock tab
@@ -94,6 +102,8 @@ Below the stock fields, the **Shopify locations** list shows every active locati
 
 **Send Market Prices Now** sends all linked products to every market with a pricelist. See [Markets](../products/markets.md).
 
+Below the markets, **Sales Channels** lists the store's channels (Online Store, Point of Sale...). Tick **Publish Products Here** to publish the products Odoo sends on that channel. See [Sales channels](../products/sales-channels.md).
+
 ## Payouts tab *Shopify*
 
 | Field | Default | What it does |
@@ -104,4 +114,12 @@ Below the stock fields, the **Shopify locations** list shows every active locati
 | **Payments Clearing Account** | Empty | Optional. Where order payments wait for the payout. Empty: the account of each order's own payment. |
 | **Last Payout Check** | | Read only. The next import reads payouts issued on or after this date. Odoo sets it two days before the last run, so a payout that Shopify marks paid late is not missed. |
 
-**Import Payouts Now** queues the import at once. See [Payouts](../orders/payouts.md).
+**Import Payouts Now** queues the import at once. **Accounts per Transaction Type** books disputes, reserves, adjustments and other transaction types on their own accounts. See [Payouts](../orders/payouts.md#accounts-per-transaction-type).
+
+## Schedules tab
+
+How often orders are checked and stock and prices are sent, with the last run and **Run Now**. See [Schedules](../operations/schedules.md).
+
+## Alerts tab
+
+Who is told when a job fails for good, and how much is logged. See [Alerts](../operations/alerts.md).

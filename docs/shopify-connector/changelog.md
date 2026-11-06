@@ -9,6 +9,26 @@ description: "Version history of Shopify Connector for Odoo."
 
 The newest release is first. In Odoo the version number starts with the Odoo version, so release 1.1.0 for Odoo 20.0 shows as `20.0.1.1.0`.
 
+## 1.0.17
+
+*2026-11-07, Odoo 17.0 - 20.0*
+
+- Schedules tab on each store: how often orders are checked and stock and prices are sent, the last run of each, and Run Now buttons.
+- Alerts tab: chosen users get a note and a "Failed store jobs" activity when a job fails after its retries; the log can keep only warnings and errors.
+- Tips and import duties as their own order lines (Tip and Duties products), so totals match Shopify.
+- Order source (Online Store, Point of Sale, Draft Order, apps), Store Pickup and the Shopify order tags on the sales order.
+- Shopify POS orders: delivered from the warehouse of their shop location, an optional walk-in customer, and an option to leave them out.
+- Local pickup: a Ready for Pickup button tells Shopify the order is ready, and Shopify sends the customer its pickup message.
+- Import new orders by shipping status (all, not shipped yet, or shipped).
+- Products: Import Collections, products put in the manual collection of their Odoo category (optionally created), Odoo tags sent as Shopify tags, keep selling when out of stock (store default and per product), and taxable from the Odoo taxes.
+- Sales channels: publish the products Odoo sends on the channels you tick, for example Online Store and Point of Sale.
+- Webhooks for product changes and deletions, and for new customers.
+- Payouts: an account per transaction type for disputes, reserves, adjustments, Shopify bills and more.
+- Orders tab: shipping policy, lock confirmed orders (store changes and cancellations still apply), a customer receivable account per store, invoice and payment on the store order date, and the store order number as payment reference.
+- Shipping methods can set an Odoo delivery method (carrier) on the order and its delivery; the shipping price stays the store's.
+- Store Text tab on a store product: a title and description sent to this store only.
+- Commerce Bridge 1.0.23: update Commerce Bridge as well. It now needs Odoo's Delivery app, which is installed with the update.
+
 ## 1.0.4
 
 *2026-11-05, Odoo 13.0 - 20.0*

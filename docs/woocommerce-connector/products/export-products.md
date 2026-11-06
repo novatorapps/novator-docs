@@ -5,6 +5,9 @@ sidebar_position: 3
 description: Create and update WooCommerce products from Odoo, with variants, prices, stock, categories and images.
 ---
 
+import StoreText from '@site/src/partials/commerce/StoreText.mdx';
+
+
 # Send products to WooCommerce
 
 ## Before you start
@@ -68,6 +71,10 @@ For variants, an existing variation is reused when it is linked, or when it has 
 - **Catalog > Store Products** gets the product with its store ID, type, status and link.
 - **Catalog > Product Links** gets one line per variant, with the stock and price just sent.
 - The log has a line *Product ... sent to the store (draft/publish)*.
+
+## A title and description for this store only
+
+<StoreText platform="WooCommerce" />
 
 ## Good to know
 

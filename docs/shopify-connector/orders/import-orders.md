@@ -41,7 +41,7 @@ Every Shopify order you want in Odoo becomes a sales order, named with the store
 | Archived (closed) orders | Yes, when they changed in the period |
 | Test orders | Yes, like any other order |
 
-The full mapping is on [Order status](./order-status.md).
+The full mapping is on [Order status](./order-status.md). You can also leave out new orders by shipping status or Point of Sale orders: see [Point of sale, pickup and order source](./pos-and-pickup.md).
 
 ## What happens during an import
 

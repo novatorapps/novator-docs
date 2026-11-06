@@ -4,6 +4,7 @@ Besides product lines, an imported order can have shipping, discount and fee lin
 
 - Every shipping method {props.platform} uses gets a line in **Online Stores > Configuration > Shipping Methods** (name and **Store Code**) the first time it appears.
 - Set an **Odoo Product** on a method to book its shipping lines on that product, for example one product per carrier. Empty: the store's **Shipping Product** (*Shipping (online store)*, `CB-SHIP`).
+- Set an **Odoo Delivery Method** on a method to put that carrier on the order and its delivery (carrier name and tracking on the delivery slip, carrier reports). The shipping price stays the one the store charged.
 - The line amount is the shipping price after shipping discounts, without tax, with the tax the store charged on shipping.
 - Without any shipping product, the order waits with *Set a shipping product on the store.*
 
@@ -21,6 +22,12 @@ Separate discount lines keep the product prices clean in your sales reports, and
 ### Fees
 
 Fee lines (sent by some platforms, for example a payment surcharge or gift wrap) use the **Fee Product** (*Fee (online store)*, `CB-FEE`). Without a fee product, such an order waits with *Set a fee product on the store.*
+
+### Tips and duties
+
+- A tip the customer added at checkout becomes a line with the **Tip Product** (*Tip (online store)*, `CB-TIP`), at the tip amount, without tax.
+- Import duties charged on a cross-border order become a line with the **Duties Product** (*Duties (online store)*, `CB-DUTIES`).
+- Both are services, so they are invoiced with the order but never delivered. Without them the order total would differ from the store.
 
 ### Custom items, deleted products and gift cards
 
