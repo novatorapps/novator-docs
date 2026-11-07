@@ -14,7 +14,7 @@ export const toc = [{value: 'When orders arrive', id: 'when-orders-arrive', leve
 
 ## When orders arrive
 
-- Every 15 minutes Odoo asks Amazon for orders created or changed since the last check, on every active marketplace of the store. **Check Orders Now** on the store (or **Sync Orders** on its card) checks at once.
+- Every 15 minutes (change it on the [Schedules](../operations/schedules.md) tab) Odoo asks Amazon for orders created or changed since the last check, on every active marketplace of the store. **Check Orders Now** on the store (or **Sync Orders** on its card) checks at once.
 - The first check starts from **Import Orders From** on the **Orders** tab. To import older orders, set an earlier date and click **Check Orders Now**.
 - Each order becomes a sales order named with the store prefix and the Amazon order number, for example **AMZ-403-4037056-8259392**, and keeps the date the buyer ordered.
 

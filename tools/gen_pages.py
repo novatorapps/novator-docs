@@ -91,10 +91,16 @@ def install_page(app, mods):
     return '\n'.join(lines)
 
 
-def changelog_page(app, releases):
+def changelog_page(app, releases, roadmap=None):
     lines = ['---', 'title: Release notes', 'sidebar_position: 95',
              'description: "Version history of %s for Odoo."' % app['title'], NOTE, '---', '', '# Release notes', '',
              'The newest release is first. In Odoo the version number starts with the Odoo version, so release 1.1.0 for Odoo 20.0 shows as `20.0.1.1.0`.', '']
+    if roadmap:
+        lines += ['## Coming next', '', 'What we are building for the next releases, in this order. Plans can change; '
+                  'tell us what matters most to you on the [support](./support-policy.md) page.', '']
+        for i, item in enumerate(roadmap, start=1):
+            lines += ['%s. **%s**: %s' % (i, item['title'], item['text'])]
+        lines += ['']
     for r in releases:
         lines += ['## %s' % r['version'], '', '*%s, Odoo %s*' % (r['date'], r['series']), '']
         lines += ['- %s' % n for n in r['notes']] + ['']
@@ -105,6 +111,7 @@ def main():
     apps = load('apps.json')['apps']
     mods = load('data/modules.json')
     rel = load('data/releases.json')
+    roadmap = load('data/roadmap.json') if os.path.exists(os.path.join(ROOT, 'data/roadmap.json')) else {}
     missing = []
     for app in apps:
         d = os.path.join(ROOT, 'docs', app['slug'])
@@ -119,7 +126,7 @@ def main():
         with open(os.path.join(d, 'install.md'), 'w', encoding='utf-8') as f:
             f.write(install_page(app, mods))
         with open(os.path.join(d, 'changelog.md'), 'w', encoding='utf-8') as f:
-            f.write(changelog_page(app, rel[app['slug']]))
+            f.write(changelog_page(app, rel[app['slug']], roadmap.get(app['slug'])))
     return missing
 
 

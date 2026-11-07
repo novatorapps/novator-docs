@@ -35,6 +35,17 @@
       "category": "eCommerce"
     },
     {
+      "slug": "jazi-connector",
+      "title": "Jazi Connector",
+      "summary": "List products on Jazi in English and Arabic, send stock and prices, and turn Jazi orders into sales orders with fulfilment and AWB from Odoo.",
+      "free": null,
+      "pro": "novator_jazi_connector",
+      "price": "$399",
+      "versions": "17.0 - 20.0",
+      "guide": true,
+      "category": "eCommerce"
+    },
+    {
       "slug": "dashboard-builder",
       "title": "Dashboard Builder",
       "summary": "KPI tiles, 13 chart types and lists from any Odoo data. Pro: AI, drill-down, TV mode, SQL, email digests.",

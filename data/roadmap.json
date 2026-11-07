@@ -1,0 +1,32 @@
+{
+  "amazon-connector": [
+    {
+      "title": "Multi-Channel Fulfillment",
+      "text": "ship orders from your other channels (WooCommerce, Shopify, Odoo eCommerce, sales orders) from your FBA stock, with tracking back in Odoo."
+    },
+    {
+      "title": "FBA inbound shipments",
+      "text": "plan and send shipments to Amazon fulfillment centres from Odoo, with box labels, carriers, tracking and received quantity checks."
+    },
+    {
+      "title": "Removal orders and FBA stock adjustments",
+      "text": "return or dispose of FBA stock from Odoo, and apply Amazon's inventory adjustments to the FBA warehouse."
+    },
+    {
+      "title": "Invoice upload",
+      "text": "send the Odoo invoice PDF of each order to Amazon, so buyers download it from their Amazon account."
+    },
+    {
+      "title": "Variations and more images in List on Amazon",
+      "text": "list products with sizes and colours as one Amazon family, with all product images."
+    },
+    {
+      "title": "Amazon shipping labels",
+      "text": "Easy Ship and Buy Shipping labels for FBM orders, printed from the delivery order."
+    },
+    {
+      "title": "Real-time orders and profit per order",
+      "text": "Amazon notifications instead of polling, and a profit report per order with Amazon fees and costs."
+    }
+  ]
+}

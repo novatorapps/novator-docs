@@ -912,8 +912,8 @@
   ],
   "amazon-connector": [
     {
-      "version": "1.0.0",
-      "date": "2026-11-06",
+      "version": "1.0.14",
+      "date": "2026-11-07",
       "modules": [
         "novator_amazon_connector",
         "commerce_bridge"
@@ -922,9 +922,37 @@
       "notes": [
         "First release, on the Amazon Selling Partner API with your own developer app. Link with Amazon (one click) is coming soon.",
         "FBM and FBA orders with VAT per marketplace (price-included taxes supported), shipping, gift wrap and promotions; cancellations both ways.",
-        "Shipment confirmation with carrier and tracking, feed results checked; FBM stock and prices per marketplace; listings import with offers per marketplace.",
+        "Shipment confirmation with carrier and tracking, feed results checked; FBM stock; listings import linking SKUs by SKU, barcode or ASIN, with offers per marketplace and the ASIN on the product.",
+        "Prices: one pricelist per marketplace in its currency (created automatically), price source Amazon or Odoo, Amazon prices copied into the pricelists on import, changed pricelist rules sent within a minute.",
+        "List on Amazon (beta): offers on existing ASINs found by barcode, or new products from Amazon's own product type requirements, always checked with Amazon in preview before submitting.",
         "FBA warehouse with stock every 6 hours, FBA customer returns, refunds as credit notes, settlements as journal entries with fees and reconciled order payments.",
-        "Take over orders and SKUs from Odoo Enterprise's Amazon connector; several seller accounts per company; buyer data removal."
+        "Take over orders and SKUs from Odoo Enterprise's Amazon connector; several seller accounts per company; buyer data removal.",
+        "Schedules tab per store (order, stock and price intervals, last run, Run Now) and failure alerts to chosen users with an activity; log level.",
+        "Orders tab: shipping policy, lock confirmed orders, a customer receivable account per store, invoice and payment on the order date, the order number as payment reference; Amazon shipping services can set an Odoo delivery method.",
+        "Staging copies read only, with a Run Pending Jobs button where Odoo.sh switched scheduled actions off.",
+        "Needs Commerce Bridge 1.0.23 (from the WooCommerce connector repository) and Odoo's Delivery app, installed with it."
+      ]
+    }
+  ],
+  "jazi-connector": [
+    {
+      "version": "1.0.15",
+      "date": "2026-11-07",
+      "modules": [
+        "novator_jazi_connector",
+        "commerce_bridge"
+      ],
+      "series": "17.0 - 20.0",
+      "notes": [
+        "First release, on the Jazi Seller API v2 with your own API token (live or sandbox).",
+        "Link products already on Jazi by seller SKU (internal reference or barcode); Odoo never creates products from Jazi.",
+        "Jazi Categories screen: every Jazi category in English and Arabic, matched to Odoo categories, with ready-to-list and on-Jazi counts and List Products by category.",
+        "List on Jazi: category details, colours and sizes matched, brand, weight, size and photos checked before sending; created and submitted for review, review status followed.",
+        "Jazi Products: English and Arabic names and descriptions, brand and category details kept in Odoo; Update on Jazi (details, photos, price and stock, submit), Read from Jazi, Fill from Odoo, Translate to Arabic with Google Translate.",
+        "Stock from several warehouses with a buffer, sent when it moves; prices from the store pricelist with a special price, on a schedule; batch results checked.",
+        "Orders by signed notifications and a scheduled check, as sales orders for your Jazi customer priced from the pricelist; fulfilment and AWB sent when the delivery is validated.",
+        "Schedules and failure alerts per store, job queue with retries, log, dashboard card, test copies read only.",
+        "Needs Commerce Bridge 1.0.23 (from the WooCommerce connector repository) and Odoo's Delivery app, installed with it."
       ]
     }
   ]

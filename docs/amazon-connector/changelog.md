@@ -9,12 +9,30 @@ description: "Version history of Amazon Connector for Odoo."
 
 The newest release is first. In Odoo the version number starts with the Odoo version, so release 1.1.0 for Odoo 20.0 shows as `20.0.1.1.0`.
 
-## 1.0.0
+## Coming next
 
-*2026-11-06, Odoo 17.0 - 20.0*
+What we are building for the next releases, in this order. Plans can change; tell us what matters most to you on the [support](./support-policy.md) page.
+
+1. **Multi-Channel Fulfillment**: ship orders from your other channels (WooCommerce, Shopify, Odoo eCommerce, sales orders) from your FBA stock, with tracking back in Odoo.
+2. **FBA inbound shipments**: plan and send shipments to Amazon fulfillment centres from Odoo, with box labels, carriers, tracking and received quantity checks.
+3. **Removal orders and FBA stock adjustments**: return or dispose of FBA stock from Odoo, and apply Amazon's inventory adjustments to the FBA warehouse.
+4. **Invoice upload**: send the Odoo invoice PDF of each order to Amazon, so buyers download it from their Amazon account.
+5. **Variations and more images in List on Amazon**: list products with sizes and colours as one Amazon family, with all product images.
+6. **Amazon shipping labels**: Easy Ship and Buy Shipping labels for FBM orders, printed from the delivery order.
+7. **Real-time orders and profit per order**: Amazon notifications instead of polling, and a profit report per order with Amazon fees and costs.
+
+## 1.0.14
+
+*2026-11-07, Odoo 17.0 - 20.0*
 
 - First release, on the Amazon Selling Partner API with your own developer app. Link with Amazon (one click) is coming soon.
 - FBM and FBA orders with VAT per marketplace (price-included taxes supported), shipping, gift wrap and promotions; cancellations both ways.
-- Shipment confirmation with carrier and tracking, feed results checked; FBM stock and prices per marketplace; listings import with offers per marketplace.
+- Shipment confirmation with carrier and tracking, feed results checked; FBM stock; listings import linking SKUs by SKU, barcode or ASIN, with offers per marketplace and the ASIN on the product.
+- Prices: one pricelist per marketplace in its currency (created automatically), price source Amazon or Odoo, Amazon prices copied into the pricelists on import, changed pricelist rules sent within a minute.
+- List on Amazon (beta): offers on existing ASINs found by barcode, or new products from Amazon's own product type requirements, always checked with Amazon in preview before submitting.
 - FBA warehouse with stock every 6 hours, FBA customer returns, refunds as credit notes, settlements as journal entries with fees and reconciled order payments.
 - Take over orders and SKUs from Odoo Enterprise's Amazon connector; several seller accounts per company; buyer data removal.
+- Schedules tab per store (order, stock and price intervals, last run, Run Now) and failure alerts to chosen users with an activity; log level.
+- Orders tab: shipping policy, lock confirmed orders, a customer receivable account per store, invoice and payment on the order date, the order number as payment reference; Amazon shipping services can set an Odoo delivery method.
+- Staging copies read only, with a Run Pending Jobs button where Odoo.sh switched scheduled actions off.
+- Needs Commerce Bridge 1.0.23 (from the WooCommerce connector repository) and Odoo's Delivery app, installed with it.

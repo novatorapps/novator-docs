@@ -13,3 +13,7 @@ export const toc = [...partialToc];
 A copy of your database (an Odoo.sh staging build, a duplicate for tests) still has the Amazon keys. The connector makes sure such a copy cannot change your live Amazon account: it can read orders and listings, but it never sends shipments, stock, prices or cancellations.
 
 <TestDatabases platform="Amazon" />
+
+## Scheduled actions in staging
+
+Odoo.sh switches off all scheduled actions in staging builds, so jobs you start there (Import Listings, Check Orders Now, ...) wait in **Pending Jobs**. The store then shows *Scheduled actions are switched off in this database* with a **Run Pending Jobs** button: click it to run them now.

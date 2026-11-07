@@ -1,26 +1,57 @@
 ---
 title: Create your developer app
 sidebar_position: 1
-description: Register as a private developer in Seller Central, choose the roles, create the app client and get the client ID, client secret and refresh token for Odoo.
+description: Register as a private developer in Amazon's Solution Provider Portal, verify your identity, choose the roles, create the app and get the client ID, client secret and refresh token for Odoo.
 ---
 
 # Create your developer app
 
-Odoo talks to Amazon through the Selling Partner API (SP-API) with a small app that you create in your own Seller Central account. It is free, takes about 15 minutes, and only your Odoo uses it. You do this once per seller account.
+Odoo talks to Amazon through the Selling Partner API (SP-API) with a small app that you register for your own seller account. It is free and only your Odoo uses it. You do this once per seller account. Plan for one to two days in total: the steps take about an hour, then Amazon reviews your identity and your profile.
 
 :::note Before you start
-- Only the **primary user** of the seller account can register as a developer. Other users, even with full admin rights, see *Access Required* on **Develop Apps**: ask the account owner to do these steps, or to sit with you.
+- Use the login of the **primary user** of the seller account (the account owner). Other users, even with full admin rights, do not see **Develop Apps** or get *Not Authorized*: ask the account owner to do these steps, or to sit with you.
 - You need a **Professional** selling plan.
+- Have at hand: your **commercial registration** (company name exactly as on the seller account) and an **identity document** of the account owner or the company's legal representative. Amazon may also ask for a selfie or a short video check.
 - Amazon charges nothing for registering or for using the API.
 - Prefer one click instead of keys? **Link with Amazon** is coming soon (see [Connect the store](./connect-store.md)).
 :::
 
-## 1. Register as a private developer
+## 1. Open the Solution Provider Portal
 
-1. In Seller Central open **Apps and Services > Develop Apps** (on some marketplaces: **Partner Network > Develop Apps**).
-2. Click **Proceed to Developer Profile** and choose **Private developer: I build applications that integrate my own company with Amazon APIs**.
-3. Fill in the organisation and contact details.
-4. Select the roles below. Amazon asks a few questions about how you protect data for some of them; suggested answers follow the table.
+1. Sign in to Seller Central of your home marketplace (for example `sellercentral.amazon.sa`) with the primary user's login.
+2. Open the menu and go to **Apps and Services > Develop Apps** (on some marketplaces: **Partner Network > Develop Apps**). You can also open `https://solutionproviderportal.amazon.com/developer/register` directly in the same browser.
+3. Amazon shows **Enroll in New Program** with your accounts. Select your **seller account** (it says *Sell on Amazon*) and click **Select Account**.
+
+![Select your seller account](/img/amazon-connector/spp_select_account.png)
+
+:::tip
+- *This email address isn't associated with any accounts*: the browser is signed in with another Amazon login. Sign out of Amazon (or use a private window) and start again from Seller Central.
+
+  ![Not Authorized](/img/amazon-connector/spp_not_authorized.png)
+- Do **not** click **Create Account** or **Register** on these pages: that creates a separate account that is not linked to your seller account.
+:::
+
+4. On **Solution Type Setup**, tick only **Build applications that use SP APIs** and click **Apply**.
+
+![Solution Type Setup](/img/amazon-connector/spp_solution_type.png)
+
+## 2. Verify your identity
+
+1. On the portal home page, under *Steps to create production apps*, click **Get Started** next to **Verify your Identity**.
+
+   ![Verify your identity](/img/amazon-connector/spp_verify_identity.png)
+
+2. Enter the business registration details and upload the identity document. The person verifying must be the account owner or the company's legal representative.
+3. Amazon says it usually takes 20 minutes; it can take a day or two. If your seller account is already verified, Amazon often confirms your identity straight away (*Based on partner accounts associated with your profile, we have confirmed your identity*) and returns you to the portal home page.
+
+Until then the portal only lets you create sandbox apps, which return test data and cannot reach your store.
+
+## 3. Set up your developer profile
+
+1. When your identity is verified, click **Set up Solution Provider Account Profile**.
+2. Under *Data Access* choose **Private Developer: I build application(s) to integrate my own company with Amazon**. Do not choose *Public*: that is for companies that sell apps to other sellers.
+3. Fill in the organisation and contact details, and explain that you connect your own Amazon account to your own Odoo ERP.
+4. Select the marketplaces you sell in and the roles below. Amazon asks a few questions about how you protect data for some of them; suggested answers follow the table.
 
 | Role | Why the connector needs it |
 |---|---|
@@ -39,18 +70,21 @@ The two restricted roles give access to buyer data. You need them for FBM orders
 
 - Buyer data is stored only in our own Odoo database, which is protected by user logins and access rights, reached over HTTPS, and backed up by our hosting provider.
 - Buyer addresses are removed from Odoo a set number of days after delivery (the store setting **Remove Buyer Addresses After**).
+- Invoices keep the buyer's name and billing address as long as tax law requires. If Amazon asks how long you keep personal data, choose the option that matches your invoice retention and explain this.
 - No third party receives the data.
-- Security incidents are reported to Amazon within 24 hours.
+- Security incidents are reported to Amazon (security@amazon.com) within 24 hours.
 
-5. Submit. Amazon usually approves within a day; the restricted roles can take a few days and sometimes a follow-up question by email.
+Answer **Yes** to the security questions only where it is true for your company.
 
-## 2. Add the app client
+5. Submit. Amazon usually approves within a day; the restricted roles can take a few days and sometimes a follow-up question by email. To start sooner, you can leave the restricted roles out and add them later.
 
-1. Back on **Develop Apps**, click **Add new app client**.
-2. App name: for example *Odoo*. API type: **SP API**.
+## 4. Add the app
+
+1. In the portal, open **Apps > Add new app client** (on Seller Central: **Develop Apps > Add new app client**).
+2. App name: for example *Odoo*. API type: **SP API**. No OAuth URIs are needed.
 3. Select the same roles as in your profile and save.
 
-## 3. Copy the keys
+## 5. Copy the keys
 
 1. In the list of apps, next to your app, click **View** under *LWA credentials*: copy the **Client identifier** (starts with `amzn1.application-oa2-client.`) and the **Client secret**.
 2. Click the arrow next to **Edit App** and choose **Authorize**, then **Authorize app**: copy the **refresh token** (starts with `Atzr|`).
